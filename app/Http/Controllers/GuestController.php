@@ -104,7 +104,7 @@ class GuestController extends Controller
     {
         $projets = Projet::all();
         $categoris = ProjectCategory::has('projects')->get();
-        return view('front.projet')->with('projets', $projets)->with('categoris', $categoris);
+        return view('front.list_projets')->with('projets', $projets)->with('categoris', $categoris);
     }
 
     //new ajout

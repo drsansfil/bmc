@@ -263,13 +263,18 @@
                     <div class="custom-heading-02 text-center">
                         <h2>BEST MANAGEMENT & CONSULTING BMC</h2>
                         <p>
-                            Notre cabinet, implanté à Tunis, depuis 2009 est spécialisé dans l’accompagnement et l’assistance des entreprises publiques ou privées.
+                            Notre cabinet, implanté à Tunis, depuis 2009 est spécialisé dans l’accompagnement et
+                            l’assistance des entreprises publiques ou privées.
                         </p>
                         <p>
-                            Dans ce cadre d'activité, on organise des séminaires de formation professionnelle continue en inter ou en intra-entreprise, et on s'occupe au mise à niveau des entreprises, appelées à agir dans un milieu de plus en plus concurrentiel.
+                            Dans ce cadre d'activité, on organise des séminaires de formation professionnelle continue en
+                            inter ou en intra-entreprise, et on s'occupe au mise à niveau des entreprises, appelées à agir
+                            dans un milieu de plus en plus concurrentiel.
                             <br>
                             <b>
-                                Nos services ont par conséquent pu acquérir l'expérience et la compétence pour étudier, planifier, estimer le budget nécessaire à de telles opérations et conduire ou accompagner un projet de la phase d'étude jusqu'à son terme.
+                                Nos services ont par conséquent pu acquérir l'expérience et la compétence pour étudier,
+                                planifier, estimer le budget nécessaire à de telles opérations et conduire ou accompagner un
+                                projet de la phase d'étude jusqu'à son terme.
                             </b>
                         </p>
                     </div><!-- .custom-heading-02 end -->
@@ -661,103 +666,34 @@
                     <!-- Owl Carousel Container start -->
                     <div class="carousel-container">
                         <div id="latest-posts-carousel" class="owl-carousel pi-latest-posts-01">
-                            <!-- .owl-item start -->
-                            <div class="owl-item">
-                                <div class="post-container clearfix">
-                                    <div class="post-media">
-                                        <a href="management-news-single-consultingpress-quality-over-quantity.html">
-                                            <img src="img/blog/consultingpress-delivering-quality-over-quantity.jpg"
-                                                alt="ConsultingPress delivering quality over quantity" />
-                                        </a>
-                                    </div><!-- .post-media end -->
 
-                                    <div class="post-body">
-                                        <span class="date">25 aug, 2016</span>
+                            @forelse ($projets as $item)
+                                <!-- .owl-item start -->
+                                <div class="owl-item">
+                                    <div class="post-container clearfix">
+                                        <div class="post-media">
+                                            <a href="/projet/post/{{ $item->id }}">
+                                                <img src="{{ asset('uploads')}}/{{ $item->illustration }}"
+                                                    alt="{{ $item->nom_projet}}" />
+                                            </a>
+                                        </div><!-- .post-media end -->
 
-                                        <a href="management-news-single-consultingpress-quality-over-quantity.html">
-                                            <h3>ConsultingPress Delivering Quality Over Quantity</h3>
-                                        </a>
+                                        <div class="post-body">
+                                            <span class="date">{{ $item->created_at}}</span>
 
-                                        <a href="management-news-single-consultingpress-quality-over-quantity.html"
-                                            class="read-more">
-                                            Read more
-                                        </a><!-- .read-more end -->
-                                    </div><!-- .post-body end -->
-                                </div><!-- .post-container end -->
-                            </div><!-- .owl-item end -->
+                                            <a href="management-news-single.html">
+                                                <h3>{{ $item->nom_projet}}</h3>
+                                            </a>
 
-                            <!-- .owl-item start -->
-                            <div class="owl-item">
-                                <div class="post-container clearfix">
-                                    <div class="post-media">
-                                        <a href="management-news-single.html">
-                                            <img src="img/blog/consultingpress-increase-company-value-by-investing-in-people.jpg"
-                                                alt="Increase company value by investing in people" />
-                                        </a>
-                                    </div><!-- .post-media end -->
+                                            <a href="/projet/post/{{ $item->id }}" class="read-more">
+                                                Read more
+                                            </a><!-- .read-more end -->
+                                        </div><!-- .post-body end -->
+                                    </div><!-- .post-container end -->
+                                </div><!-- .owl-item end -->
+                            @empty
+                            @endforelse
 
-                                    <div class="post-body">
-                                        <span class="date">23 aug, 2016</span>
-
-                                        <a href="management-news-single.html">
-                                            <h3>Increase company value by investing in people</h3>
-                                        </a>
-
-                                        <a href="management-news-single.html" class="read-more">
-                                            Read more
-                                        </a><!-- .read-more end -->
-                                    </div><!-- .post-body end -->
-                                </div><!-- .post-container end -->
-                            </div><!-- .owl-item end -->
-
-                            <!-- .owl-item start -->
-                            <div class="owl-item">
-                                <div class="post-container clearfix">
-                                    <div class="post-media">
-                                        <a href="management-news-single-logistics-leaders.html">
-                                            <img src="img/blog/consultingpress-developing-future-logistics-leaders-in-europe.jpg"
-                                                alt="ConsultingPress developing future logistics leaders in europe" />
-                                        </a>
-                                    </div><!-- .post-media end -->
-
-                                    <div class="post-body">
-                                        <span class="date">23 aug, 2016</span>
-
-                                        <a href="management-news-single-logistics-leaders.html">
-                                            <h3>Developing future logistics leaders in Europe</h3>
-                                        </a>
-
-                                        <a href="management-news-single-logistics-leaders.html" class="read-more">
-                                            Read more
-                                        </a><!-- .read-more end -->
-                                    </div><!-- .post-body end -->
-                                </div><!-- .post-container end -->
-                            </div><!-- .owl-item end -->
-
-                            <!-- .owl-item start -->
-                            <div class="owl-item">
-                                <div class="post-container clearfix">
-                                    <div class="post-media">
-                                        <a href="management-news-single-guidelines-business-strategy.html">
-                                            <img src="img/blog/consultingpress-guidelines-for-a-high-impact-business-strategy.jpg"
-                                                alt="Guidelines for a high-impact business strategy" />
-                                        </a>
-                                    </div><!-- .post-media end -->
-
-                                    <div class="post-body">
-                                        <span class="date">18 aug, 2016</span>
-
-                                        <a href="management-news-single-guidelines-business-strategy.html">
-                                            <h3>Guidelines for a high-impact business strategy</h3>
-                                        </a>
-
-                                        <a href="management-news-single-guidelines-business-strategy.html"
-                                            class="read-more">
-                                            Read more
-                                        </a><!-- .read-more end -->
-                                    </div><!-- .post-body end -->
-                                </div><!-- .post-container end -->
-                            </div><!-- .owl-item end -->
                         </div><!-- .owl-carousel end -->
                     </div><!-- Owl Carousel Container end -->
                 </div><!-- .col-md-12 end -->

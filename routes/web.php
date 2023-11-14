@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 /* front*/
 //multiple middlewares
 Route::middleware(['count-visitors', 'Language'])->group(function () {
-    Route::get('/apropos', [GuestController::class, 'indexe'])->name('apropos');
+    Route::get('/about', [GuestController::class, 'indexe'])->name('apropos');
     Route::get('/', [GuestController::class, 'home'])->name('homepage');
     Route::get('/contact', [GuestController::class, 'contactindex'])->name('contact');
     Route::get('/change-language/{lang}', [GuestController::class, 'changeLang'])->name('change-language');

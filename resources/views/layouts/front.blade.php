@@ -193,31 +193,19 @@
 
                                         <!-- navigation links start -->
                                         <ul class="nav navbar-nav">
-                                            <li class="current-menu-item">
+                                            <li  class="{{ request()->is('','/') ? 'current-menu-item' : '' }}" >
                                                 <a href="/">Home</a>
                                             </li>
-                                            <li>
+                                            <li class="{{ request()->is('about') ? 'current-menu-item' : '' }}" >
                                                 <a href="/about">A propos</a>
                                             </li>
-                                            <li>
+                                            <li class="{{ request()->is('missions') ? 'current-menu-item' : '' }}" >
                                                 <a href="/missions">Nos missions</a>
                                             </li>
-                                            <li class="menu-item-has-children dropdown">
-                                                <a href="#" data-toggle="dropdown" class="dropdown-toggle"
-                                                    role="button">Case studies</a>
-
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="management-cases-grid.html">Cases Grid</a></li>
-                                                    <li><a href="management-cases-grid-filters.html">Grid With
-                                                            Filters</a>
-                                                    </li>
-                                                    <li><a href="management-cases-list.html">Cases List</a></li>
-                                                    <li><a href="management-case-single-sidebar.html">Case Single
-                                                            Sidebar</a></li>
-                                                    <li><a href="management-case-single-full.html">Case Single Full</a>
-                                                    </li>
-                                                </ul>
+                                            <li class="{{ request()->is('projets') ? 'current-menu-item' : '' }}">
+                                                <a href="/projets">Projets</a>
                                             </li>
+
 
                                             <li class="menu-item-has-children dropdown">
                                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle"
@@ -230,7 +218,7 @@
                                                 </ul>
                                             </li>
 
-                                            <li class=" ">
+                                            <li class="{{ request()->is('contact') ? 'current-menu-item' : '' }}">
                                                 <a href="/contact">Contact</a>
                                             </li>
                                     </div><!-- navbar end -->
