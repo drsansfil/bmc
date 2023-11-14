@@ -673,7 +673,7 @@
                                     <div class="post-container clearfix">
                                         <div class="post-media">
                                             <a href="/projet/post/{{ $item->id }}">
-                                                <img src="/uploads/{{ $item->images() }}"
+                                                <img src="/uploads/{{ $item->images()->first()->url }}"
                                                     alt="{{ $item->nom_projet}}" />
                                             </a>
                                         </div><!-- .post-media end -->
