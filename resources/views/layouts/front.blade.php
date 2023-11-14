@@ -9,6 +9,7 @@
         type="text/css">
     <link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/fonts/lynny/style.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS Home Page Required FIles -->
     <link rel="stylesheet" href="/masterslider/style/masterslider.min.css"><!-- Master slider main style -->
