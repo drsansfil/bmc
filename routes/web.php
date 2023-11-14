@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\analyse;
+use App\Http\Controllers\assistance;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContactController;
@@ -10,11 +12,9 @@ use App\Http\Controllers\metierController;
 use App\Http\Controllers\NewslettreController;
 use App\Http\Controllers\ProjetController;
 use App\Http\Controllers\ProjectCategoryController;
-use App\Http\Controllers\TemoignageController;
 use App\Models\Blog;
 use App\Models\Client;
 use App\Models\Information;
-use App\Models\metier;
 use App\Models\Newslettre;
 use App\Models\Projet;
 use App\Models\ProjectCategory;
@@ -41,18 +41,8 @@ Route::middleware(['count-visitors', 'Language'])->group(function () {
         $projets = Projet::all(); //recupere tout les projets de la base
         return view('front.about')->with('info', $info)->with('projets', $projets);
     })->name('about');
-    Route::get('/metier/{id}', [GuestController::class, 'metierdetails']);
-    Route::get('/list/metiers', function () {
-        $metiers = metier::all();
-        return view('front.liste_metier')->with('metiers', $metiers);
-    });
-    Route::get('/nos_secteurs', function () {
-        $secteurs = ProjectCategory::all();
-        return view('front.liste_secteur')->with('secteurs', $secteurs);
-    });
-    Route::get('/missions', function () {
-        return view('front.mission');
-    });
+    Route::get('/analyse', [analyse::class, 'index']);
+    Route::get('/assistance', [assistance::class, 'index']);
 
 
 
@@ -181,38 +171,19 @@ Route::middleware('auth')->group(function () {
 
 
 
-    //metiers
-    Route::get('/admin/metiers', [metierController::class, 'index']);
-    Route::get('/admin/delete_metier/{id}', [metierController::class, 'delete']);
-    Route::get('/admin/update_metier/{id}', [metierController::class, 'update_view']);
-    Route::post('/admin/update_metier', [metierController::class, 'update']);
-    Route::post('/admin/add_metier', [metierController::class, 'create']);
-    Route::get('/admin/ajouter_metier', function () {
-        return view('admin.metiers.ajouter');
+    //analyse
+    Route::get('/admin/analyse', [analyse::class, 'liste']);
+    Route::get('/admin/delete_analyse/{id}', [analyse::class, 'delete']);
+    Route::get('/admin/update_analyse/{id}', [analyse::class, 'update_view']);
+    Route::post('/admin/update_analyse', [analyse::class, 'update']);
+    Route::post('/admin/add_analyse', [analyse::class, 'create']);
+    Route::get('/admin/ajouter_analyse', function () {
+        return view('admin.analyse.ajouter');
     });
 
 
 
 
-
-
-    //client
-   /*  Route::get('/ajout_client', function () {
-        return view('admin.clients.ajouter');
-    })->name('ajout_client'); //page ajouter client
-
-
-    Route::get('/edite_clients/{id}', function ($id) {
-        $clients = client::find($id);
-        return view('admin.clients.update_client')->with('clients', $clients);
-    })->name('modifier_client'); //page modifier client
-
-    Route::get('/index_client', [ClientController::class, 'index'])->middleware('auth');
-    Route::post('/store_clients', [ClientController::class, 'store']);
-    Route::get('/admin/client/{i}/delete', [ClientController::class, 'destroy']);
-    Route::post('/edite_clients', [ClientController::class, 'update']);
-
- */
 
 
     //contact

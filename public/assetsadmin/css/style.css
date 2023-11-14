@@ -4039,14 +4039,14 @@ input[type=button].btn-block {
 
 .btn-red {
     color: #fff;
-    background-color:#1a64a8;
-    border-color: #1a64a8;
+    background-color:#279c31;
+    border-color: #279c31;
 }
 
 .btn-red:hover {
     color: #fff;
-    background-color:#1a64a8;
-    border-color: #1a64a8;
+    background-color:#279c31;
+    border-color: #279c31;
 }
 
 .btn-red:focus,
@@ -35902,7 +35902,7 @@ License: MIT
     font-family: Menlo, Monaco, monospace, sans-serif;
     font-size: 14px;
     color: #4a4952;
-    background-color: #f0f0f5;
+    background-color: #279c31;
     resize: none;
     outline: none;
     -ms-box-sizing: border-box;
@@ -63528,7 +63528,7 @@ body.rtl {
 
 .main-msg-wrapper {
     padding: 10px 15px;
-    background-color: #f0f0f5;
+    background-color:#279c31;
     font-size: 13px;
     margin-bottom: 10px;
     display: inline-block;
@@ -70878,7 +70878,7 @@ textarea.form-control {
 }
 
 .orange {
-    background-color: #1a64a8;
+    background-color: #279c31;
 }
 
 .red {

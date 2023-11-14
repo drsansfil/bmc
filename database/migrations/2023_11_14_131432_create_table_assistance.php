@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProjetsTable extends Migration
+class CreateTableAssistance extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateProjetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('projets', function (Blueprint $table) {
+        Schema::create('table_assistance', function (Blueprint $table) {
             $table->id();
-            $table->string('nom_projet');
-            $table->text('description');
-            $table->foreignId('project_category_id')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ class CreateProjetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projets');
+        Schema::dropIfExists('table_assistance');
     }
 }

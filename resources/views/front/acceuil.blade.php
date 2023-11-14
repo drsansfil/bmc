@@ -673,7 +673,7 @@
                                     <div class="post-container clearfix">
                                         <div class="post-media">
                                             <a href="/projet/post/{{ $item->id }}">
-                                                <img src="{{ asset('uploads')}}/{{ $item->illustration }}"
+                                                <img src="/uploads/{{ $item->images() }}"
                                                     alt="{{ $item->nom_projet}}" />
                                             </a>
                                         </div><!-- .post-media end -->
@@ -766,7 +766,7 @@
                             <!-- .owl-item start -->
                             @forelse ($clients as $item)
                                 <div class="owl-item">
-                                    <img src="{{ asset('uploads') }}/{{ $item->logo }}" alt="{{ $item->nom_client }}"
+                                    <img src="/ploads/{{ $item->logo }}" alt="{{ $item->nom_client }}"
                                         title="{{ $item->nom_client }}" />
                                 </div><!-- .owl-item end -->
                             @empty

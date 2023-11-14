@@ -20,6 +20,9 @@ class ProjetController extends Controller
         return view('admin.projets.index_projets')->with('projets', $projets);
     }
 
+
+
+
     //fontion enregistre dans  le base
     public function store(Request $request)
     {
@@ -70,6 +73,9 @@ class ProjetController extends Controller
 
     }
 
+
+
+
     //fontion supprimer
     public function destroy($id)
     {
@@ -97,6 +103,9 @@ class ProjetController extends Controller
         }
     }
 
+
+
+    
 
     //fontion modifier
     public function update(Request $request)

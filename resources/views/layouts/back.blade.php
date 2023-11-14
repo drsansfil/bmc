@@ -8,19 +8,19 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('assetsadmin/images/brand/logo.png')}}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('assetsadmin/images/brand/logo.png')}}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assetsadmin/images/brand/logo.png')}}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assetsadmin/images/brand/logo.png')}}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assetsadmin/images/brand/logo.png')}}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assetsadmin/images/brand/logo.png')}}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assetsadmin/images/brand/logo.png')}}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assetsadmin/images/brand/logo.png')}}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assetsadmin/images/brand/logo.png')}}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('assetsadmin/images/brand/logo.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assetsadmin/images/brand/logo.png')}}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assetsadmin/images/brand/logo.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assetsadmin/images/brand/logo.png')}}">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/svg/consultingpress-logo-dark-green.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/svg/consultingpress-logo-dark-green.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/svg/consultingpress-logo-dark-green.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/svg/consultingpress-logo-dark-green.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/svg/consultingpress-logo-dark-green.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/svg/consultingpress-logo-dark-green.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/svg/consultingpress-logo-dark-green.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/svg/consultingpress-logo-dark-green.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/svg/consultingpress-logo-dark-green.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/svg/consultingpress-logo-dark-green.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/svg/consultingpress-logo-dark-green.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/svg/consultingpress-logo-dark-green.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/svg/consultingpress-logo-dark-green.png">
 
     <link rel="manifest" href="{{ asset('assets/favicon/manifest.json') }}">
     <!-- TITLE -->
@@ -60,9 +60,9 @@
                     href="javascript:void(0)"></a>
                 <!-- sidebar-toggle-->
                 <a class="logo-horizontal " href="/admin/dashboard">
-                    <img src="{{ asset('assetsadmin/images/brand/brand-logo.png') }}"
+                    <img src="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}"
                         class="header-brand-img desktop-logo" alt="logo">
-                    <img src="{{ asset('assetsadmin/images/brand/brand-logo.png') }}"
+                    <img src="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}"
                         class="header-brand-img light-logo1" alt="logo">
                 </a>
                 <!-- LOGO -->
@@ -167,13 +167,13 @@
         <div class="app-sidebar">
             <div class="side-header">
                 <a class="header-brand1" href="/admin/dashboard">
-                    <img src="{{ asset('assetsadmin/images/brand/brand-logo.png') }}"
+                    <img src="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}"
                         class="header-brand-img desktop-logo" alt="logo">
-                    <img src="{{ asset('assetsadmin/images/brand/brand-logo.png') }}"
+                    <img src="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}"
                         class="header-brand-img toggle-logo" alt="logo">
-                    <img src="{{ asset('assetsadmin/images/brand/brand-logo.png') }}"
+                    <img src="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}"
                         class="header-brand-img light-logo" alt="logo">
-                    <img src="{{ asset('assetsadmin/images/brand/brand-logo.png') }}"
+                    <img src="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}"
                         class="header-brand-img light-logo1" alt="logo">
                 </a>
                 <!-- LOGO -->
@@ -211,8 +211,8 @@
                                 class=" fe fe-mail"></i>&nbsp<span class="side-menu__label">Newslettres</span></a>
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item {{ request()->is('admin/metiers','admin/ajouter_metier') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/admin/metiers">
-                            <i class="bi bi-folder2-open"></i> &nbsp<span class="side-menu__label">Metiers</span></a>
+                        <a class="side-menu__item {{ request()->is('admin/analyse','admin/ajouter_analyse') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/admin/analyse">
+                            <i class="bi bi-folder2-open"></i> &nbsp<span class="side-menu__label">Analyse</span></a>
                     </li>
                     <li class="slide">
                         <a class="side-menu__item {{ request()->is('index_blog','ajout_blog') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/index_blog"><i
@@ -263,7 +263,7 @@
 
     <style>
         .active-menu{
-            border-left: solid 5px #1a64a8;
+            border-left: solid 5px #279c31;
             background-color: #f0f0f5;
         }
     </style>

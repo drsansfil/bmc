@@ -22,7 +22,6 @@ class GuestController extends Controller
         $blog = Blog::latest()->take(4)->get(); //recupere tout les blog de la base
         $projectCategories = ProjectCategory::all();
         $clients=Client::all();
-        $directeur = directeur::first();
         $metiers = metier::all();
 
         if(is_null($info)){
@@ -36,7 +35,6 @@ class GuestController extends Controller
         ->with('clients',$clients)
         ->with('projets', $projets)
         ->with('metiers', $metiers)
-        ->with('directeur', $directeur)
         ->with('projectCategories', $projectCategories)
         ->with('blogs', $blog);
     }
@@ -82,18 +80,11 @@ class GuestController extends Controller
     public function blogDetail($id)
     {
         $blog = Blog::findOrFail($id);
-
-        // Obtenir le projet précédent
-        $previousBlog = Blog::where('id', '<', $id)->orderBy('id', 'desc')->first();
-
-        // Obtenir le projet suivant
-        $nextBlog = Blog::where('id', '>', $id)->orderBy('id', 'asc')->first();
-
-        return view('front.blogDetail')->with([
-            'blog' => $blog,
-            'previousBlog' => $previousBlog,
-            'nextBlog' => $nextBlog,
-        ]);
+        $blogs = Blog::all();
+        if (!$blog) {
+            abort(404);
+        }
+        return view('front.blogDetails')->with('blog',$blog)->with('blogs', $blogs);
     }
 
 

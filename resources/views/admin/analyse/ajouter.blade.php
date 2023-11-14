@@ -1,5 +1,5 @@
 @extends('layouts.back')
-@section('title', 'Ajouter un métier')
+@section('title', 'Ajouter une analyse')
 
 @section('content')
     <!-- PAGE -->
@@ -12,7 +12,7 @@
                     <div class="main-container container-fluid">
                         <!-- PAGE-HEADER -->
                         <div class="page-header">
-                            <h1 class="page-title">ajouter un métier</h1>
+                            <h1 class="page-title">ajouter une analyse</h1>
                         </div>
                         <div class="row p-5">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
@@ -25,28 +25,19 @@
                                                         <a href="/admin/metiers"><button
                                                                 class="btn btn-red"><i class="bi bi-arrow-return-left"></i>
                                                                 retour</button></a>
-                                                        Ajouter un métier
+                                                        Ajouter une analyse
                                                     </div>
                                                 </div>
-                                                <form action="/admin/add_metier" method="POST"
+                                                <form action="/admin/add_analyse" method="POST"
                                                     enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="modal-body">
                                                         <div class="mb-5"><label class="form-label"
                                                                 for="exampleFormControlInput1">
-                                                                <strong>Titre du métier </strong>
+                                                                <strong>Titre de l'analyse</strong>
                                                             </label>
-                                                            <input class="form-control" name="titre" id="name"
+                                                            <input class="form-control" name="titre" 
                                                                 type="text" required>
-
-                                                        </div>
-                                                        <div class="mb-5"><label class="form-label"
-                                                                for="exampleFormControlInput1">
-                                                                <strong>Decription du métier</strong>
-                                                            </label>
-                                                            <p>
-                                                                <textarea class="form-control" name="description" id="exampleTextarea" rows="3" required> </textarea>
-                                                            </p>
 
                                                         </div>
                                                         <div class="mb-5"><label class="form-label"
@@ -54,7 +45,7 @@
                                                                 <strong>Image d'illustration</strong>
                                                             </label>
                                                             <input class="form-control" name="image" type="file"
-                                                                required>
+                                                                required accept="imaeges">
 
                                                         </div>
                                                     </div>

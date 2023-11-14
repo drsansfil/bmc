@@ -3,34 +3,25 @@
 
 <head>
     <title>BMC - @yield("title")</title>
-    <meta name="description"
-        content="ConsultingPress is multi niche HTML Template. Checkout Management Consulting Layout.">
-    <meta name="author" content="Pixel Industry">
-    <meta name="keywords"
-        content="management consulting, management consulting template, business consulting, business consulting template">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" />
-
     <!-- Fonts and icon fonts -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600&amp;subset=latin,latin-ext"
         type="text/css">
-    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="fonts/lynny/style.min.css">
+    <link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/fonts/lynny/style.min.css">
 
     <!-- CSS Home Page Required FIles -->
-    <link rel="stylesheet" href="masterslider/style/masterslider.min.css"><!-- Master slider main style -->
-    <link rel="stylesheet" href="masterslider/skins/default/style.min.css"><!-- Master slider default skin -->
-    <link rel='stylesheet' href='owl-carousel/owl.carousel.min.css' /><!-- Owl carousel -->
-    <link rel="stylesheet" href="css/odometer.min.css" /><!-- Number counter -->
+    <link rel="stylesheet" href="/masterslider/style/masterslider.min.css"><!-- Master slider main style -->
+    <link rel="stylesheet" href="/masterslider/skins/default/style.min.css"><!-- Master slider default skin -->
+    <link rel='stylesheet' href='/owl-carousel/owl.carousel.min.css' /><!-- Owl carousel -->
+    <link rel="stylesheet" href="/css/odometer.min.css" /><!-- Number counter -->
 
     <!-- CSS Default Files -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/color-default.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/color-default.css">
+    <link rel="stylesheet" href="/css/responsive.css">
     {{-- referencement --}}
     <!-- Twitter -->
     <meta name="twitter:card" content="@yield('image')">
@@ -49,9 +40,9 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <!-- links for favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assetsadmin/images/brand/logo.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assetsadmin/images/brand/logo.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assetsadmin/images/brand/logo.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}">
     <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
     <link rel="mask-icon" href="{{ asset('assets/favicon//safari-pinned-tab.svg') }}" color="#5bbad5">
 
@@ -102,7 +93,7 @@
                                     <div id="logo">
                                         <a href="/">
                                             <img src="/img/svg/consultingpress-logo-dark-green.png"
-                                                alt="ConsultingPress Management Consulting Template" />
+                                                alt="Best BMC" />
                                         </a>
                                     </div><!-- .logo -->
                                 </div><!-- .col-md-3 end -->
@@ -194,16 +185,25 @@
                                         <!-- navigation links start -->
                                         <ul class="nav navbar-nav">
                                             <li  class="{{ request()->is('','/') ? 'current-menu-item' : '' }}" >
-                                                <a href="/">Home</a>
+                                                <a href="/">Acceuil</a>
                                             </li>
                                             <li class="{{ request()->is('about') ? 'current-menu-item' : '' }}" >
                                                 <a href="/about">A propos</a>
                                             </li>
-                                            <li class="{{ request()->is('missions') ? 'current-menu-item' : '' }}" >
-                                                <a href="/missions">Nos missions</a>
+                                            <li class="menu-item-has-children dropdown {{ request()->is('analyse','assistance') ? 'current-menu-item' : '' }}">
+                                                <a href="#" data-toggle="dropdown" class="dropdown-toggle"
+                                                    role="button">Nos missions</a>
+
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="/analyse">Analyse</a></li>
+                                                    <li><a href="/assistance">Assistance</a></li>
+                                                </ul>
                                             </li>
                                             <li class="{{ request()->is('projets') ? 'current-menu-item' : '' }}">
                                                 <a href="/projets">Projets</a>
+                                            </li>
+                                            <li class="{{ request()->is('blog') ? 'current-menu-item' : '' }}">
+                                                <a href="/blog">Actualités</a>
                                             </li>
 
 
@@ -242,10 +242,6 @@
                                                 </a>
 
                                                 <ul class="wpml-lang-dropdown">
-                                                    <li>
-                                                        <a href="#">de</a>
-                                                    </li>
-
                                                     <li>
                                                         <a href="#">fr</a>
                                                     </li>
@@ -293,7 +289,7 @@
                         <li class="widget widget-text">
                             <a href="management-index.html">
                                 <img src="/img/svg/consultingpress-logo-dark-green.png"
-                                    alt="ConsultingPress Management Consulting Template" />
+                                    alt="Best BMC" />
                             </a>
                         </li><!-- .widget.widget-text end -->
                     </ul><!-- .footer-widget-container end -->
