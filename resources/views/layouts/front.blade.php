@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>ConsultingPress - Consulting Multi Niche HTML Template Management Consulting</title>
+    <title>BMC - @yield("title")</title>
     <meta name="description"
         content="ConsultingPress is multi niche HTML Template. Checkout Management Consulting Layout.">
     <meta name="author" content="Pixel Industry">
@@ -100,7 +100,7 @@
                                 <div class="col-md-3">
                                     <!-- .logo start -->
                                     <div id="logo">
-                                        <a href="management-index.html">
+                                        <a href="/">
                                             <img src="/img/svg/consultingpress-logo-dark-green.png"
                                                 alt="ConsultingPress Management Consulting Template" />
                                         </a>
