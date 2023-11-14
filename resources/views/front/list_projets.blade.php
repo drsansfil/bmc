@@ -52,7 +52,7 @@
                             <div class="portfolio-item">
                                 <div class="media">
                                     <a href="/projet/post/{{ $item->id }}">
-                                        <img src="{{ asset('uploads')}}/{{ $item->illustration }}" alt="{{ $item->nom_projet }}" />
+                                        <img src="{{ asset('uploads')}}/{{ $item->images()->first()->url }}" alt="{{ $item->nom_projet }}" />
                                     </a>
                                 </div><!-- .media end -->
 
