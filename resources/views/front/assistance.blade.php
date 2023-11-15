@@ -60,77 +60,25 @@
                             </div><!-- .custom-heading-03 end -->
 
                             <ul class="fa-ul large-icons detailed clearfix">
-                                <li>
-                                    <i class="icon-container lynny-checkmark-2"></i>
+                               @forelse ($assistances as $item)
+                               <li>
+                                <i class="icon-container lynny-checkmark-2"></i>
 
-                                    <div class="li-content">
-                                        <h4>Merger and acquisition strategy</h4>
+                                <div class="li-content">
+                                    <h4>{{ $item->titre }}</h4>
 
-                                        <p>
-                                            The first step is to define your
-                                            company strategy. Your company
-                                            strategy must be in alliance
-                                            with newly created merger and
-                                            acquisition strategy. We will
-                                            help you define clear merger
-                                            strategy that will be flexible
-                                            enough and result in maximum
-                                            chances for successful merger or acquisition.
-                                        </p>
+                                    <p>
+                                        {{ $item->description }}
+                                    </p>
 
-                                        <a href="management-services-merger-strategy.html" class="read-more">
-                                            Read more
-                                        </a><!-- .read-more end -->
-                                    </div>
-                                </li>
 
-                                <li>
-                                    <i class="icon-container lynny-checkmark-2"></i>
+                                </div>
+                            </li>
+                               @empty
 
-                                    <div class="li-content">
-                                        <h4>Strategic Due Diligence</h4>
+                               @endforelse
 
-                                        <p>
-                                            One of the most important parts
-                                            of merger process is to investigate
-                                            your target company. That's where
-                                            ConsultingPress comes in.
-                                            The first thing is to analyze the
-                                            company of interest and see how
-                                            much value merger can bring to
-                                            your company in opposite to finance
-                                            and time resources you invest in
-                                            that merger or acquisition.
-                                        </p>
 
-                                        <a href="management-services-strategic-due-diligence.html" class="read-more">
-                                            Read more
-                                        </a><!-- .read-more end -->
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <i class="icon-container lynny-checkmark-2"></i>
-
-                                    <div class="li-content">
-                                        <h4>Merger integration planning and execution</h4>
-
-                                        <p>
-                                            The key of successful merger or
-                                            acquisition is to determine what
-                                            parts of your organization,
-                                            processes or function will be
-                                            integrated. We will help you
-                                            determine degree of integration
-                                            that will result in maximum value
-                                            for your company.
-                                        </p>
-
-                                        <a href="management-services-merger-integration-planning.html" class="read-more">
-                                            Read more
-                                        </a><!-- .read-more end -->
-                                    </div>
-                                </li>
                             </ul>
                         </div><!-- .col-md-12 end -->
                     </div><!-- .row end -->

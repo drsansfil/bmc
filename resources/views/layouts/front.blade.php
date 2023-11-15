@@ -2,11 +2,10 @@
 <html>
 
 <head>
-    <title>BMC - @yield("title")</title>
+    <title>BMC - @yield('title')</title>
     <!-- Fonts and icon fonts -->
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600&amp;subset=latin,latin-ext"
-        type="text/css">
+        href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600&amp;subset=latin,latin-ext" type="text/css">
     <link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/fonts/lynny/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,8 +41,10 @@
     <meta property="og:image:height" content="630">
     <!-- links for favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ asset('/img/svg/consultingpress-logo-dark-green.png') }}">
     <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
     <link rel="mask-icon" href="{{ asset('assets/favicon//safari-pinned-tab.svg') }}" color="#5bbad5">
 
@@ -93,8 +94,7 @@
                                     <!-- .logo start -->
                                     <div id="logo">
                                         <a href="/">
-                                            <img src="/img/svg/consultingpress-logo-dark-green.png"
-                                                alt="Best BMC" />
+                                            <img src="/img/svg/consultingpress-logo-dark-green.png" alt="Best BMC" />
                                         </a>
                                     </div><!-- .logo -->
                                 </div><!-- .col-md-3 end -->
@@ -185,13 +185,14 @@
 
                                         <!-- navigation links start -->
                                         <ul class="nav navbar-nav">
-                                            <li  class="{{ request()->is('','/') ? 'current-menu-item' : '' }}" >
+                                            <li class="{{ request()->is('', '/') ? 'current-menu-item' : '' }}">
                                                 <a href="/">Acceuil</a>
                                             </li>
-                                            <li class="{{ request()->is('about') ? 'current-menu-item' : '' }}" >
+                                            <li class="{{ request()->is('about') ? 'current-menu-item' : '' }}">
                                                 <a href="/about">A propos</a>
                                             </li>
-                                            <li class="menu-item-has-children dropdown {{ request()->is('analyse','assistance') ? 'current-menu-item' : '' }}">
+                                            <li
+                                                class="menu-item-has-children dropdown {{ request()->is('analyse', 'assistance') ? 'current-menu-item' : '' }}">
                                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle"
                                                     role="button">Nos missions</a>
 
@@ -204,7 +205,7 @@
                                                 <a href="/projets">Projets</a>
                                             </li>
 
-                                           {{--  <li class="menu-item-has-children dropdown">
+                                            {{--  <li class="menu-item-has-children dropdown">
                                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle"
                                                     role="button">News</a>
 
@@ -285,8 +286,7 @@
                         <!-- .widget.widget-text start -->
                         <li class="widget widget-text">
                             <a href="management-index.html">
-                                <img src="/img/svg/consultingpress-logo-dark-green.png"
-                                    alt="Best BMC" />
+                                <img src="/img/svg/consultingpress-logo-dark-green.png" alt="Best BMC" />
                             </a>
                         </li><!-- .widget.widget-text end -->
                     </ul><!-- .footer-widget-container end -->
@@ -326,6 +326,9 @@
                     </ul><!-- .footer-widget-container end -->
 
                     <!-- .footer-widget-container start -->
+                    @php
+                       $projets = App\Models\Projet::orderBy('created_at', 'desc')->take(2)->get();
+                    @endphp
                     <ul class="footer-widget-container col-md-3 col-sm-6">
                         <li class="widget widget-text">
                             <div class="title">
@@ -334,37 +337,25 @@
 
                             <!-- Latest posts element start -->
                             <ul class="pi-latest-posts-02">
-                                <li class="post-container">
-                                    <div class="post-media">
-                                        <a href="management-news-single.html">
-                                            <img src="img/blog/consultingpress-increase-company-value-by-investing-in-people.jpg"
-                                                alt="ConsultingPress Management Consulting" />
-                                        </a>
-                                    </div><!-- .post-media end -->
+                                @forelse ($projets as $item)
+                                    <li class="post-container">
+                                        <div class="post-media">
+                                            <a href="/projet/post/{{ $item->id }}">
+                                                <img src="/uploads/{{ $item->images()->first()->url }}"
+                                                    alt="{{ $item->id }}" />
+                                            </a>
+                                        </div><!-- .post-media end -->
 
-                                    <div class="post-body">
-                                        <span class="date">25 jul, 2016</span>
-                                        <a href="management-news-single.html">
-                                            <h4>Increase company value by investing in people</h4>
-                                        </a>
-                                    </div><!-- .post-body end -->
-                                </li>
+                                        <div class="post-body">
+                                            <span class="date">{{ $item->created_at }}</span>
+                                            <a href="/projet/post/{{ $item->id }}">
+                                                <h4>{{ $item->nom_projet }}</h4>
+                                            </a>
+                                        </div><!-- .post-body end -->
+                                    </li>
+                                @empty
+                                @endforelse
 
-                                <li class="post-container">
-                                    <div class="post-media">
-                                        <a href="management-news-single-consultingpress-quality-over-quantity.html">
-                                            <img src="img/blog/consultingpress-delivering-quality-over-quantity.jpg"
-                                                alt="ConsultingPress Management Consulting" />
-                                        </a>
-                                    </div><!-- .post-media end -->
-
-                                    <div class="post-body">
-                                        <span class="date">25 jul, 2016</span>
-                                        <a href="management-news-single-consultingpress-quality-over-quantity.html">
-                                            <h4>ConsultingPress Delivering Quality Over Quantity</h4>
-                                        </a>
-                                    </div><!-- .post-body end -->
-                                </li>
                             </ul><!-- .pi-latest-posts-02 end -->
                         </li>
                     </ul><!-- .footer-widget-container end -->

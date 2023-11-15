@@ -31,11 +31,6 @@
                                             <i class="bi bi-envelope"></i> Configurer le Mail
                                         </button>
                                     </a>
-                                    <a href="/directeur">
-                                        <button class="btn btn-red" type="button">
-                                            Mot du directeur
-                                        </button>
-                                    </a>
                                 </div>
                             </div>
                         @endif

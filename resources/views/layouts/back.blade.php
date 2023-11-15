@@ -215,8 +215,8 @@
                             <i class="bi bi-folder2-open"></i> &nbsp<span class="side-menu__label">Analyse</span></a>
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item {{ request()->is('index_blog','ajout_blog') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/index_blog"><i
-                                class="  fe fe-edit"></i> &nbsp<span class="side-menu__label">Actualite</span></a>
+                        <a class="side-menu__item {{ request()->is('admin/assistance','admin/ajouter_assistance') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/admin/assistance">
+                            <i class="bi bi-folder2-open"></i> &nbsp<span class="side-menu__label">Assistance</span></a>
                     </li>
                     <li class="slide">
                         <a class="side-menu__item {{ request()->is('admin/project_category','admin/project_category/create') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/admin/project_category"><i

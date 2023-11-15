@@ -1,7 +1,11 @@
 @extends('layouts.front')
 @section('title', 'Accueil')
 @section('content')
-
+<style>
+    .icon_ex{
+        width: 100% !important;
+    }
+</style>
     <div class="master-slider-wrapper">
         <!-- #masterslider start -->
         <div id="mastersliderFullWidth02" class="master-slider-full-screen master-slider ms-skin-default mb-0">
@@ -236,7 +240,7 @@
                     <!-- .service-feature-box-03 start -->
                     <div class="service-box service-box-03">
                         <div class="icon-container">
-                            <i class="lynny-radar"></i>
+                            <img src="/images/experience-01.svg" class="icon_ex" alt="" srcset="">
                         </div><!-- .icon-container end -->
 
                         <div class="text-container">
@@ -253,7 +257,7 @@
                     <!-- .service-feature-box-03 start -->
                     <div class="service-box service-box-03">
                         <div class="icon-container">
-                            <i class="lynny-radar"></i>
+                            <img src="/images/disponibilité-01.svg" class="icon_ex" alt="" srcset="">
                         </div><!-- .icon-container end -->
 
                         <div class="text-container">
@@ -270,7 +274,7 @@
                     <!-- .service-feature-box-03 start -->
                     <div class="service-box service-box-03">
                         <div class="icon-container">
-                            <i class="lynny-radar"></i>
+                            <img src="/images/intégrité-01.svg" class="icon_ex" alt="" srcset="">
                         </div><!-- .icon-container end -->
 
                         <div class="text-container">
@@ -287,7 +291,7 @@
                     <!-- .service-feature-box-03 start -->
                     <div class="service-box service-box-03">
                         <div class="icon-container">
-                            <i class="lynny-radar"></i>
+                            <img src="/images/Sa polyvalence et pluridisciplinarité-01.svg" class="icon_ex" alt="" srcset="">
                         </div><!-- .icon-container end -->
 
                         <div class="text-container">
@@ -304,12 +308,12 @@
                     <!-- .service-feature-box-03 start -->
                     <div class="service-box service-box-03">
                         <div class="icon-container">
-                            <i class="lynny-radar"></i>
+                            <img src="/images/écoute-01.svg" class="icon_ex" alt="" srcset="">
                         </div><!-- .icon-container end -->
 
                         <div class="text-container">
                             <a href="#">
-                                <h3>L’écoute du client</h3>
+                                <h3>L’écoute du client <br><br> </h3>
                             </a>
                             <p>
                                 Defining your business goals and steps to achieve them.
@@ -321,7 +325,7 @@
                     <!-- .service-feature-box-03 start -->
                     <div class="service-box service-box-03">
                         <div class="icon-container">
-                            <i class="lynny-radar"></i>
+                            <img src="/images/réponse dans les meilleurs délais-01.svg" class="icon_ex" alt="" srcset="">
                         </div><!-- .icon-container end -->
 
                         <div class="text-container">

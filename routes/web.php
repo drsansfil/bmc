@@ -76,7 +76,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/projet/{i}/delete', [ProjetController::class, 'destroy']);
     Route::post('/edite_projets', [ProjetController::class, 'update']);
 
-    //blog
+    /* //blog
     Route::get('/ajout_blog', function () {
         return view('admin.blogs.ajouter');
     })->name('ajout_blog'); //page ajouter blog
@@ -89,7 +89,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/index_blog', [BlogController::class, 'index']);
     Route::post('/store_blogs', [BlogController::class, 'store']);
     Route::get('/admin/blog/{i}/delete', [BlogController::class, 'destroy']);
-    Route::post('/edite_blogs', [BlogController::class, 'update']);
+    Route::post('/edite_blogs', [BlogController::class, 'update']); */
 
 
 
@@ -160,16 +160,6 @@ Route::middleware('auth')->group(function () {
 
 
 
-    //directeur
-    Route::get('/directeur', [InformationController::class, 'voir_directeur']);
-    Route::post('/edite_directeur', [InformationController::class, 'edit_directeur']);
-
-
-
-
-
-
-
 
     //analyse
     Route::get('/admin/analyse', [analyse::class, 'liste']);
@@ -179,6 +169,20 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin/add_analyse', [analyse::class, 'create']);
     Route::get('/admin/ajouter_analyse', function () {
         return view('admin.analyse.ajouter');
+    });
+
+
+
+
+
+    // assistance
+    Route::get('/admin/assistance', [assistance::class, 'liste']);
+    Route::get('/admin/delete_assistance/{id}', [assistance::class, 'delete']);
+    Route::get('/admin/update_assistance/{id}', [assistance::class, 'update_view']);
+    Route::post('/admin/update_assistance', [assistance::class, 'update']);
+    Route::post('/admin/add_assistance', [assistance::class, 'create']);
+    Route::get('/admin/ajouter_assistance', function () {
+        return view('admin.assistance.ajouter');
     });
 
 
