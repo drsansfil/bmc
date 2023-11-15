@@ -111,7 +111,7 @@ class GuestController extends Controller
         // Obtenir le projet suivant
         $nextProjet = Projet::where('id', '>', $id)->orderBy('id', 'asc')->first();
 
-        return view('front.projetDetail')->with([
+        return view('front.projetDetails')->with([
             'projet' => $projet,
             'previousProjet' => $previousProjet,
             'nextProjet' => $nextProjet,
