@@ -18,6 +18,29 @@ class InformationController extends Controller
         return view('admin.informations.index_information')->with('informations', $informations);
     }
 
+
+    public function nos_chiffres_view()  {
+        $informations = information::first();
+        return view('admin.informations.chiffres')->with('informations', $informations);
+    }
+
+
+    public function update_chiffres(Request $request){
+        $information = Information::firstOrNew([]);
+        $information->client = $request->client;
+        $information->projet = $request->projet;
+        $information->partenaire = $request->partenaire;
+        $information->secteur = $request->secteur;
+        if ($information->save()) {
+            $information_present = information::first();
+            return redirect()->back()->with('message', 'Mise a jour effectuer');
+        } else {
+            return redirect()->back()->with('erreur', 'echec ');
+        }
+    }
+
+
+
     //fontion enregistre dans  le base
     public function store(Request $request)
     {
@@ -25,7 +48,6 @@ class InformationController extends Controller
             'email_contact' => '',
             'phone_contact' => '',
             'adresse' => '',
-            'adresse2' => '',
             'facebook' => '',
             'email'=> '',
             'instagram' => '',
@@ -46,7 +68,6 @@ class InformationController extends Controller
         $information->instagram = $request->instagram;
         $information->linkedin = $request->linkedin;
         $information->adresse = $request->adresse;
-        $information->adresse2 = $request->adresse2;
         $information->email_contact = $request->email;
         $information->contacts = $request->phone_contact;
 
@@ -86,7 +107,6 @@ class InformationController extends Controller
         $information->instagram = '';
         $information->linkedin = '';
         $information->adresse = '';
-        $information->adresse2 = '';
         $information->contacts = '';
         $information->video = '';
         $information->home_message = "";

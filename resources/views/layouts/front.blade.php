@@ -374,7 +374,6 @@
                                     <li>
                                         <i class="lynny-home"></i>
                                         {{ $info_footer->adresse }}<br />
-                                        {{ $info_footer->adresse2 }}<br />
                                     </li>
 
                                     <li>

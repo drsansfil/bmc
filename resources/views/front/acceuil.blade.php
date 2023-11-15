@@ -17,6 +17,7 @@
                     alt="ConsultignPress Unlock Your Business Potential" />
                 <span class="ms-layer pi-caption-small"
                     style="
+
                           left: 0;
                           top: 200px;" data-type="text"
                     data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="0">
@@ -25,6 +26,7 @@
 
                 <h2 class="ms-layer pi-caption"
                     style="
+                    text-shadow: -2px -2px 8px rgba(3, 3, 5, 1);
                         left: 0;
                         top: 260px;" data-type="text"
                     data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="500">

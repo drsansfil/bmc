@@ -14,8 +14,8 @@
 
                     </div>
 
-                     {{-- composant qui sera charger d'afficher les messages d'erreur et de success --}}
-                     @include('admin.composants.alert_success')
+                    {{-- composant qui sera charger d'afficher les messages d'erreur et de success --}}
+                    @include('admin.composants.alert_success')
                     <!-- PAGE-HEADER END -->
                     <div class="card">
                         @if ($informations)
@@ -29,6 +29,11 @@
                                     <a href="/config_mail">
                                         <button class="btn btn-red" type="button">
                                             <i class="bi bi-envelope"></i> Configurer le Mail
+                                        </button>
+                                    </a>
+                                    <a href="/nos_chiffres">
+                                        <button class="btn btn-red" type="button">
+                                             Nos chiffres
                                         </button>
                                     </a>
                                 </div>
@@ -81,8 +86,7 @@
                                                                     for="exampleFormControlInput1">
                                                                     <i class="bi bi-facebook"></i>
                                                                     <strong>Facebook</strong></label>
-                                                                <input class="form-control" name="facebook"
-                                                                    id="lien_social"
+                                                                <input class="form-control" name="facebook" id="lien_social"
                                                                     placeholder="Votre url facebook"
                                                                     value="{{ $informations->facebook }}" type="text">
                                                             </div>
@@ -93,8 +97,7 @@
                                                                     <i class="bi bi-instagram"></i>
                                                                     <strong>Instagram</strong></label>
                                                                 <input class="form-control" name="instagram"
-                                                                    id="lien_social"
-                                                                    placeholder="Votre url insagram"
+                                                                    id="lien_social" placeholder="Votre url insagram"
                                                                     value="{{ $informations->instagram }}" type="text">
                                                             </div>
                                                         </div>
@@ -104,8 +107,7 @@
                                                                     <i class="bi bi-linkedin"></i>
                                                                     <strong>Linkedin</strong></label>
                                                                 <input class="form-control" name="linkedin"
-                                                                placeholder="Votre url Linkedin"
-                                                                    id="lien_social"
+                                                                    placeholder="Votre url Linkedin" id="lien_social"
                                                                     value="{{ $informations->linkedin }}" type="text">
                                                             </div>
                                                         </div>
@@ -115,8 +117,7 @@
                                                                     <i class="bi bi-envelope"></i>
                                                                     <strong>Email</strong></label>
                                                                 <input class="form-control" name="email"
-                                                                placeholder="Votre adresse email"
-                                                                    id="lien_social"
+                                                                    placeholder="Votre adresse email" id="lien_social"
                                                                     value="{{ $informations->email }}" type="text">
                                                             </div>
                                                         </div>
@@ -125,17 +126,12 @@
 
 
                                                     <div class="mb-3"><label class="form-label"
-                                                            for="exampleFormControlInput1"><strong>Adresse 1</strong>
+                                                            for="exampleFormControlInput1"><strong>Adresse </strong>
                                                             Localisation</label>
                                                         <input class="form-control" name="adresse" id="adresse"
                                                             value="{{ $informations->adresse }}" type="text">
                                                     </div>
-                                                    <div class="mb-3"><label class="form-label"
-                                                        for="exampleFormControlInput1"><strong>Adresse 2</strong>
-                                                        Localisation</label>
-                                                    <input class="form-control" name="adresse2" id="adresse2"
-                                                        value="{{ $informations->adresse2 }}" type="text">
-                                                </div>
+
 
 
 
@@ -182,9 +178,12 @@
                                                         @endforelse
                                                     </div>
                                                     <br>
-                                                    <b><i class="bi bi-facebook"></i> </b> {{ $informations->facebook }} <br>
-                                                    <b><i class="bi bi-linkedin"></i> </b> {{ $informations->linkedin }} <br>
-                                                    <b><i class="bi bi-instagram"></i> </b> {{ $informations->instagram }} <br>
+                                                    <b><i class="bi bi-facebook"></i> </b> {{ $informations->facebook }}
+                                                    <br>
+                                                    <b><i class="bi bi-linkedin"></i> </b> {{ $informations->linkedin }}
+                                                    <br>
+                                                    <b><i class="bi bi-instagram"></i> </b> {{ $informations->instagram }}
+                                                    <br>
                                                     <b><i class="bi bi-envelope"></i> </b> {{ $informations->email }} <br>
                                                     {{ $informations->lien_social }} <br><br>
                                                     <b><i class="bi bi-geo-alt"></i> Adresse :</b>

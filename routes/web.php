@@ -131,6 +131,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/config_accueil', [InformationController::class, 'config_accueil_update']);
     Route::get('/config_mail', [InformationController::class, 'config_mail']);
     Route::post('/config_mail', [InformationController::class, 'config_mail_update']);
+    Route::get('/nos_chiffres', [InformationController::class, 'nos_chiffres_view']);
+    Route::post('/update_chiffres', [InformationController::class, 'update_chiffres']);
 
 
 

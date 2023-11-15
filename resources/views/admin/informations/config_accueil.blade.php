@@ -89,11 +89,11 @@
                                                         <textarea name="home_message" class="form-control" id=""rows="3">{{ $informations->home_message }}</textarea>
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label class="form-label" for="customFileSm"> <strong>Video /
+                                                        <label class="form-label" for="customFileSm"> <strong>
                                                                 Image</strong>
                                                         </label>
                                                         <input class="form-control form-control-sm" name="media"
-                                                            id="customFileSm" type="file" accept="image/*, video/*">
+                                                            id="customFileSm" type="file" accept="image/*">
                                                         <progress id="uploadProgress" value="0" max="100"
                                                             style="width: 100%;"></progress>
                                                         <span class="text-danger small">(50 Mo Maximun)</span>

@@ -18,7 +18,6 @@ class CreateInformationTable extends Migration
             $table->string('email_contact')->nullable();
             $table->string('contacts')->nullable();
             $table->string('adresse')->nullable();
-            $table->string('adresse2')->nullable();
             $table->text('facebook')->nullable();
             $table->text('instagram')->nullable();
             $table->text('linkedin')->nullable();

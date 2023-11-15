@@ -43,14 +43,14 @@ class ClientController extends Controller
         $clients = client::find($id);
         if($clients){
             $imagePath = public_path('uploads/' . $clients->url);
-            if (file_exists($imagePath)) {
+            if (is_file($imagePath) && file_exists($imagePath)) {
                 unlink($imagePath);
             }
         }
         if ($clients->delete()) {
             return redirect('/index_client')->with('message', 'client Suprimer avec succses');
         } else {
-            echo "error";
+            return redirect('/index_client')->with('erreur', 'client Suprimer avec succses');
         }
     }
 
