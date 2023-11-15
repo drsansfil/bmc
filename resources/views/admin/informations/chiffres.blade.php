@@ -42,11 +42,12 @@
                                     </div>
                                 @endif
                                 <div class="row">
-                                    <div class="col-sm-8 mx-auto">
+                                    <div class="col-sm-12">
                                         <br>
                                         <div class="alert alert-default">
                                             <i class="bi bi-exclamation-triangle"></i>
-                                            Vous etes sur le point de configurer les chiffres qui seront afficher a la page d'acceuil.
+                                            Vous etes sur le point de configurer les chiffres qui seront afficher a la page
+                                            d'acceuil.
                                         </div>
                                         @if ($informations)
                                             <div>
@@ -55,29 +56,35 @@
                                             <form action="/update_chiffres" method="post">
                                                 @csrf
                                                 <div class="modal-body">
-                                                    <div class="mb-3"><label class="form-label"
-                                                            for="exampleFormControlInput1">Nos clients
-                                                        </label>
-                                                        <input class="form-control" name="client"
-                                                            value="{{ $informations->client }}" type="number" >
-                                                    </div>
-                                                    <div class="mb-3"><label class="form-label"
-                                                            for="exampleFormControlInput1">Nos partenaires
-                                                        </label>
-                                                        <input class="form-control" name="partenaire"
-                                                            value="{{ $informations->partenaire }}" type="number" >
-                                                    </div>
-                                                    <div class="mb-3"><label class="form-label"
-                                                            for="exampleFormControlInput1">Nos projets
-                                                        </label>
-                                                        <input class="form-control" name="projet"
-                                                            value="{{ $informations->projet }}" type="number" >
-                                                    </div>
-                                                    <div class="mb-3"><label class="form-label"
-                                                            for="exampleFormControlInput1">Nos secteurs
-                                                        </label>
-                                                        <input class="form-control" name="secteur"
-                                                            value="{{ $informations->secteur }}" type="number" >
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="mb-3"><label class="form-label"
+                                                                    for="exampleFormControlInput1">Nos clients
+                                                                </label>
+                                                                <input class="form-control" name="client"
+                                                                    value="{{ $informations->client }}" type="number">
+                                                            </div>
+                                                            <div class="mb-3"><label class="form-label"
+                                                                    for="exampleFormControlInput1">Nos partenaires
+                                                                </label>
+                                                                <input class="form-control" name="partenaire"
+                                                                    value="{{ $informations->partenaire }}" type="number">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="mb-3"><label class="form-label"
+                                                                    for="exampleFormControlInput1">Nos projets
+                                                                </label>
+                                                                <input class="form-control" name="projet"
+                                                                    value="{{ $informations->projet }}" type="number">
+                                                            </div>
+                                                            <div class="mb-3"><label class="form-label"
+                                                                    for="exampleFormControlInput1">Nos secteurs
+                                                                </label>
+                                                                <input class="form-control" name="secteur"
+                                                                    value="{{ $informations->secteur }}" type="number">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">

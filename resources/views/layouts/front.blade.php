@@ -201,6 +201,9 @@
                                                     <li><a href="/assistance">Assistance</a></li>
                                                 </ul>
                                             </li>
+                                            <li class="{{ request()->is('outils') ? 'current-menu-item' : '' }}">
+                                                <a href="/outils">Nos Outils</a>
+                                            </li>
                                             <li class="{{ request()->is('projets') ? 'current-menu-item' : '' }}">
                                                 <a href="/projets">Projets</a>
                                             </li>

@@ -7,6 +7,7 @@ use App\Models\Client;
 use App\Models\directeur;
 use App\Models\Information;
 use App\Models\metier;
+use App\Models\outils;
 use App\Models\Projet;
 use App\Models\ProjectCategory;
 use GuzzleHttp\Psr7\Request;
@@ -23,6 +24,7 @@ class GuestController extends Controller
         $projectCategories = ProjectCategory::all();
         $clients=Client::all();
         $metiers = metier::all();
+        $outils = outils::all();
 
         if(is_null($info)){
             Information::insert(["home_message"=>"Veuillez configurer"]);
@@ -35,6 +37,7 @@ class GuestController extends Controller
         ->with('clients',$clients)
         ->with('projets', $projets)
         ->with('metiers', $metiers)
+        ->with('outils', $outils)
         ->with('projectCategories', $projectCategories)
         ->with('blogs', $blog);
     }
@@ -145,6 +148,13 @@ class GuestController extends Controller
 
     public function specialisation_bim(){
         return view('front.specialisation_bim');
+    }
+
+
+
+    public function index_outils(){
+        $outils=outils::all();
+        return view('front.outils')->with('outils',$outils);
     }
 
 }

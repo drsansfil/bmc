@@ -219,6 +219,10 @@
                             <i class="bi bi-folder2-open"></i> &nbsp<span class="side-menu__label">Assistance</span></a>
                     </li>
                     <li class="slide">
+                        <a class="side-menu__item {{ request()->is('admin/outils','admin/ajouter_outils') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/admin/outils">
+                            <i class="bi bi-folder2-open"></i> &nbsp<span class="side-menu__label">Nos outils</span></a>
+                    </li>
+                    <li class="slide">
                         <a class="side-menu__item {{ request()->is('admin/project_category','admin/project_category/create') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/admin/project_category"><i
                                 class="  fe fe-edit"></i> &nbsp<span class="side-menu__label">Secteur d'activité</span></a>
                     </li>

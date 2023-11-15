@@ -1,5 +1,5 @@
 @extends('layouts.back')
-@section('title', 'Modifier une  assistance')
+@section('title', 'Modifier un outils')
 
 @section('content')
     <!-- PAGE -->
@@ -12,7 +12,7 @@
                     <div class="main-container container-fluid">
                         <!-- PAGE-HEADER -->
                         <div class="page-header">
-                            <h1 class="page-title">Modifier une  assistance</h1>
+                            <h1 class="page-title">Modifier l'outil</h1>
                         </div>
                         <div class="row p-5">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
@@ -22,17 +22,17 @@
                                             <div class="card p-5">
                                                 <div class="card-header">
                                                     <div class="card-title" _msthash="3392506" _msttexthash="591578">
-                                                        <a href="/admin/assistance"><button class="btn btn-red"><i
+                                                        <a href="/admin/outils"><button class="btn btn-red"><i
                                                                     class="bi bi-arrow-return-left"></i>
                                                                 retour</button></a>
-                                                        Modifier une  assistance
+                                                        Modifier l'outil
                                                     </div>
                                                 </div>
-                                                <form action="/admin/update_assistance" method="POST"
+                                                <form action="/admin/update_outils" method="POST"
                                                     enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="row">
-                                                        <div class="col-sm-12 mx-auto">
+                                                        <div class="col-sm-8 mx-auto">
                                                             <div class="modal-body">
                                                                 <div class="mb-5">
                                                                     <label class="form-label"
@@ -41,16 +41,25 @@
                                                                     </label>
                                                                     <input class="form-control" name="titre"
                                                                         id="name" type="text"
-                                                                        value="{{ $assistance->titre }}" required>
+                                                                        value="{{ $outils->titre }}" required>
                                                                 </div>
                                                                 Choisir une nouvelle image
                                                                 <textarea name="description" class="form-control" rows="3" required style="width: 100%">
-                                                                    {{ $assistance->description }}
+                                                                    {{ $outils->description }}
                                                                 </textarea>
 
                                                                 <input type="hidden" name="id"
-                                                                    value="{{ $assistance->id }}">
+                                                                    value="{{ $outils->id }}">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <img src="/uploads/{{ $outils->image }}"
+                                                            alt="{{ $outils->created_at }}" style="width: 100%;"
+                                                            srcset="">
+                                                            <hr>
+                                                            selectionner une image
+                                                            <input class="form-control form-control-sm" name="image"
+                                                            id="customFileSm" type="file" required>
                                                         </div>
                                                     </div>
                                                     <div>

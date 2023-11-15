@@ -398,6 +398,7 @@
                     </p>
 
                     <ul class="fa-ul ul-circled">
+                        @forelse ($outils as $item)
                         <li>
                             <div class="icon-container">
                                 <img src="img/svg/svg-icon-cargo.svg" alt="Aerospace & Defense" />
@@ -405,70 +406,18 @@
 
                             <div class="li-content">
                                 <p>
-                                    5S
+                                    {{ $item->titre}}
                                 </p>
+
                             </div><!-- .li-content end -->
                         </li>
+                        @empty
 
-                        <li>
-                            <div class="icon-container">
-                                <img src="img/svg/svg-icon-cargo.svg" alt="Energy & Chemicals" />
-                            </div><!-- .icon-container end -->
+                        @endforelse
+                        <a href="/outils" class="read-more">
+                            Plus de détails sur nos outils.
+                        </a><!-- .read-more end -->
 
-                            <div class="li-content">
-                                <p>
-                                    KAIZEN
-                                </p>
-                            </div><!-- .li-content end -->
-                        </li>
-
-                        <li>
-                            <div class="icon-container">
-                                <img src="img/svg/svg-icon-cargo.svg" alt="Transport & Logistics" />
-                            </div><!-- .icon-container end -->
-
-                            <div class="li-content">
-                                <p>
-                                    KANBAN
-                                </p>
-                            </div><!-- .li-content end -->
-                        </li>
-
-                        <li>
-                            <div class="icon-container">
-                                <img src="img/svg/svg-icon-cargo.svg" alt="Communications " />
-                            </div><!-- .icon-container end -->
-
-                            <div class="li-content">
-                                <p>
-                                    QRQC
-                                </p>
-                            </div><!-- .li-content end -->
-                        </li>
-
-                        <li>
-                            <div class="icon-container">
-                                <img src="img/svg/svg-icon-cargo.svg" alt="Banking and Finance" />
-                            </div><!-- .icon-container end -->
-
-                            <div class="li-content">
-                                <p>
-                                    SMED
-                                </p>
-                            </div><!-- .li-content end -->
-                        </li>
-
-                        <li>
-                            <div class="icon-container">
-                                <img src="img/svg/svg-icon-cargo.svg" alt="Education & Non-profit" />
-                            </div><!-- .icon-container end -->
-
-                            <div class="li-content">
-                                <p>
-                                    LEAN
-                                </p>
-                            </div><!-- .li-content end -->
-                        </li>
                     </ul>
 
 

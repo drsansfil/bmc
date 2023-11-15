@@ -10,6 +10,7 @@ use App\Http\Controllers\GuestController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\metierController;
 use App\Http\Controllers\NewslettreController;
+use App\Http\Controllers\outils;
 use App\Http\Controllers\ProjetController;
 use App\Http\Controllers\ProjectCategoryController;
 use App\Models\Blog;
@@ -24,6 +25,7 @@ use Illuminate\Support\Facades\Route;
 /* front*/
 //multiple middlewares
 Route::middleware(['count-visitors', 'Language'])->group(function () {
+    Route::get('/outils', [GuestController::class, 'index_outils']);
     Route::get('/about', [GuestController::class, 'indexe'])->name('apropos');
     Route::get('/', [GuestController::class, 'home'])->name('homepage');
     Route::get('/contact', [GuestController::class, 'contactindex'])->name('contact');
@@ -43,8 +45,6 @@ Route::middleware(['count-visitors', 'Language'])->group(function () {
     })->name('about');
     Route::get('/analyse', [analyse::class, 'index']);
     Route::get('/assistance', [assistance::class, 'index']);
-
-
 
     //Mew ajout
     Route::get('portfolio-gallery/{id}', [GuestController::class, 'details_projet'])->name('details_projet');
@@ -171,6 +171,20 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin/add_analyse', [analyse::class, 'create']);
     Route::get('/admin/ajouter_analyse', function () {
         return view('admin.analyse.ajouter');
+    });
+
+
+
+
+
+    //outils
+    Route::get('/admin/outils', [outils::class, 'liste']);
+    Route::get('/admin/delete_outils/{id}', [outils::class, 'delete']);
+    Route::get('/admin/update_outils/{id}', [outils::class, 'update_view']);
+    Route::post('/admin/update_outils', [outils::class, 'update']);
+    Route::post('/admin/add_outils', [outils::class, 'create']);
+    Route::get('/admin/ajouter_outils', function () {
+        return view('admin.outils.ajouter');
     });
 
 

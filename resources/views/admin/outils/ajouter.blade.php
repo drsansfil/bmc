@@ -1,5 +1,5 @@
 @extends('layouts.back')
-@section('title', 'Modifier une  assistance')
+@section('title', 'Ajouter un outil')
 
 @section('content')
     <!-- PAGE -->
@@ -12,7 +12,7 @@
                     <div class="main-container container-fluid">
                         <!-- PAGE-HEADER -->
                         <div class="page-header">
-                            <h1 class="page-title">Modifier une  assistance</h1>
+                            <h1 class="page-title">ajouter un outil</h1>
                         </div>
                         <div class="row p-5">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
@@ -22,39 +22,38 @@
                                             <div class="card p-5">
                                                 <div class="card-header">
                                                     <div class="card-title" _msthash="3392506" _msttexthash="591578">
-                                                        <a href="/admin/assistance"><button class="btn btn-red"><i
+                                                        <a href="/admin/outils"><button class="btn btn-red"><i
                                                                     class="bi bi-arrow-return-left"></i>
                                                                 retour</button></a>
-                                                        Modifier une  assistance
+                                                        Ajouter un outil
                                                     </div>
                                                 </div>
-                                                <form action="/admin/update_assistance" method="POST"
+                                                <form action="/admin/add_outils" method="POST"
                                                     enctype="multipart/form-data">
                                                     @csrf
-                                                    <div class="row">
-                                                        <div class="col-sm-12 mx-auto">
-                                                            <div class="modal-body">
-                                                                <div class="mb-5">
-                                                                    <label class="form-label"
-                                                                        for="exampleFormControlInput1">
-                                                                        <strong>Titre </strong>
-                                                                    </label>
-                                                                    <input class="form-control" name="titre"
-                                                                        id="name" type="text"
-                                                                        value="{{ $assistance->titre }}" required>
-                                                                </div>
-                                                                Choisir une nouvelle image
-                                                                <textarea name="description" class="form-control" rows="3" required style="width: 100%">
-                                                                    {{ $assistance->description }}
-                                                                </textarea>
+                                                    <div class="modal-body">
+                                                        <div class="mb-5"><label class="form-label"
+                                                                for="exampleFormControlInput1">
+                                                                <strong>Nom de l'outil</strong>
+                                                            </label>
+                                                            <input class="form-control" name="titre" type="text"
+                                                                required>
 
-                                                                <input type="hidden" name="id"
-                                                                    value="{{ $assistance->id }}">
-                                                            </div>
+                                                        </div>
+                                                        <div class="mb-5"><label class="form-label"
+                                                                for="exampleFormControlInput1">
+                                                                <strong>Description</strong>
+                                                            </label>
+                                                            <textarea name="description" class="form-control" required style="width: 100%" rows="4"></textarea>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="customFileSm"><strong>Image</strong></label>
+                                                            <input class="form-control form-control-sm" name="image"
+                                                                id="customFileSm" type="file" required>
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <button class="btn btn-red" type="submit">Modifier</button>
+                                                        <button class="btn btn-red" type="submit">Ajouter</button>
                                                     </div>
                                                 </form>
                                             </div>
