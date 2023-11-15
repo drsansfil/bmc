@@ -65,7 +65,7 @@ class ClientController extends Controller
         if ($request->file('logo')) {
             //supprimer ancienne photo
             $file_Path = public_path() . '/uploads/' . $clients->logo;
-            if (file_exists($file_Path)) {
+            if (is_file($file_Path) && file_exists($file_Path)) {
                 unlink($file_Path);
             }
             $newname = uniqid();

@@ -503,10 +503,10 @@
                         <div class="odometer-container">
                             <div class="odometer-inner">
                                 <i class="fa fa-arrow-up"></i>
-                                <div class="odometer" data-to='14'></div>
+                                <div class="odometer" data-to={{ $info->secteur}}></div>
                             </div>
                             <p>
-                                Industry Sectors covered
+                                Secteurs
                             </p>
                         </div><!-- .odometer-container end -->
                     </div><!-- .col-md-3 end -->
@@ -518,10 +518,10 @@
                         <div class="odometer-container">
                             <div class="odometer-inner">
                                 <i class="fa fa-arrow-up"></i>
-                                <div class="odometer" data-to='350'></div>
+                                <div class="odometer" data-to={{ $info->projet}}></div>
                             </div>
                             <p>
-                                Projects Implemented
+                                Projets
                             </p>
                         </div><!-- .odometer-container end -->
                     </div><!-- .col-md-3 end -->
@@ -533,10 +533,10 @@
                         <div class="odometer-container">
                             <div class="odometer-inner">
                                 <i class="fa fa-arrow-up"></i>
-                                <div class="odometer" data-to='85'></div>
+                                <div class="odometer" data-to={{ $info->partenaire}}></div>
                             </div>
                             <p>
-                                Partners Worldwide
+                                Partenaires
                             </p>
                         </div><!-- .odometer-container end -->
                     </div><!-- .col-md-3 end -->
@@ -548,10 +548,10 @@
                         <div class="odometer-container">
                             <div class="odometer-inner">
                                 <i class="fa fa-arrow-up"></i>
-                                <div class="odometer" data-to='1250'></div>
+                                <div class="odometer" data-to={{ $info->client }}></div>
                             </div>
                             <p>
-                                Satisfied Clients
+                                Clients satisfaits
                             </p>
                         </div><!-- .odometer-container end -->
                     </div><!-- .col-md-3 end -->
