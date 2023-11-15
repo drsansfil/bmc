@@ -1,19 +1,18 @@
 @extends('layouts.front')
 @section('title', 'Accueil')
 @section('content')
-<style>
-    .icon_ex{
-        width: 100% !important;
-    }
-</style>
+    <style>
+        .icon_ex {
+            width: 100% !important;
+        }
+    </style>
     <div class="master-slider-wrapper">
         <!-- #masterslider start -->
         <div id="mastersliderFullWidth02" class="master-slider-full-screen master-slider ms-skin-default mb-0">
 
             <!-- FIRST SLIDE -->
             <div class="ms-slide">
-                <img src="/uploads/{{ $info->video }}"
-                    data-src="/uploads/{{ $info->video }}"
+                <img src="/uploads/{{ $info->video }}" data-src="/uploads/{{ $info->video }}"
                     alt="ConsultignPress Unlock Your Business Potential" />
                 <span class="ms-layer pi-caption-small"
                     style="
@@ -28,9 +27,9 @@
                     style="
                     text-shadow: -2px -2px 8px rgba(3, 3, 5, 1);
                         left: 0;
-                        top: 260px;" data-type="text"
-                    data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="500">
-                    {{ $info->home_message}}
+                        top: 260px;"
+                    data-type="text" data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="500">
+                    {{ $info->home_message }}
                 </h2>
 
                 <a href="/contact"></a>
@@ -102,81 +101,26 @@
                     <!-- Owl Carousel Container start -->
                     <div class="carousel-container">
                         <div id="featured-pages-carousel" class="owl-carousel">
-                            <!-- .owl-item start -->
-                            <div class="owl-item">
-                                <div class="featured-page-box">
-                                    <div class="media">
-                                        <img src="img/pics/consultingpress-leading-management-consulting-company.jpg"
-                                            alt="ConsultingPress Leading Management Consulting Company" />
-                                    </div>
+                            @forelse ($outils as $item)
+                                <!-- .owl-item start -->
+                                <div class="owl-item">
+                                    <div class="featured-page-box">
+                                        <div class="media">
+                                            <img src="/uploads/ {{ $item->image }}"
+                                                alt=" {{ $item->titre }}" />
+                                        </div>
 
-                                    <div class="body">
-                                        <a href="management-about.html">
-                                            <h2>
-                                                ConsultingPress - Leading Management
-                                                Consulting company
-                                            </h2>
-                                        </a>
-                                    </div><!-- .body end -->
-                                </div><!-- .featured-page-box end -->
-                            </div><!-- .owl-item end -->
+                                        <div class="body">
+                                                <h2>
+                                                    {{ $item->titre }}
+                                                </h2>
+                                        </div><!-- .body end -->
+                                    </div><!-- .featured-page-box end -->
+                                </div><!-- .owl-item end -->
 
-                            <!-- .owl-item start -->
-                            <div class="owl-item">
-                                <div class="featured-page-box">
-                                    <div class="media">
-                                        <img src="img/pics/consultingpress-increasing-your-business-value-with-our-expertise.jpg"
-                                            alt="ConsultingPress Increasing your business productivity using our expertise" />
-                                    </div>
+                            @empty
+                            @endforelse
 
-                                    <div class="body">
-                                        <a href="management-services-image-grid.html">
-                                            <h2>
-                                                Increasing your business productivity
-                                                using our expertise
-                                            </h2>
-                                        </a>
-                                    </div><!-- .body end -->
-                                </div><!-- .featured-page-box end -->
-                            </div><!-- .owl-item end -->
-
-                            <!-- .owl-item start -->
-                            <div class="owl-item">
-                                <div class="featured-page-box">
-                                    <div class="media">
-                                        <img src="img/pics/consultingpress-serving-big-and-small-companies-worldwide.jpg"
-                                            alt="ConsultingPress Serving small and big companies worldwide" />
-                                    </div>
-
-                                    <div class="body">
-                                        <a href="management-industry-sectors.html">
-                                            <h2>
-                                                Serving small and big
-                                                companies worldwide
-                                            </h2>
-                                        </a>
-                                    </div><!-- .body end -->
-                                </div><!-- .featured-page-box end -->
-                            </div><!-- .owl-item end -->
-
-                            <!-- .owl-item start -->
-                            <div class="owl-item">
-                                <div class="featured-page-box">
-                                    <div class="media">
-                                        <img src="img/pics/consultingpress-over-20-years-of-consulting-services-experience.jpg"
-                                            alt="ConsultingPress Over 20 years of experience and 250 case studies" />
-                                    </div>
-
-                                    <div class="body">
-                                        <a href="management-cases-grid.html">
-                                            <h2>
-                                                Over 20 years of experience and
-                                                250 case studies conducted
-                                            </h2>
-                                        </a>
-                                    </div><!-- .body end -->
-                                </div><!-- .featured-page-box end -->
-                            </div><!-- .owl-item end -->
                         </div><!-- .owl-carousel end -->
                     </div><!-- Owl Carousel Container end -->
                 </div><!-- .col-md-12 end -->
@@ -293,7 +237,8 @@
                     <!-- .service-feature-box-03 start -->
                     <div class="service-box service-box-03">
                         <div class="icon-container">
-                            <img src="/images/Sa polyvalence et pluridisciplinarité-01.svg" class="icon_ex" alt="" srcset="">
+                            <img src="/images/Sa polyvalence et pluridisciplinarité-01.svg" class="icon_ex" alt=""
+                                srcset="">
                         </div><!-- .icon-container end -->
 
                         <div class="text-container">
@@ -327,7 +272,8 @@
                     <!-- .service-feature-box-03 start -->
                     <div class="service-box service-box-03">
                         <div class="icon-container">
-                            <img src="/images/réponse dans les meilleurs délais-01.svg" class="icon_ex" alt="" srcset="">
+                            <img src="/images/réponse dans les meilleurs délais-01.svg" class="icon_ex" alt=""
+                                srcset="">
                         </div><!-- .icon-container end -->
 
                         <div class="text-container">
@@ -399,20 +345,19 @@
 
                     <ul class="fa-ul ul-circled">
                         @forelse ($outils as $item)
-                        <li>
-                            <div class="icon-container">
-                                <img src="img/svg/svg-icon-cargo.svg" alt="Aerospace & Defense" />
-                            </div><!-- .icon-container end -->
+                            <li>
+                                <div class="icon-container">
+                                    <img src="img/svg/svg-icon-cargo.svg" alt="Aerospace & Defense" />
+                                </div><!-- .icon-container end -->
 
-                            <div class="li-content">
-                                <p>
-                                    {{ $item->titre}}
-                                </p>
+                                <div class="li-content">
+                                    <p>
+                                        {{ $item->titre }}
+                                    </p>
 
-                            </div><!-- .li-content end -->
-                        </li>
+                                </div><!-- .li-content end -->
+                            </li>
                         @empty
-
                         @endforelse
                         <a href="/outils" class="read-more">
                             Plus de détails sur nos outils.
@@ -452,7 +397,7 @@
                         <div class="odometer-container">
                             <div class="odometer-inner">
                                 <i class="fa fa-arrow-up"></i>
-                                <div class="odometer" data-to={{ $info->secteur}}></div>
+                                <div class="odometer" data-to={{ $info->secteur }}></div>
                             </div>
                             <p>
                                 Secteurs
@@ -467,7 +412,7 @@
                         <div class="odometer-container">
                             <div class="odometer-inner">
                                 <i class="fa fa-arrow-up"></i>
-                                <div class="odometer" data-to={{ $info->projet}}></div>
+                                <div class="odometer" data-to={{ $info->projet }}></div>
                             </div>
                             <p>
                                 Projets
@@ -482,7 +427,7 @@
                         <div class="odometer-container">
                             <div class="odometer-inner">
                                 <i class="fa fa-arrow-up"></i>
-                                <div class="odometer" data-to={{ $info->partenaire}}></div>
+                                <div class="odometer" data-to={{ $info->partenaire }}></div>
                             </div>
                             <p>
                                 Partenaires
@@ -559,15 +504,15 @@
                                         <div class="post-media">
                                             <a href="/projet/post/{{ $item->id }}">
                                                 <img src="/uploads/{{ $item->images()->first()->url }}"
-                                                    alt="{{ $item->nom_projet}}" />
+                                                    alt="{{ $item->nom_projet }}" />
                                             </a>
                                         </div><!-- .post-media end -->
 
                                         <div class="post-body">
-                                            <span class="date">{{ $item->created_at}}</span>
+                                            <span class="date">{{ $item->created_at }}</span>
 
                                             <a href="management-news-single.html">
-                                                <h3>{{ $item->nom_projet}}</h3>
+                                                <h3>{{ $item->nom_projet }}</h3>
                                             </a>
 
                                             <a href="/projet/post/{{ $item->id }}" class="read-more">
@@ -652,7 +597,7 @@
                             @forelse ($clients as $item)
                                 <div class="owl-item">
                                     <img src="/uploads/{{ $item->logo }}" alt="{{ $item->nom_client }}"
-                                        title="{{ $item->nom_client }}"  style="height: 50px !important;"/>
+                                        title="{{ $item->nom_client }}" style="height: 50px !important;" />
                                 </div><!-- .owl-item end -->
                             @empty
                             @endforelse

@@ -59,7 +59,7 @@
                                                             <hr>
                                                             selectionner une image
                                                             <input class="form-control form-control-sm" name="image"
-                                                            id="customFileSm" type="file" required>
+                                                            id="customFileSm" type="file" >
                                                         </div>
                                                     </div>
                                                     <div>
