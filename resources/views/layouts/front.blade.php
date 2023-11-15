@@ -203,12 +203,8 @@
                                             <li class="{{ request()->is('projets') ? 'current-menu-item' : '' }}">
                                                 <a href="/projets">Projets</a>
                                             </li>
-                                            <li class="{{ request()->is('blog') ? 'current-menu-item' : '' }}">
-                                                <a href="/blog">Actualités</a>
-                                            </li>
 
-
-                                            <li class="menu-item-has-children dropdown">
+                                           {{--  <li class="menu-item-has-children dropdown">
                                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle"
                                                     role="button">News</a>
 
@@ -217,7 +213,7 @@
                                                     <li><a href="management-news-list.html">News List</a></li>
                                                     <li><a href="management-news-single.html">News Single</a></li>
                                                 </ul>
-                                            </li>
+                                            </li> --}}
 
                                             <li class="{{ request()->is('contact') ? 'current-menu-item' : '' }}">
                                                 <a href="/contact">Contact</a>

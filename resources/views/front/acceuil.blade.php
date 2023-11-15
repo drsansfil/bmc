@@ -8,15 +8,15 @@
 
             <!-- FIRST SLIDE -->
             <div class="ms-slide">
-                <img src="masterslider/blank.gif"
-                    data-src="img/slider/consultingpress-management-consulting-unlock-your-business-potential.jpg"
+                <img src="/uploads/{{ $info->video }}"
+                    data-src="/uploads/{{ $info->video }}"
                     alt="ConsultignPress Unlock Your Business Potential" />
                 <span class="ms-layer pi-caption-small"
                     style="
                           left: 0;
                           top: 200px;" data-type="text"
                     data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="0">
-                    management consulting
+                    BEST BMC
                 </span>
 
                 <h2 class="ms-layer pi-caption"
@@ -24,37 +24,14 @@
                         left: 0;
                         top: 260px;" data-type="text"
                     data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="500">
-                    Unlock Your
+                    {{ $info->home_message}}
                 </h2>
 
-                <h2 class="ms-layer pi-caption"
-                    style="
-                        left: 0;
-                        top: 340px;" data-type="text"
-                    data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="800">
-                    Business Potential
-                </h2>
-
-                <img class="ms-layer pi-link-arrow" src="masterslider/blank.gif" data-src="img/slider/circle-icon-green.svg"
-                    alt="" style="
-                         left: 0;
-                         top: 445px;"
-                    data-type="image" data-effect="left(short)" data-duration="500" data-hide-effect="fade"
-                    data-delay="1100" />
-
-                <span class="ms-layer pi-link"
-                    style="
-                          left: 55px;
-                          top: 445px;" data-type="text"
-                    data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="1100">
-                    Learn more
-                </span>
-
-                <a href="management-services-image-grid.html"></a>
+                <a href="/contact"></a>
 
             </div><!-- END OF FIRST SLIDE -->
 
-            <!-- SECOND SLIDE -->
+            {{-- <!-- SECOND SLIDE -->
             <div class="ms-slide">
                 <img src="masterslider/blank.gif"
                     data-src="img/slider/consultingpress-management-consulting-shape-your-business-future.jpg"
@@ -100,55 +77,8 @@
 
                 <a href="management-services-image-grid.html"></a>
 
-            </div><!-- END OF SECOND SLIDE -->
+            </div><!-- END OF SECOND SLIDE --> --}}
 
-            <!-- THIRD SLIDE -->
-            <div class="ms-slide">
-                <img src="masterslider/blank.gif"
-                    data-src="img/slider/consultingpress-management-consulting-improve-your-business-performance.jpg"
-                    alt="ConsultignPress Management Consulting Improve Your Business Performance" />
-                <span class="ms-layer pi-caption-small"
-                    style="
-                          left: 0;
-                          top: 200px;" data-type="text"
-                    data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="0">
-                    management consulting
-                </span>
-
-                <h2 class="ms-layer pi-caption"
-                    style="
-                        left: 0;
-                        top: 260px;" data-type="text"
-                    data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="500">
-                    Improve Your
-                </h2>
-
-                <h2 class="ms-layer pi-caption"
-                    style="
-                        left: 0;
-                        top: 340px;" data-type="text"
-                    data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="800">
-                    Business Performance
-                </h2>
-
-                <img class="ms-layer pi-link-arrow" src="masterslider/blank.gif"
-                    data-src="img/slider/circle-icon-green.svg" alt=""
-                    style="
-                         left: 0;
-                         top: 445px;" data-type="image"
-                    data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="1100" />
-
-                <span class="ms-layer pi-link"
-                    style="
-                          left: 55px;
-                          top: 445px;" data-type="text"
-                    data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="1100">
-                    Learn more
-                </span>
-
-                <a href="management-services-image-grid.html"></a>
-
-            </div><!-- END OF THIRD SLIDE -->
 
         </div><!-- #master-slider end -->
     </div><!-- .master-slider-wrapper end -->
@@ -766,7 +696,7 @@
                             <!-- .owl-item start -->
                             @forelse ($clients as $item)
                                 <div class="owl-item">
-                                    <img src="/ploads/{{ $item->logo }}" alt="{{ $item->nom_client }}"
+                                    <img src="/uploads/{{ $item->logo }}" alt="{{ $item->nom_client }}"
                                         title="{{ $item->nom_client }}" />
                                 </div><!-- .owl-item end -->
                             @empty
