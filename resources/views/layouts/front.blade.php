@@ -73,15 +73,15 @@
     <div class="header-wrapper header-style-02 header-negative-bottom clearfix">
 
         <!-- #header start -->
-        <header id="header" class="">
+        <header id="header" class="" >
 
             <!-- .container start -->
-            <div class="container">
+            <div class="container" >
                 <!-- .row start -->
-                <div class="row">
+                <div class="row" style="background-color: white !important;">
 
                     <!-- .col-md-12 start -->
-                    <div class="col-md-12">
+                    <div class="col-md-12" >
 
                         <!-- .top-bar-wrapper start -->
                         <div class="top-bar-wrapper clearfix">
