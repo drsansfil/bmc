@@ -76,9 +76,7 @@
                             </div><!-- .icon-container end -->
 
                             <div class="text-container">
-                                <a href="#">
                                     <h3> {{ $item->titre}}</h3>
-                                </a>
 
                                 <p>
                                     {{ $item->description }}
