@@ -48,7 +48,7 @@
                                                 <a href="/admin/update_analyse/{{ $item->id }}" type="button" class="btn btn-icon  btn-info">
                                                     <i class="fa fa-pencil-square-o"></i>
                                                 </a>
-                                                <a href="/admin/delete_analyse/{{ $item->id }}" onclick="return confirm('voulez-vous vraiment supprimer ce métier ?')" type="button" class="btn btn-icon  btn-danger">
+                                                <a href="/admin/delete_analyse/{{ $item->id }}" onclick="return confirm('voulez-vous vraiment supprimer cette analyse ?')" type="button" class="btn btn-icon  btn-danger">
                                                     <i class="fe fe-trash"></i>
                                                 </a>
                                             </td>

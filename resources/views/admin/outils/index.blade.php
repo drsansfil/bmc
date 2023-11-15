@@ -59,7 +59,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <a href="/admin/delete_outils/{{ $item->id }}"
-                                                                        onclick="return confirm('voulez-vous vraiment supprimer ce métier ?')"
+                                                                        onclick="return confirm('voulez-vous vraiment supprimer cet outil ?')"
                                                                         type="button" class="btn btn-icon  btn-danger">
                                                                         <i class="fe fe-trash"></i>
                                                                     </a>
