@@ -73,15 +73,15 @@
     <div class="header-wrapper header-style-02 header-negative-bottom clearfix">
 
         <!-- #header start -->
-        <header id="header" class="" >
+        <header id="header" class="" style="background-color: white !important;">
 
             <!-- .container start -->
-            <div class="container" >
+            <div class="container">
                 <!-- .row start -->
-                <div class="row" style="background-color: white !important;">
+                <div class="row">
 
                     <!-- .col-md-12 start -->
-                    <div class="col-md-12" >
+                    <div class="col-md-12">
 
                         <!-- .top-bar-wrapper start -->
                         <div class="top-bar-wrapper clearfix">
@@ -327,7 +327,9 @@
 
                     <!-- .footer-widget-container start -->
                     @php
-                       $projets = App\Models\Projet::orderBy('created_at', 'desc')->take(2)->get();
+                        $projets = App\Models\Projet::orderBy('created_at', 'desc')
+                            ->take(2)
+                            ->get();
                     @endphp
                     <ul class="footer-widget-container col-md-3 col-sm-6">
                         <li class="widget widget-text">
