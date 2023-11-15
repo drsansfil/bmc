@@ -1,5 +1,5 @@
 @extends('layouts.front')
-@section('title', $blog->nom)
+@section('title', $projet->nom_projet)
 @section('content')
 
     <div class="page-title page-title-style-02 bkg-img09">
@@ -13,7 +13,7 @@
                 <div class="col-md-6">
                     <!-- .pt-heading start -->
                     <div class="pt-heading">
-                        <h1>{{ $blog->nom }}</h1>
+                        <h1>{{ $projet->nom_projet }}</h1>
                     </div><!-- .pt-heading end -->
                 </div><!-- .col-md-6 end -->
 
@@ -29,11 +29,11 @@
                             </li>
 
                             <li>
-                                <a href="/blog">Actualités</a>
+                                <a href="/projets">Projets</a>
                             </li>
 
                             <li>
-                                <span class="active">{{ $blog->nom }}</span>
+                                <span class="active">{{ $projet->nom_projet }}</span>
                             </li>
                         </ul><!-- .breadcrumb end -->
                     </div><!-- .breadcrumb-container end -->
@@ -54,16 +54,22 @@
                 <!-- .col-md-8 start -->
                 <ul class="col-md-8 blog-posts blog-grid blog-single clearfix">
                     <li class="post-container clearfix">
-                        <div class="post-media">
-                            <img src="/uploads/{{ $blog->image }}" alt="Increase company value by investing in people">
-                        </div><!-- .post-media end -->
 
                         <div class="post-body">
-                            <span class="date">{{ $blog->created_at }}</span>
+                            <span class="date">{{ $projet->created_at }}</span>
 
-                            <h2>{{ $blog->nom }}</h2>
+                            <h2>{{ $projet->nom_projet }}</h2>
 
-                            {!! $blog->description !!}
+                            {!! $projet->description !!}
+                            <div class="row">
+                                @forelse ($projet->images as $item)
+                                <div class="col-sm-6">
+                                    <img src="/uploads/{{$item->url}}" alt="">
+                                </div>
+                            @empty
+
+                            @endforelse
+                            </div>
                         </div><!-- .post-body end -->
 
                     </li><!-- .post-container end -->
@@ -74,12 +80,12 @@
                     <ul class="aside-widgets">
                         <li class="widget widget-text">
                             <div class="title">
-                                <h3>Dernieres actualités</h3>
+                                <h3>Dernieres Projets</h3>
                             </div><!-- .title end -->
                             <ul class="pi-latest-posts-03">
-                                @forelse ($blogs as $item)
+                                @forelse ($projets as $item)
                                     <li class="post-container">
-                                        <a href="/blog/post/{{ $item->id }}">{{ $item->nom}}</a>
+                                        <a href="/projets/post/{{ $item->id }}">{{ $item->nom_projet}}</a>
                                         <span class="date">{{ $item->created_at }}</span>
                                     </li><!-- .post-container end -->
                                 @empty

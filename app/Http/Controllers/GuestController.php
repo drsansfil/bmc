@@ -102,19 +102,13 @@ class GuestController extends Controller
     public function details_projet($id)
     {
         $projet = Projet::find($id);
+        $projets = Projet::all();
         if (!$projet) {
             abort(404);
         }
-        // Obtenir le projet précédent
-        $previousProjet = Projet::where('id', '<', $id)->orderBy('id', 'desc')->first();
-
-        // Obtenir le projet suivant
-        $nextProjet = Projet::where('id', '>', $id)->orderBy('id', 'asc')->first();
-
         return view('front.projetDetails')->with([
             'projet' => $projet,
-            'previousProjet' => $previousProjet,
-            'nextProjet' => $nextProjet,
+            'projets' => $projets,
         ]);
     }
 
