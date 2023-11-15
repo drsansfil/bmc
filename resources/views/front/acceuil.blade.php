@@ -106,7 +106,7 @@
                                 <div class="owl-item">
                                     <div class="featured-page-box">
                                         <div class="media">
-                                            <img src="/uploads/ {{ $item->image }}"
+                                            <img src="/uploads/{{ $item->image }}"
                                                 alt=" {{ $item->titre }}" />
                                         </div>
 
