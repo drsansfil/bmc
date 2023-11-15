@@ -297,28 +297,24 @@
                         <!-- .widget.widget-pages start -->
                         <li class="widget widget-pages">
                             <div class="title">
-                                <h3>About</h3>
+                                <h3>Nos liens</h3>
                             </div><!-- .title end -->
 
                             <ul>
                                 <li>
-                                    <a href="management-about.html">About Consulting Press</a>
+                                    <a href="/">Accueil</a>
                                 </li>
 
                                 <li>
-                                    <a href="management-our-team.html">Our Team</a>
+                                    <a href="/about">A propos de nous</a>
                                 </li>
 
                                 <li>
-                                    <a href="management-partners.html">Business Partners</a>
+                                    <a href="/projets">Nos projets</a>
                                 </li>
 
                                 <li>
-                                    <a href="management-contact-multilocation.html">Global Coverage</a>
-                                </li>
-
-                                <li>
-                                    <a href="management-contact-compact.html">Contact</a>
+                                    <a href="/contact">Contact</a>
                                 </li>
                             </ul>
 
