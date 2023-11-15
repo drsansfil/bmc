@@ -703,7 +703,7 @@
                             @forelse ($clients as $item)
                                 <div class="owl-item">
                                     <img src="/uploads/{{ $item->logo }}" alt="{{ $item->nom_client }}"
-                                        title="{{ $item->nom_client }}" />
+                                        title="{{ $item->nom_client }}"  style="height: 50px !important;"/>
                                 </div><!-- .owl-item end -->
                             @empty
                             @endforelse
