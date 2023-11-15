@@ -60,7 +60,7 @@ class analyse extends Controller
                 File::delete('uploads/' . $analyse->image);
             }
             $analyse->delete();
-            return back()->with('success', 'Suppression réussie');
+            return back()->with('message', 'Suppression réussie');
         } else {
             return back()->with('erreur', 'suppression impossible');
         }

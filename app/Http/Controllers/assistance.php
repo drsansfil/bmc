@@ -50,7 +50,7 @@ class assistance extends Controller
         $assistance = assistances::find($id);
         if (!empty($assistance)) {
             $assistance->delete();
-            return back()->with('success', 'Suppression réussie');
+            return back()->with('message', 'Suppression réussie');
         } else {
             return back()->with('erreur', 'suppression impossible');
         }
