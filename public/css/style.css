@@ -66,8 +66,8 @@ Tags: consulting, tourism consulting, finance consulting, IT security consulting
             6.16. ELEMENTS - KEX CONTACTS
             6.17. ELEMENTS - LATEST POSTS
                 6.17.1. LATEST POSTS STYLE 01 - BIG IMAGE
-                6.17.2. LATEST POSTS STYLE 02 - SMALL IMAGE (IN FOOTER) 
-                6.17.3. LATEST POSTS STYLE 03 - NO IMAGE (IN SIDEBAR) 
+                6.17.2. LATEST POSTS STYLE 02 - SMALL IMAGE (IN FOOTER)
+                6.17.3. LATEST POSTS STYLE 03 - NO IMAGE (IN SIDEBAR)
             6.18. ELEMENTS - LISTS
             6.19. ELEMENTS - MAP
             6.20. ELEMENTS - MESSAGE BOXES
@@ -94,7 +94,7 @@ Tags: consulting, tourism consulting, finance consulting, IT security consulting
             6.34. ELEMENTS - VIDEO
             6.35. ELEMENTS - WIDGETS
                 6.35.1. BASIC WIDGET STYLING
-                6.35.2. WIDGET - CONTACT INFO LIST 
+                6.35.2. WIDGET - CONTACT INFO LIST
                 6.35.3. WIDGET - DOWNLOAD LINKS (BROCHURE DOWNLOAD)
                 6.35.4. WIDGET - NAV MENU (IN SIDEBAR)
                 6.35.5. WIDGET - NEWSLETTER WIDGET
@@ -142,7 +142,7 @@ body {
   color: #748182;
   background-color: #fff; }
 
-/*  
+/*
     2.1. TYPOGRAPHY
     ========================================================================= */
 /*  2.1.1. HEADINGS
@@ -233,8 +233,8 @@ pre {
   border-color: #eee;
   background-color: #eff2f7; }
 
-/*  
-    LISTS   
+/*
+    LISTS
 */
 ul,
 ol {
@@ -467,7 +467,7 @@ img {
       left: 15px;
       border-top-color: #6ec25b; }
 
-/*  
+/*
     3.1. PAGE CONTENT
     ========================================================================= */
 .page-content {
@@ -658,7 +658,7 @@ img {
 .bkg-img40 {
   background-image: url("../img/pics/page-title34.jpg"); }
 
-/*  
+/*
     3.2. HELPSERS - PADDINGS AND MARGINS, CENTERING TEXT...
     ========================================================================= */
 *[class^="row"] *[class^="row"]:last-child {
@@ -688,7 +688,7 @@ img {
 .centered {
   text-align: center; }
 
-/*  
+/*
     3.3. PAGE TITLES
     ========================================================================= */
 .pt-mask {
@@ -776,7 +776,7 @@ img {
       .page-title-style-03 .breadcrumb > li > a {
         color: #acb4b5; }
 
-/*  
+/*
     3.4. BREADCRUMBS
     ========================================================================= */
 .breadcrumb {
@@ -816,7 +816,7 @@ img {
     color: #071740;
     text-decoration: underline; }
 
-/*  
+/*
     3.5. SIDEBAR
     ========================================================================= */
 .aside-right {
@@ -836,7 +836,7 @@ img {
 /* =============================================================================
     4. HEADERS
     ========================================================================= */
-/*  
+/*
     4.1. HEADER TRANSPARENT - GLOBAL HEADER STYLES (+ TOURISM & FINANCE HEADER)
     ========================================================================= */
 .header-wrapper {
@@ -1026,7 +1026,7 @@ img {
   #social-links a {
     color: #c5dadc; }
 
-/*  
+/*
     4.2. MAIN NAVIGATION
     ========================================================================= */
 .navbar-default {
@@ -1205,7 +1205,7 @@ img {
   background-color: rgba(7, 23, 64, 0.8);
   border: none; }
 
-/*  
+/*
     4.3. HEDAER STYLE 02
     ========================================================================= */
 .header-style-02 {
@@ -1283,7 +1283,7 @@ img {
   .header-style-02 .dropdown-menu {
     background-color: rgba(3, 13, 38, 0.8); }
 
-/*  
+/*
     4.4. HEADER STYLE 03 - DARK NAVIGATION BAR
     ========================================================================= */
 .header-style-02.header-negative-bottom.solid-color {
@@ -1370,7 +1370,7 @@ img {
 /* =============================================================================
     6. ELEMENTS
     ========================================================================= */
-/*  
+/*
     6.1. ELEMENTS - ACCORDION
     ========================================================================= */
 .accordion {
@@ -1431,7 +1431,7 @@ img {
 .page-content.dark .accordion > .title > a {
   color: #fff; }
 
-/*  
+/*
     6.2. ELEMENTS - BANNER BOX
     ========================================================================= */
 .banner-box {
@@ -1457,7 +1457,7 @@ img {
   .img-animate-container .img-animate {
     position: absolute; }
 
-/*  
+/*
     6.3. ELEMENTS - BLOCKQUOTE
     ========================================================================= */
 blockquote {
@@ -1473,7 +1473,7 @@ blockquote {
     color: #748182;
     color: #acb4b5; }
 
-/*  
+/*
     6.4. ELEMENTS - BLOG
     ========================================================================= */
 .blog-posts.blog-grid .post-container {
@@ -1831,7 +1831,7 @@ blockquote {
 .posts-bkg-15 {
   background-image: url("../img/blog/consultingpress-digital-marketing.jpg"); }
 
-/*  
+/*
     6.5. ELEMENTS - BUTTON
     ========================================================================= */
 .page-content.dark .btn span {
@@ -1933,7 +1933,7 @@ blockquote {
   .btn.btn-yellow {
     background-color: #ffcc01; }
 
-/*  
+/*
     6.6. ELEMENTS - CALL TO ACTION
     ========================================================================= */
 .page-content.cta-negative-top {
@@ -1972,7 +1972,7 @@ blockquote {
     .call-to-action .cta-social li a {
       color: #748182; }
 
-/*  
+/*
     6.7. ELEMENTS - CHART
     ========================================================================= */
 .chart-container {
@@ -1986,7 +1986,7 @@ blockquote {
   .chart-container canvas {
     max-width: 100%; }
 
-/*  
+/*
     6.8. ELEMENTS - CIRCLE ICON
     ========================================================================= */
 .circle-icon-animate {
@@ -1996,7 +1996,7 @@ blockquote {
   .circle-icon-animate:hover {
     stroke-dashoffset: 0; }
 
-/*  
+/*
     6.9. ELEMENTS - COMPANY TIMELINE
     ========================================================================= */
 .company-timeline > li {
@@ -2037,7 +2037,7 @@ blockquote {
       top: 0;
       left: 0; }
 
-/*  
+/*
     6.10. ELEMENTS - CONTACT FORM
     ========================================================================= */
 .wpcf7 .wpcf7-text,
@@ -2116,7 +2116,7 @@ blockquote {
   .g-recaptcha.recaptcha-visible {
     display: block; }
 
-/*  
+/*
     6.11. ELEMENTS - CUSTOM HEADINGS
     ========================================================================= */
 .custom-heading-01 span {
@@ -2155,7 +2155,7 @@ blockquote {
     top: 0;
     left: 0; }
 
-/*  
+/*
     6.12. ELEMENTS - DIVIDER
     ========================================================================= */
 /*  6.12.1. DIVIDER DOTTED
@@ -2239,7 +2239,7 @@ blockquote {
     .divider-scroll-up .scroll-up:hover i {
       color: #fff; }
 
-/*  
+/*
     6.13. ELEMENTS - FEATURE BOX
     ========================================================================= */
 /*  6.13.1. FEATURE BOX GENERAL STYLING
@@ -2329,7 +2329,7 @@ blockquote {
     .industry-sectors-grid > li:nth-child(3n + 1) {
       clear: both; }
 
-/*  
+/*
     6.14. ELEMENTS - FEATURED PAGES
     ========================================================================= */
 .featured-page-box {
@@ -2387,7 +2387,7 @@ blockquote {
     -o-transform: scale(1, 1);
     transform: scale(1, 1); }
 
-/*  
+/*
     6.15. ELEMENTS - IMAGE REVEAL
     ========================================================================= */
 .animated {
@@ -2469,7 +2469,7 @@ blockquote {
     width: 30%; }
   100% {
     width: 0%; } }
-/*  
+/*
     6.16. ELEMENTS - KEX CONTACTS
     ========================================================================= */
 .key-contacts > ul {
@@ -2495,10 +2495,10 @@ blockquote {
     .key-contacts .text-container .fa-ul > li a, .key-contacts .text-container .fa-ul > li p, .key-contacts .text-container .fa-ul > li span {
       font-size: 13px; }
 
-/*  
+/*
     6.17. ELEMENTS - LATEST POSTS
     ========================================================================= */
-/*  6.17.1. LATEST POSTS STYLE 01 - BIG IMAGE 
+/*  6.17.1. LATEST POSTS STYLE 01 - BIG IMAGE
     ------------------------------------------------------------------------- */
 .pi-latest-posts-01 .post-container {
   list-style: none;
@@ -2535,7 +2535,7 @@ blockquote {
   width: 100%;
   margin-bottom: 10px; }
 
-/*  6.17.2. LATEST POSTS STYLE 02 - SMALL IMAGE (IN FOOTER) 
+/*  6.17.2. LATEST POSTS STYLE 02 - SMALL IMAGE (IN FOOTER)
     ------------------------------------------------------------------------- */
 .widget > ul.pi-latest-posts-02 > .post-container {
   list-style: none;
@@ -2575,7 +2575,7 @@ blockquote {
 #footer-wrapper .pi-latest-posts-02 .post-body h4 {
   color: #c5dadc; }
 
-/*  6.17.3. LATEST POSTS STYLE 03 - NO IMAGE (IN SIDEBAR) 
+/*  6.17.3. LATEST POSTS STYLE 03 - NO IMAGE (IN SIDEBAR)
     ------------------------------------------------------------------------- */
 .pi-latest-posts-03 > li,
 .widget > .pi-latest-posts-03 > li {
@@ -2618,7 +2618,7 @@ blockquote {
 #footer-wrapper .footer-widget-container .widget > .pi-latest-posts-03 > li > span.date::before {
   color: #acb4b5; }
 
-/*  
+/*
     6.18. ELEMENTS - LISTS
     ========================================================================= */
 .fa-ul {
@@ -2676,7 +2676,7 @@ blockquote {
 .list-style-none {
   list-style: none; }
 
-/*  
+/*
     6.19. ELEMENTS - MAP
     ========================================================================= */
 .map-height-lg {
@@ -2691,7 +2691,7 @@ blockquote {
 #map + a {
   margin-top: 30px; }
 
-/*  
+/*
     6.20. ELEMENTS - MESSAGE BOXES
     ========================================================================= */
 .message-boxes {
@@ -2765,7 +2765,7 @@ blockquote {
   .message-boxes:hover > .message-close {
     opacity: 1; }
 
-/*  
+/*
     6.21. ELEMENTS - NUMBER COUNTER
     ========================================================================= */
 .odometer-container .odometer-inner {
@@ -2797,7 +2797,7 @@ blockquote {
 .page-content.dark .odometer-container .digit-mark {
   color: #fff; }
 
-/*  
+/*
     6.22. ELEMENTS - OWL CAROUSEL
     ========================================================================= */
 .owl-controls > .owl-nav > .owl-prev {
@@ -2823,7 +2823,7 @@ blockquote {
   background-repeat: no-repeat;
   background-position: center; }
 
-/*  
+/*
     6.23. ELEMENTS - PORTFOLIO
     ========================================================================= */
 .row.portfolio-filters {
@@ -3106,7 +3106,7 @@ blockquote {
 .cases-bkg22 {
   background-image: url("../img/cases/management-business-strategy-shoe-stars01.jpg"); }
 
-/*  
+/*
     6.24. ELEMENTS - PRICING TABLE
     ========================================================================= */
 .pricing-table {
@@ -3142,7 +3142,7 @@ blockquote {
     -moz-box-shadow: 1px 0px 15px #eee;
     box-shadow: 1px 0px 15px #eee; }
 
-/*  
+/*
     6.25. ELEMENTS - READ MORE
     ========================================================================= */
 .read-more {
@@ -3195,7 +3195,7 @@ blockquote {
 ul + .read-more {
   margin-top: 15px; }
 
-/*  
+/*
     6.26. ELEMENTS - SCROLL UP
     ========================================================================= */
 .scroll-up {
@@ -3230,7 +3230,7 @@ ul + .read-more {
   .scroll-up:hover i {
     color: #fff; }
 
-/*  
+/*
     6.27. ELEMENTS - SERVICES
     ========================================================================= */
 .service-box h1, .service-box h2, .service-box h3, .service-box h4, .service-box h5, .service-box h6 {
@@ -3340,7 +3340,7 @@ ul + .read-more {
     padding-right: 15px;
     padding-left: 15px; }
 
-/*  
+/*
     6.28. ELEMENTS - SLIDER
     ========================================================================= */
 /*  6.28.1. MASTER SLIDER
@@ -3370,8 +3370,8 @@ ul + .read-more {
 .ms-view {
   background: #071740; }
 
-/* 
-    STYLING NAVIGATION ARROWS    
+/*
+    STYLING NAVIGATION ARROWS
 */
 .ms-skin-default .ms-nav-next, .ms-skin-default .ms-nav-prev {
   right: 0;
@@ -3395,7 +3395,7 @@ ul + .read-more {
   background-position: center;
   background-repeat: no-repeat; }
 
-/*  
+/*
     MASTER SLIDER CAPTIONS, HEADINGS AND LINKS
 */
 .pi-caption-small {
@@ -3453,7 +3453,7 @@ ul + .read-more {
   font-size: 18px;
   line-height: 26px; }
 
-/*  
+/*
     VIDEO SLIDE OVERLAY
 */
 .ms-slide .ms-slide-bgvideocont {
@@ -3540,7 +3540,7 @@ ul + .read-more {
 .slider-wrapper div[id^="slider-caption-"] {
   display: none; }
 
-/*  
+/*
     6.29. ELEMENTS - SOCIAL PHOTO STREAMS
     ========================================================================= */
 .social-feed {
@@ -3591,7 +3591,7 @@ ul + .read-more {
       background-position: 0 0;
       padding-left: 40px; }
 
-/*  
+/*
     6.30. ELEMENTS - TABLE
     ========================================================================= */
 .table {
@@ -3624,7 +3624,7 @@ ul + .read-more {
   .table.table-hover > tbody > tr:hover {
     background-color: #eff3f7; }
 
-/*  
+/*
     6.31. ELEMENTS - TABS
     ========================================================================= */
 .tabs-container > .tabs {
@@ -3684,7 +3684,7 @@ ul + .read-more {
 .tabs-container.tabs-theme > .tab-content-wrap {
   background-color: #fff; }
 
-/*  
+/*
     6.32. ELEMENTS - TEAM MEMBER
     ========================================================================= */
 .team-horizontal {
@@ -3697,7 +3697,7 @@ ul + .read-more {
   .team-horizontal .team-details-container {
     padding-left: 293px; }
 
-/*  
+/*
     6.33. ELEMENTS - TESTIMONIAL
     ========================================================================= */
 .page-content.dark .testimonial-style-01 > p {
@@ -3741,7 +3741,7 @@ ul + .read-more {
     color: #071740;
     font-weight: 600; }
 
-/*  
+/*
     6.34. ELEMENTS - VIDEO
     ========================================================================= */
 iframe {
@@ -3749,7 +3749,7 @@ iframe {
   height: auto;
   min-height: 300px; }
 
-/*  
+/*
     6.35. ELEMENTS - WIDGETS
     ========================================================================= */
 /*  6.35.1. BASIC WIDGET STYLING
@@ -3790,7 +3790,7 @@ iframe {
 .aside-widgets > li.widget:last-child {
   margin-bottom: 0; }
 
-/*  6.35.2. WIDGET - CONTACT INFO LIST 
+/*  6.35.2. WIDGET - CONTACT INFO LIST
     ------------------------------------------------------------------------- */
 .contact-info-list > li {
   padding-left: 25px; }

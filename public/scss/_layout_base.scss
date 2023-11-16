@@ -83,11 +83,11 @@
     }
 }
 
-/*  
+/*
     3.1. PAGE CONTENT
-    ========================================================================= */ 
+    ========================================================================= */
 
-.page-content { 
+.page-content {
     position: relative;
 
     &.dark {
@@ -101,7 +101,7 @@
     }
 
     .row {
-        margin-bottom: 120px;
+        
 
         div[class^="col-md-"] .cma-wysiwyg-editor {
             overflow: hidden;
@@ -134,7 +134,7 @@
 
             &:only-child,
                 &:last-child{
-                margin-bottom: 0;                
+                margin-bottom: 0;
             }
         }
 
@@ -185,7 +185,7 @@
 }
 
 [class*="bkg-img"] {
-    @include bkg-img-styles();    
+    @include bkg-img-styles();
 }
 
 .bkg-img01 {
@@ -349,9 +349,9 @@
 }
 
 
-/*  
+/*
     3.2. HELPSERS - PADDINGS AND MARGINS, CENTERING TEXT...
-    ========================================================================= */ 
+    ========================================================================= */
 
 *[class^="row"] *[class^="row"]:last-child {
     margin-bottom: 0;
@@ -390,9 +390,9 @@
 }
 
 
-/*  
+/*
     3.3. PAGE TITLES
-    ========================================================================= */ 
+    ========================================================================= */
 
 .pt-mask {
     display: block;
@@ -444,7 +444,7 @@
             }
         }
     }
-    
+
     &.left-aligned {
         .pt-heading {
             > h1,
@@ -454,7 +454,7 @@
                 width: 100%;
             }
         }
-        
+
         .breadcrumb {
             display: block;
         }
@@ -495,14 +495,14 @@
     background-color: #eff3f7;
     margin-bottom: 80px;
     padding: 15px 0;
-    
+
     .breadcrumb {
         display: block;
-        
+
         > li {
             padding-bottom: 0;
             color: $mc-regular;
-            
+
             > a {
                 color: $mc-light;
             }
@@ -512,9 +512,9 @@
 
 
 
-/*  
+/*
     3.4. BREADCRUMBS
-    ========================================================================= */ 
+    ========================================================================= */
 .breadcrumb {
     display: table;
     margin: 0 auto;
@@ -533,7 +533,7 @@
     li {
 
         &+ li::before {
-            position: relative;        
+            position: relative;
             top: -2px;
             color: $mc-extra-light;
             content: "\f054";
@@ -576,9 +576,9 @@
 }
 
 
-/*  
+/*
     3.5. SIDEBAR
-    ========================================================================= */  
+    ========================================================================= */
 .aside-right {
     padding-left: 30px;
 }

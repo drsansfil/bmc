@@ -55,40 +55,58 @@
                     </div><!-- .custom-heading-02 end -->
                 </div><!-- .col-md-12 end -->
             </div><!-- .row end -->
+            <br><br>
 
-            <!-- .row start -->
-            <div class="row">
 
-                @forelse ($outils as $item)
-                    <!-- .col-md-4 start -->
-                    <div class="col-md-4 col-sm-4">
-                        <!-- .service-feature-box-04 start -->
-                        <div class="service-box service-box-04 triggerAnimation animated" data-animate="fadeInLeft">
-                            <div class="media">
-                                <a href="#">
-                                    <img src="/uploads/{{ $item->image}}"
-                                        alt="{{ $item->titre}}">
-                                </a>
-                            </div>
+            <div class="container">
+                @forelse ($outils as $index => $item)
+                <div class="row oo p-2">
+                    {{-- Colonne pour les grandes tailles d'écran --}}
+                    <div class="col-lg-5 order-lg-{{ $index % 2 == 0 ? 1 : 2 }}">
+                        <img src="/uploads/{{ $item->image }}" alt="{{ $item->titre }}" class="img-fluid">
+                    </div>
 
-                            <div class="icon-container">
-                                <img src="/uploads/{{ $item->icone }}" />
-                            </div><!-- .icon-container end -->
+                    {{-- Colonne pour les petites tailles d'écran --}}
+                    <div class="col-lg-7 order-lg-{{ $index % 2 == 0 ? 2 : 1 }}">
+                        <table>
+                            <tr>
+                                <td style="width: 22px;">
+                                    <img src="/uploads/{{ $item->icone }}" style="height: 20px;"/>
+                                </td>
+                                <td>
+                                    <h3> {{ $item->titre }}</h3>
+                                </td>
+                            </tr>
+                        </table>
 
-                            <div class="text-container">
-                                    <h3> {{ $item->titre}}</h3>
+                        <div class="text-container">
+                            <p>{{ $item->description }}</p>
+                        </div>
+                    </div>
+                </div>
+            @empty
+                {{-- Traitement pour le cas où la liste est vide --}}
+            @endforelse
 
-                                <p>
-                                    {{ $item->description }}
-                                </p>
-                            </div><!-- .text-container end -->
-                        </div><!-- .service-feature-box-04 end -->
-                    </div><!-- .col-md-4 end -->
-                @empty
-                @endforelse
 
-            </div><!-- .row end -->
+            </div>
         </div><!-- .container end -->
     </div><!-- .page-content end -->
+    <style>
+        .oo:hover {
+            box-shadow: -6px -8px 64px -21px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: -6px -8px 64px -21px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: -6px -8px 64px -21px rgba(0, 0, 0, 0.75);
+        }
 
+        .oo {
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .page-content .row {
+            margin-bottom: 10px !important;
+        }
+    </style>
+    <br><br><br><br><br>
 @endsection
