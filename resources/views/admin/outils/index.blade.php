@@ -30,6 +30,7 @@
                                     <table id="example" class="table table-striped " style="width:100%">
                                         <thead class="table-danger">
                                             <tr>
+                                                <th>Icone</th>
                                                 <th>Image</th>
                                                 <th>titre</th>
                                                 <th>Description</th>
@@ -40,6 +41,11 @@
                                         <tbody class="table-bordered">
                                             @foreach ($outils as $item)
                                                 <tr>
+                                                    <td>
+                                                        <img src="/uploads/{{ $item->icone }}"
+                                                            alt="icone" style="width: 40px;"
+                                                            srcset="">
+                                                    </td>
                                                     <td>
                                                         <img src="/uploads/{{ $item->image }}"
                                                             alt="{{ $item->created_at }}" style="width: 100px;"

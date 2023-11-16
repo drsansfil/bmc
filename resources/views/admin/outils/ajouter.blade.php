@@ -49,10 +49,25 @@
                                                             </label>
                                                             <textarea name="description" class="form-control" required style="width: 100%" rows="4"></textarea>
                                                         </div>
-                                                        <div class="mb-3">
-                                                            <label class="form-label" for="customFileSm"><strong>Image</strong></label>
-                                                            <input class="form-control form-control-sm" name="image"
-                                                                id="customFileSm" type="file" required>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                        for="customFileSm"><strong>Image</strong></label>
+                                                                    <input class="form-control form-control-sm"
+                                                                        name="image" id="customFileSm" type="file"
+                                                                        required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label"
+                                                                        for="customFileSm"><strong>Icone (SVG uniquement)</strong></label>
+                                                                    <input class="form-control form-control-sm"
+                                                                        name="icone" id="customFileSm" type="file"
+                                                                        required>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">

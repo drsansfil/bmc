@@ -29,6 +29,7 @@ class outils extends Controller
             'titre' => 'required|string',
             'description' => 'required|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif',
+            'icone' => 'required|image|mimes:svg',
         ]);
 
         if ($validator->fails()) {
@@ -45,6 +46,14 @@ class outils extends Controller
             $image->move($destinationPath, $newname);
             $outils->image =  $newname;
         }
+        if ($request->file('icone')) {
+            $newname = uniqid();
+            $image = $request->file('image');
+            $newname .= "." . $image->getClientOriginalExtension();
+            $destinationPath = 'uploads';
+            $image->move($destinationPath, $newname);
+            $outils->icone =  $newname;
+        }
         if ($outils->save()) {
             return redirect('/admin/outils')->with('message', "l'enregistrement a été effectuer !");
         } else {
@@ -60,6 +69,9 @@ class outils extends Controller
         if (!empty($outils)) {
             if (File::exists('uploads/' . $outils->image)) {
                 File::delete('uploads/' . $outils->image);
+            }
+            if (File::exists('uploads/' . $outils->icone)) {
+                File::delete('uploads/' . $outils->icone);
             }
             $outils->delete();
             return back()->with('message', 'Suppression réussie');
@@ -87,6 +99,7 @@ class outils extends Controller
             'titre' => 'required|string',
             'description' => 'required|string',
             'id' => 'required',
+            'icone' => 'required|image|mimes:svg',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ]);
         if ($validator->fails()) {
@@ -107,6 +120,16 @@ class outils extends Controller
             $image->move($destinationPath, $newname);
             File::delete("uploads/$oldimg");
             $outils->image =  $newname;
+        }
+        if ($request->file('icone')) {
+            $oldimg = $outils->icone;
+            $newname = uniqid();
+            $image = $request->file('icone');
+            $newname .= "." . $image->getClientOriginalExtension();
+            $destinationPath = 'uploads';
+            $image->move($destinationPath, $newname);
+            File::delete("uploads/$oldimg");
+            $outils->icone =  $newname;
         }
         if ($outils->save()) {
             return redirect('/admin/outils')->with('message', "Modification réussie !");

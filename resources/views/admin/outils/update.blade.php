@@ -60,6 +60,14 @@
                                                             selectionner une image
                                                             <input class="form-control form-control-sm" name="image"
                                                             id="customFileSm" type="file" >
+                                                            <hr>
+                                                            <img src="/uploads/{{ $outils->icone }}"
+                                                            alt="{{ $outils->created_at }}" style="width: 50px"
+                                                            srcset="">
+                                                            <hr>
+                                                            selectionner une icone (SVG uniquement)
+                                                            <input class="form-control form-control-sm" name="icone"
+                                                            id="customFileSm" type="file" >
                                                         </div>
                                                     </div>
                                                     <div>

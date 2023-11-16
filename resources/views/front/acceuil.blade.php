@@ -94,46 +94,6 @@
         <!-- .container start -->
         <div class="container">
 
-            <!-- .row start -->
-            <div class="row featured-pages-negative-top">
-                <!-- .col-md-12 start -->
-                <div class="col-md-12">
-                    <!-- Owl Carousel Container start -->
-                    <div class="carousel-container">
-                        <div id="featured-pages-carousel" class="owl-carousel">
-                            @forelse ($outils as $item)
-                                <!-- .owl-item start -->
-                                <div class="owl-item">
-                                    <div class="featured-page-box">
-                                        <div class="media">
-                                            <img src="/uploads/{{ $item->image }}"
-                                                alt=" {{ $item->titre }}" />
-                                        </div>
-
-                                        <div class="body">
-                                                <h2>
-                                                    {{ $item->titre }}
-                                                </h2>
-                                        </div><!-- .body end -->
-                                    </div><!-- .featured-page-box end -->
-                                </div><!-- .owl-item end -->
-
-                            @empty
-                            @endforelse
-
-                        </div><!-- .owl-carousel end -->
-                    </div><!-- Owl Carousel Container end -->
-                </div><!-- .col-md-12 end -->
-            </div><!-- .row end -->
-        </div><!-- .container end -->
-    </div><!-- .page-content end -->
-
-    <!-- .page-conent start -->
-    <div class="page-content">
-
-        <!-- .container start -->
-        <div class="container">
-
 
             <!-- .row start -->
             <div class="row">
@@ -306,13 +266,13 @@
                     <!-- note start -->
                     <div class="call-to-action clearfix">
                         <div class="text">
-                            <h4>We’ll identify your needs and enhance your business growth.</h4>
+                            <h4>Nous identifierons vos besoins et améliorerons la croissance de votre entreprise.</h4>
                         </div>
 
-                        <a href="management-contact-compact.html" class="btn icon-animated">
+                        <a href="/" class="btn icon-animated">
                             <span>
                                 <i class="lynny-page-1"></i>
-                                request a quick quote
+                                demander un devis rapide
                             </span>
                         </a>
                     </div><!-- .call-to-action end -->
@@ -347,7 +307,7 @@
                         @forelse ($outils as $item)
                             <li>
                                 <div class="icon-container">
-                                    <img src="img/svg/svg-icon-cargo.svg" alt="Aerospace & Defense" />
+                                    <img src="/uploads/{{ $item->icone }}" />
                                 </div><!-- .icon-container end -->
 
                                 <div class="li-content">
@@ -468,13 +428,13 @@
                     <!-- note start -->
                     <div class="call-to-action clearfix">
                         <div class="text">
-                            <h4>Always searching for fresh talents. Send us your resume via email.</h4>
+                            <h4>Toujours à la recherche de nouveaux talents. Envoyez-nous votre CV par email.</h4>
                         </div>
 
-                        <a href="management-contact-compact.html" class="btn icon-animated">
+                        <a href="/" class="btn icon-animated">
                             <span>
                                 <i class="lynny-page-1"></i>
-                                connect with us
+                                Contactez-nous
                             </span>
                         </a>
                     </div><!-- .call-to-action end -->
@@ -541,7 +501,7 @@
             <div class="row">
                 <!-- .col-md-6 start -->
                 <div class="col-md-6">
-                    <h2>Subscribe for our latest news & insights</h2>
+                    <h2>Abonnez-vous pour nos dernières nouvelles et informations</h2>
                 </div><!-- .col-md-6 end -->
 
                 <!-- .col-md-6 start -->
@@ -579,7 +539,7 @@
     </div><!-- .page-content end -->
 
     <!-- .page-conent start -->
-    <div class="page-content custom-background bkg-color-dark padding-small">
+    <div class="page-content custom-background  padding-small" style="background-color: #eff3f7 !important;">
 
         <!-- .container start -->
         <div class="container">
@@ -589,9 +549,8 @@
 
                 <!-- .col-md-12 start -->
                 <div class="col-md-12">
-
                     <!-- Owl Carousel Container start -->
-                    <div class="carousel-container">
+                    <div class="carousel-container" >
                         <div id="client-carousel" class="owl-carousel">
                             <!-- .owl-item start -->
                             @forelse ($clients as $item)

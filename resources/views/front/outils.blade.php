@@ -72,7 +72,7 @@
                             </div>
 
                             <div class="icon-container">
-                                <i class="lynny-radar"></i>
+                                <img src="/uploads/{{ $item->icone }}" />
                             </div><!-- .icon-container end -->
 
                             <div class="text-container">
