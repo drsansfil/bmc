@@ -109,7 +109,7 @@
                                                 </div>
 
                                                 <div class="text-container">
-                                                    <span>call us</span>
+                                                    <span>APPELEZ-NOUS</span>
                                                     <p>
                                                         {{ $info_footer->contacts }}
                                                     </p>
@@ -122,7 +122,7 @@
                                                 </div>
 
                                                 <div class="text-container">
-                                                    <span>get in touch</span>
+                                                    <span>ENTRER EN CONTACT</span>
                                                     <a href="mailto:{{ $info_footer->email_contact }}">
                                                         {{ $info_footer->email_contact }}
                                                     </a>
@@ -135,10 +135,10 @@
                                                 </div>
 
                                                 <div class="text-container">
-                                                    <span>our locations</span>
+                                                    <span>Localisation</span>
                                                     <p>
                                                         <a href="/contact">
-                                                            Global coverage
+                                                            NOS IMPLANTATIONS
                                                         </a>
                                                     </p>
                                                 </div><!-- .text-container end -->
@@ -239,7 +239,7 @@
                                             <!-- WPML Languages start -->
                                             <div class="wpml-languages enabled">
                                                 <a class="active" href="#">
-                                                    <span>en</span>
+                                                    <span>fr</span>
                                                     <i class="fa fa-chevron-down"></i>
                                                 </a>
 
@@ -263,7 +263,7 @@
             </div><!-- .header-inner end -->
         </header><!-- #header end -->
     </div><!-- .header-wrapper end -->
-
+    {{-- composant qui sera charger d'afficher les messages d'erreur et de success --}}
 
     @yield('content')
 
@@ -479,9 +479,8 @@
             }
         });
         /* ]]> */
-
     </script>
-     <script>
+    <script>
         document.getElementById('m_search').addEventListener('keydown', function(event) {
             if (event.key === 'Enter') {
                 event.preventDefault();

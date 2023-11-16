@@ -298,27 +298,30 @@
                     </div><!-- .custom-heading-01 end -->
 
                     <p>
-                        We have deep understanding and experience in
-                        implementing sustainable strategies in following
-                        industry sectors:
+                        l'espace où l'innovation rencontre la performance. Explorez notre vaste gamme d'outils soigneusement
+                        sélectionnés pour répondre à vos besoins professionnels et personnels.
                     </p>
 
                     <ul class="fa-ul ul-circled">
-                        @forelse ($outils as $item)
-                            <li>
-                                <div class="icon-container">
-                                    <img src="/uploads/{{ $item->icone }}" />
-                                </div><!-- .icon-container end -->
+                        <div class="row">
+                            @forelse ($outils as $item)
+                                <div class="col-sm-6">
+                                    <li>
+                                        <div class="icon-container">
+                                            <img src="/uploads/{{ $item->icone }}" />
+                                        </div><!-- .icon-container end -->
 
-                                <div class="li-content">
-                                    <p>
-                                        {{ $item->titre }}
-                                    </p>
+                                        <div class="li-content">
+                                            <p>
+                                                {{ $item->titre }}
+                                            </p>
 
-                                </div><!-- .li-content end -->
-                            </li>
-                        @empty
-                        @endforelse
+                                        </div><!-- .li-content end -->
+                                    </li>
+                                </div>
+                            @empty
+                            @endforelse
+                        </div>
                         <a href="/outils" class="read-more">
                             Plus de détails sur nos outils.
                         </a><!-- .read-more end -->
@@ -511,9 +514,17 @@
 
                         <!-- .newsletter.newsletter-widget start -->
                         <div class="newsletter newsletter-widget">
-                            <form>
-                                <input class="email" type="email" placeholder="Subscribe to our newsletter...">
-                                <input type="submit" class="submit" value="subscribe">
+                            <form method="post" action="/store_new" id="monFormulaire">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="email" name="email" required placeholder="Email">
+                                        @csrf
+                                        <input class="form-control" type="text" name="nom" required placeholder="Nom">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="submit" class="btn btn-success" value="M'abonner">
+                                    </div>
+                                </div>
                             </form>
                         </div><!-- .newsletter.newsletter-widget end -->
                     </div><!-- .widget.widget_newsletterwidget end -->
@@ -521,6 +532,8 @@
             </div><!-- .row end -->
         </div><!-- .container end -->
     </div><!-- .page-content end -->
+
+
 
     <!-- .page-conent start -->
     <div class="page-content">
@@ -550,7 +563,7 @@
                 <!-- .col-md-12 start -->
                 <div class="col-md-12">
                     <!-- Owl Carousel Container start -->
-                    <div class="carousel-container" >
+                    <div class="carousel-container">
                         <div id="client-carousel" class="owl-carousel">
                             <!-- .owl-item start -->
                             @forelse ($clients as $item)
@@ -568,5 +581,34 @@
     </div><!-- .page-content end -->
 
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            // Intercepter l'événement de soumission du formulaire
+            $('#monFormulaire').submit(function (e) {
+                // Empêcher l'envoi traditionnel du formulaire
+                e.preventDefault();
+
+                // Récupérer les données du formulaire
+                var formData = $(this).serialize();
+
+                // Envoyer les données au serveur via AJAX
+                $.ajax({
+                    type: 'POST',
+                    url: '/store_new',
+                    data: formData,
+                    success: function (response) {
+                        // Afficher le message de réponse dans une alerte
+                        alert(response.message);
+                        $('#monFormulaire')[0].reset();
+                    },
+                    error: function (error) {
+                        // En cas d'erreur, afficher un message d'erreur dans une alerte
+                        alert('Une erreur s\'est produite. Veuillez réessayer.');
+                    }
+                });
+            });
+        });
+    </script>
 @endsection

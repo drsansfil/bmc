@@ -25,9 +25,9 @@ class NewslettreController extends Controller
 
         if ($newslettre->save()) {
 
-            return redirect('/index_newslettre')->with('mesage', 'Votre newslettre ajouter avec succses');
+            return redirect('/index_newslettre')->with('message', 'Votre newslettre ajouter avec succses');
         } else {
-            return redirect('/index_newslettre')->with('mesage', 'Une erreur s\'est produite, veuillez réessayer');
+            return redirect('/index_newslettre')->with('message', 'Une erreur s\'est produite, veuillez réessayer');
 
         }
 
@@ -38,9 +38,9 @@ class NewslettreController extends Controller
     {
         $newslettres = newslettre::find($id);
         if ($newslettres->delete()) {
-            return redirect('/index_newslettre')->with('mesage', 'Votre newslettre supprimer avec succses');
+            return redirect('/index_newslettre')->with('message', 'Votre newslettre supprimer avec succses');
         } else {
-            return redirect('/index_newslettre')->with('mesage', 'Une erreur s\'est produite, veuillez réessayer');
+            return redirect('/index_newslettre')->with('message', 'Une erreur s\'est produite, veuillez réessayer');
 
         }
     }
@@ -55,9 +55,9 @@ class NewslettreController extends Controller
         $newslettres->email = $request->email;
 
         if ($newslettres->update()) {
-            return redirect('/index_newslettre')->with('mesage', 'Votre newslettre modifier avec succses');
+            return redirect('/index_newslettre')->with('message', 'Votre newslettre modifier avec succses');
         } else {
-            return redirect('/index_newslettre')->with('mesage', 'Une erreur s\'est produite, veuillez réessayer');
+            return redirect('/index_newslettre')->with('message', 'Une erreur s\'est produite, veuillez réessayer');
 
         }
     }
@@ -71,7 +71,7 @@ class NewslettreController extends Controller
 
         $newslettre->save();
 
-        return redirect()->back()->with('success', 'Votre newslettre  inscrit avec success');
+        return redirect()->back()->with('message', 'Votre newslettre  inscrit avec success');
     }
 
 }

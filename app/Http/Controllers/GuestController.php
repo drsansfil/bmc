@@ -7,6 +7,7 @@ use App\Models\Client;
 use App\Models\directeur;
 use App\Models\Information;
 use App\Models\metier;
+use App\Models\Newslettre;
 use App\Models\outils;
 use App\Models\Projet;
 use App\Models\ProjectCategory;
@@ -175,5 +176,27 @@ class GuestController extends Controller
                 ->orWhere('description', 'like', '%' . $key . '%');
         })->get();
         return view('front.recherche')->with('outils', $outils)->with('projets', $projets);
+    }
+
+
+
+
+
+
+    public function store_new(HttpRequest $request)
+    {
+
+        $newslettre = new Newslettre();
+        $newslettre->nom = $request->nom;
+        $newslettre->email = $request->email;
+
+        if ($newslettre->save()) {
+            return response()->json(['success' => true, 'message' => 'Votre newsletter a été ajoutée avec succès']);
+        } else {
+            return response()->json(['success' => false, 'message' => 'Une erreur s\'est produite, veuillez réessayer']);
+
+
+        }
+
     }
 }

@@ -49,7 +49,26 @@ Route::middleware(['count-visitors', 'Language'])->group(function () {
 
     //Mew ajout
     Route::get('portfolio-gallery/{id}', [GuestController::class, 'details_projet'])->name('details_projet');
+    Route::post('/store_new', [GuestController::class, 'store_new']);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* backend*/
 Auth::routes();
