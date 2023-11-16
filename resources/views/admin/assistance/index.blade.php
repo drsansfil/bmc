@@ -45,12 +45,20 @@
                                             <td>{{ $item->titre}}</td>
                                             <td>{{ $item->created_at }}</td>
                                             <td>
-                                                <a href="/admin/update_assistance/{{ $item->id }}" type="button" class="btn btn-icon  btn-info">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+<a href="/admin/update_assistance/{{ $item->id }}" type="button" class="btn btn-icon  btn-info">
                                                     <i class="fa fa-pencil-square-o"></i>
                                                 </a>
-                                                <a href="/admin/delete_assistance/{{ $item->id }}" onclick="return confirm('voulez-vous vraiment supprimer cette assistance ?')" type="button" class="btn btn-icon  btn-danger">
+                                                        </td>
+                                                        <td>
+<a href="/admin/delete_assistance/{{ $item->id }}" onclick="return confirm('voulez-vous vraiment supprimer cette assistance ?')" type="button" class="btn btn-icon  btn-danger">
                                                     <i class="fe fe-trash"></i>
                                                 </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </td>
                                         </tr>
                                         @endforeach

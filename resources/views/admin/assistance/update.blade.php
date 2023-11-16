@@ -53,7 +53,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div>
+                                                    <div class="modal-footer">
                                                         <button class="btn btn-red" type="submit">Modifier</button>
                                                     </div>
                                                 </form>

@@ -11,7 +11,7 @@
                     <div class="main-container container-fluid">
                         <!-- PAGE-HEADER -->
                         <div class="page-header">
-                            <h1 class="page-title">ajouter le Partenaires</h1>
+                            <h1 class="page-title">ajouter unPartenaires</h1>
                         </div>
                         <div class="row p-5">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
@@ -20,8 +20,15 @@
                                         <div class="col-lg-12">
                                             <div class="card p-5">
                                                 <div class="card-header">
-                                                    <div class="card-title" _msthash="3392506" _msttexthash="591578">Ajouter
-                                                        un nouveau le Partenaires</div>
+                                                    <div class="card-title" _msthash="3392506" _msttexthash="591578">
+                                                        <a href="/admin/outils">
+                                                            <button class="btn btn-red">
+                                                                <i class="bi bi-arrow-return-left"></i>
+                                                                retour
+                                                            </button>
+                                                        </a>
+                                                        Ajouter un nouveau Partenaires
+                                                    </div>
                                                 </div>
                                                 <!--form ajout-->
                                                 <form action="/store_clients" method="post" enctype="multipart/form-data">

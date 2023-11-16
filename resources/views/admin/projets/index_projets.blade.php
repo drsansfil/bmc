@@ -1,14 +1,14 @@
 @extends('layouts.back')
 @section('title', 'projets')
 @section('content')
-<style>
-    .show-more-button{
-        border: none;
-        color: #1a64a8;
-        font-weight: bold;
-        background-color: unset;
-    }
-</style>
+    <style>
+        .show-more-button {
+            border: none;
+            color: #1a64a8;
+            font-weight: bold;
+            background-color: unset;
+        }
+    </style>
     <div class="page">
         <div class="page-main">
         </div>
@@ -48,11 +48,11 @@
                                             </tr>
                                         </thead>
                                         <tbody class="table-bordered">
-                                            @foreach ($projets as  $project)
+                                            @foreach ($projets as $project)
                                                 <tr>
 
                                                     <td><img src="{{ asset('uploads') }}/{{ $project->images->first()->url }}"
-                                                        style="max-width: 100px;">
+                                                            style="max-width: 100px;">
                                                     </td>
                                                     <td>{{ $project->nom_projet }}</td>
                                                     <td>{{ $project->type?->nom }}</td>
@@ -66,19 +66,24 @@
                                                     </td>
                                                     <td>{{ $project->created_at }}</td>
                                                     <td>
-                                                        <!--button modifier-->
-                                                        <a href="/edite_projets/{{ $project->id }}" type="button"
-                                                            class="btn btn-icon  btn-info"><i
-                                                                class="fa fa-pencil-square-o"></i>
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="/edite_projets/{{ $project->id }}"
+                                                                        type="button" class="btn btn-icon  btn-info"><i
+                                                                            class="fa fa-pencil-square-o"></i>
 
-                                                        </a>
-
-                                                        <!--button supprimer-->
-                                                        <a href="/admin/projet/{{ $project->id }}/delete"
-                                                            onclick="return confirm('voulez-vous vraiment supprimer cette')"
-                                                            type="button" class="btn btn-icon  btn-danger"><i
-                                                                class="fe fe-trash"></i>
-                                                        </a>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="/admin/projet/{{ $project->id }}/delete"
+                                                                        onclick="return confirm('voulez-vous vraiment supprimer cette')"
+                                                                        type="button" class="btn btn-icon  btn-danger"><i
+                                                                            class="fe fe-trash"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -105,9 +110,9 @@
 
         });
     </script>
-     <script>
-        $(document).ready(function () {
-            $(".show-more-button").click(function () {
+    <script>
+        $(document).ready(function() {
+            $(".show-more-button").click(function() {
                 const textContainer = $(this).parent();
                 const textPreview = textContainer.find(".text-preview");
                 const textFull = textContainer.find(".text-full");

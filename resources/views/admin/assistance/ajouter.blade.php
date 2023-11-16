@@ -22,7 +22,7 @@
                                             <div class="card p-5">
                                                 <div class="card-header">
                                                     <div class="card-title" _msthash="3392506" _msttexthash="591578">
-                                                        <a href="/admin/metiers"><button
+                                                        <a href="/admin/assistance"><button
                                                                 class="btn btn-red"><i class="bi bi-arrow-return-left"></i>
                                                                 retour</button></a>
                                                         Ajouter une assistance
@@ -48,7 +48,7 @@
 
                                                         </div>
                                                     </div>
-                                                    <div>
+                                                    <div class="modal-footer">
                                                         <button class="btn btn-red" type="submit">Ajouter</button>
                                                     </div>
                                                 </form>

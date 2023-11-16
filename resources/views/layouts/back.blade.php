@@ -211,15 +211,15 @@
                                 class=" fe fe-mail"></i>&nbsp<span class="side-menu__label">Newslettres</span></a>
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item {{ request()->is('admin/analyse','admin/ajouter_analyse') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/admin/analyse">
+                        <a class="side-menu__item {{ request()->is('admin/analyse','admin/ajouter_analyse','admin/update_analyse/*') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/admin/analyse">
                             <i class="bi bi-folder2-open"></i> &nbsp<span class="side-menu__label">Analyse</span></a>
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item {{ request()->is('admin/assistance','admin/ajouter_assistance') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/admin/assistance">
+                        <a class="side-menu__item {{ request()->is('admin/assistance','admin/ajouter_assistance','admin/update_assistance/*') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/admin/assistance">
                             <i class="bi bi-folder2-open"></i> &nbsp<span class="side-menu__label">Assistance</span></a>
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item {{ request()->is('admin/outils','admin/ajouter_outils') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/admin/outils">
+                        <a class="side-menu__item {{ request()->is('admin/outils','admin/ajouter_outils','admin/update_outils/*') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/admin/outils">
                             <i class="bi bi-folder2-open"></i> &nbsp<span class="side-menu__label">Nos outils</span></a>
                     </li>
                     <li class="slide">

@@ -52,13 +52,12 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-4">
-                                                            <i>Ilustration</i>
                                                             <img src="{{ asset('uploads') }}/{{ $analyse->image }}"
                                                                 style="width: 100%;">
 
                                                         </div>
                                                     </div>
-                                                    <div>
+                                                    <div class="modal-footer">
                                                         <button class="btn btn-red" type="submit">Modifier</button>
                                                     </div>
                                                 </form>

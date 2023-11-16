@@ -22,9 +22,12 @@
                                             <div class="card p-5">
                                                 <div class="card-header">
                                                     <div class="card-title" _msthash="3392506" _msttexthash="591578">
-                                                        <a href="/admin/outils"><button class="btn btn-red"><i
-                                                                    class="bi bi-arrow-return-left"></i>
-                                                                retour</button></a>
+                                                        <a href="/admin/outils">
+                                                            <button class="btn btn-red">
+                                                                <i class="bi bi-arrow-return-left"></i>
+                                                                retour
+                                                            </button>
+                                                        </a>
                                                         Ajouter un outil
                                                     </div>
                                                 </div>
@@ -52,7 +55,7 @@
                                                                 id="customFileSm" type="file" required>
                                                         </div>
                                                     </div>
-                                                    <div>
+                                                    <div class="modal-footer">
                                                         <button class="btn btn-red" type="submit">Ajouter</button>
                                                     </div>
                                                 </form>

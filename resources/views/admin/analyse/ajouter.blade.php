@@ -36,7 +36,7 @@
                                                                 for="exampleFormControlInput1">
                                                                 <strong>Titre de l'analyse</strong>
                                                             </label>
-                                                            <input class="form-control" name="titre" 
+                                                            <input class="form-control" name="titre"
                                                                 type="text" required>
 
                                                         </div>
@@ -49,7 +49,7 @@
 
                                                         </div>
                                                     </div>
-                                                    <div>
+                                                    <div class="modal-footer">
                                                         <button class="btn btn-red" type="submit">Ajouter</button>
                                                     </div>
                                                 </form>

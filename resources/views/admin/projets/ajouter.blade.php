@@ -80,7 +80,7 @@
                                                         </div>
 
                                                     </div>
-                                                    <div>
+                                                    <div class="modal-footer">
                                                         <button class="btn btn-red" type="submit">Ajouter</button>
                                                     </div>
                                                 </form>
