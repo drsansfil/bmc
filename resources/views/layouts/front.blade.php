@@ -227,10 +227,11 @@
                                     <div class="nav-additional-links">
                                         <!-- #search start -->
                                         <div id="search">
-                                            <form>
-                                                <input class="search-submit" type="submit">
-                                                <input id="m_search" name="s" type="text"
-                                                    placeholder="Type and hit enter...">
+                                            <form method="post" id="searchyyy" action="/recherche">
+                                                @csrf
+                                                <input class="search-submit" type="submit" value="recherche">
+                                                <input id="m_search" name="m_search" type="text"
+                                                    placeholder="Projet, outils">
                                             </form>
                                         </div><!-- #search end -->
 
@@ -478,6 +479,15 @@
             }
         });
         /* ]]> */
+
+    </script>
+     <script>
+        document.getElementById('m_search').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                document.getElementById('searchyyy').submit();
+            }
+        });
     </script>
 
 </body>

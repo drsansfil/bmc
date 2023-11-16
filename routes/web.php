@@ -37,6 +37,7 @@ Route::middleware(['count-visitors', 'Language'])->group(function () {
     Route::get('/secteur/{id}', [GuestController::class, 'details_secteur']); // projet page
     Route::get('/blog/post/{id}', [GuestController::class, 'blogDetail'])->name('blogDetail'); // blog detail page
     Route::post('/contacte', [ContactController::class, 'saveContact'])->name('contacte');
+    Route::post('/recherche', [GuestController::class, 'recherche']);
     Route::get('/specialisation_bim', [GuestController::class, 'specialisation_bim']);
     Route::get('/about', function () {
         $info = Information::all(); //recupere tout les informations de la base

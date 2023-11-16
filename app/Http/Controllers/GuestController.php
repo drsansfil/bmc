@@ -11,6 +11,7 @@ use App\Models\outils;
 use App\Models\Projet;
 use App\Models\ProjectCategory;
 use GuzzleHttp\Psr7\Request;
+use Illuminate\Http\Request as HttpRequest;
 use Illuminate\Support\Facades\App;
 use Laravel\Ui\Presets\React;
 
@@ -22,24 +23,24 @@ class GuestController extends Controller
         $projets = Projet::all(); //recupere tout les projets de la base
         $blog = Blog::latest()->take(4)->get(); //recupere tout les blog de la base
         $projectCategories = ProjectCategory::all();
-        $clients=Client::all();
+        $clients = Client::all();
         $metiers = metier::all();
         $outils = outils::all();
 
-        if(is_null($info)){
-            Information::insert(["home_message"=>"Veuillez configurer"]);
+        if (is_null($info)) {
+            Information::insert(["home_message" => "Veuillez configurer"]);
             $informations = directeur::first();
             return view('admin.informations.directeur')->with('informations', $informations);
         }
 
         return view('front.acceuil')
-        ->with('info', $info)
-        ->with('clients',$clients)
-        ->with('projets', $projets)
-        ->with('metiers', $metiers)
-        ->with('outils', $outils)
-        ->with('projectCategories', $projectCategories)
-        ->with('blogs', $blog);
+            ->with('info', $info)
+            ->with('clients', $clients)
+            ->with('projets', $projets)
+            ->with('metiers', $metiers)
+            ->with('outils', $outils)
+            ->with('projectCategories', $projectCategories)
+            ->with('blogs', $blog);
     }
 
     public function changeLang($langcode)
@@ -87,7 +88,7 @@ class GuestController extends Controller
         if (!$blog) {
             abort(404);
         }
-        return view('front.blogDetails')->with('blog',$blog)->with('blogs', $blogs);
+        return view('front.blogDetails')->with('blog', $blog)->with('blogs', $blogs);
     }
 
 
@@ -120,21 +121,22 @@ class GuestController extends Controller
 
 
 
-    public function metierdetails($id){
-        $metier= metier::find($id);
+    public function metierdetails($id)
+    {
+        $metier = metier::find($id);
         if (!$metier) {
             abort(404);
         }
         return view('front.metier')->with([
             'metier' => $metier
         ]);
-
     }
 
 
 
-    public function details_secteur($id){
-        $secteur=ProjectCategory::find($id);
+    public function details_secteur($id)
+    {
+        $secteur = ProjectCategory::find($id);
         if (!$secteur) {
             abort(404);
         }
@@ -146,15 +148,32 @@ class GuestController extends Controller
 
 
 
-    public function specialisation_bim(){
+    public function specialisation_bim()
+    {
         return view('front.specialisation_bim');
     }
 
 
 
-    public function index_outils(){
-        $outils=outils::all();
-        return view('front.outils')->with('outils',$outils);
+    public function index_outils()
+    {
+        $outils = outils::all();
+        return view('front.outils')->with('outils', $outils);
     }
 
+
+
+    public function recherche(HttpRequest $request)
+    {
+        $key = addslashes($request->m_search);
+        $projets = Projet::where(function ($query) use ($key) {
+            $query->where('nom_projet', 'like', '%' . $key . '%')
+                ->orWhere('description', 'like', '%' . $key . '%');
+        })->get();
+        $outils = outils::where(function ($query) use ($key) {
+            $query->where('titre', 'like', '%' . $key . '%')
+                ->orWhere('description', 'like', '%' . $key . '%');
+        })->get();
+        return view('front.recherche')->with('outils', $outils)->with('projets', $projets);
+    }
 }

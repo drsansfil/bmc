@@ -471,12 +471,12 @@
                                         <div class="post-body">
                                             <span class="date">{{ $item->created_at }}</span>
 
-                                            <a href="management-news-single.html">
+                                            <a href="/projet/post/{{ $item->id }}">
                                                 <h3>{{ $item->nom_projet }}</h3>
                                             </a>
 
                                             <a href="/projet/post/{{ $item->id }}" class="read-more">
-                                                Read more
+                                                Lire plus
                                             </a><!-- .read-more end -->
                                         </div><!-- .post-body end -->
                                     </div><!-- .post-container end -->
