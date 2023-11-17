@@ -53,11 +53,11 @@
                     </div><!-- .custom-heading-03 end -->
 
                     <form class="wpcf7 wpcf7-contact-us clearfix" method="POST" action="/contacte">
-                        <input type="text" required name="name" class="wpcf7-text" id="contact-name" placeholder="{{ __('message.from_name') }}">
-                        <input type="email" required name="email" class="wpcf7-email" id="contact-email" placeholder="{{ __('message.from_email') }}">
-                        <input type="text" required name="phone_number" class="wpcf7-text" id="contact-phone" placeholder="{{ __('message.from_phone') }}">
-                        <input type="text" required name="subject" class="wpcf7-text" id="contact-subject" placeholder="{{ __('message.from_subjet') }}">
-                        <textarea rows="8" name="message" class="wpcf7-textarea" id="contact-message" placeholder="{{ __('message.from_message') }}"></textarea>
+                        <input type="text" required name="name" class="wpcf7-text" id="contact-name" placeholder="{{ __('message.form_name') }}">
+                        <input type="email" required name="email" class="wpcf7-email" id="contact-email" placeholder="{{ __('message.form_email') }}">
+                        <input type="text" required name="phone_number" class="wpcf7-text" id="contact-phone" placeholder="{{ __('message.form_phone') }}">
+                        <input type="text" required name="subject" class="wpcf7-text" id="contact-subject" placeholder="{{ __('message.form_subjet') }}">
+                        <textarea rows="8" name="message" class="wpcf7-textarea" id="contact-message" placeholder="{{ __('message.form_message') }}"></textarea>
                         <div class="g-recaptcha" data-sitekey="6Ld4VykTAAAAAM_qltIuTg7I0hpcdHjX7j68qpRz"></div>
                         <input type="submit" value="submit" class="wpcf7-submit">
                     </form><!-- .wpcf7.clearfix end -->

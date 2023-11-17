@@ -59,7 +59,7 @@ return [
 "form_email"=>"Your email",
 "form_name"=>"Your Name",
 "form_phone"=>"Phone Number",
-"form_subject"=>"Subject",
+"form_subjet"=>"Subject",
 "form_message"=>"Message",
 "form_submit"=>"Submit",
 
