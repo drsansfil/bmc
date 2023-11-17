@@ -103,18 +103,13 @@
                     <div class="custom-heading-02 text-center">
                         <h2>BEST MANAGEMENT & CONSULTING BMC</h2>
                         <p>
-                            Notre cabinet, implanté à Tunis, depuis 2009 est spécialisé dans l’accompagnement et
-                            l’assistance des entreprises publiques ou privées.
+                            {{ __('message.home_1') }}
                         </p>
                         <p>
-                            Dans ce cadre d'activité, on organise des séminaires de formation professionnelle continue en
-                            inter ou en intra-entreprise, et on s'occupe au mise à niveau des entreprises, appelées à agir
-                            dans un milieu de plus en plus concurrentiel.
+                            {{ __('message.home_2') }}
                             <br>
                             <b>
-                                Nos services ont par conséquent pu acquérir l'expérience et la compétence pour étudier,
-                                planifier, estimer le budget nécessaire à de telles opérations et conduire ou accompagner un
-                                projet de la phase d'étude jusqu'à son terme.
+                                {{ __('message.home_3') }}
                             </b>
                         </p>
                     </div><!-- .custom-heading-02 end -->
@@ -127,12 +122,9 @@
                 <div class="col-md-12">
                     <!-- .custom-heading-02 start -->
                     <div class="custom-heading-02">
-                        <h2>NOTRE EQUIPE</h2>
+                        <h2> {{ __('message.home_4') }}</h2>
                         <span>
-                            Nous pouvons donner les meilleures solutions avec une équipe composée d’experts proches des
-                            préoccupations des responsables et rompus aux exigences de leur métier. Notre équipe est
-                            compétente pour développer et mettre en place des solutions adaptées aux besoins de nos clients
-                            et apporter des réponses sur mesure.
+                            {{ __('message.home_5') }}
                         </span>
                     </div><!-- .custom-heading-02 end -->
                 </div><!-- .col-md-12 end -->
@@ -151,7 +143,7 @@
 
                         <div class="text-container">
                             <a href="#">
-                                <h3>Son expérience</h3>
+                                <h3> {{ __('message.option_1') }}</h3>
                             </a>
                             <p>
                                 Defining your business goals and steps to achieve them.
@@ -168,7 +160,7 @@
 
                         <div class="text-container">
                             <a href="#">
-                                <h3>Sa disponibilité</h3>
+                                <h3>{{ __('message.option_2') }}</h3>
                             </a>
                             <p>
                                 Defining your business goals and steps to achieve them.
@@ -185,7 +177,7 @@
 
                         <div class="text-container">
                             <a href="#">
-                                <h3>Son intégrité</h3>
+                                <h3>{{ __('message.option_3') }}</h3>
                             </a>
                             <p>
                                 Defining your business goals and steps to achieve them.
@@ -203,7 +195,7 @@
 
                         <div class="text-container">
                             <a href="#">
-                                <h3>Sa polyvalence et pluridisciplinarité</h3>
+                                <h3>{{ __('message.option_4') }}</h3>
                             </a>
                             <p>
                                 Defining your business goals and steps to achieve them.
@@ -220,7 +212,7 @@
 
                         <div class="text-container">
                             <a href="#">
-                                <h3>L’écoute du client <br><br> </h3>
+                                <h3>{{ __('message.option_5') }} <br><br> </h3>
                             </a>
                             <p>
                                 Defining your business goals and steps to achieve them.
@@ -238,7 +230,7 @@
 
                         <div class="text-container">
                             <a href="#">
-                                <h3>La réponse dans les meilleurs délais</h3>
+                                <h3>{{ __('message.option_6') }}</h3>
                             </a>
                             <p>
                                 Defining your business goals and steps to achieve them.
@@ -266,13 +258,13 @@
                     <!-- note start -->
                     <div class="call-to-action clearfix">
                         <div class="text">
-                            <h4>Nous identifierons vos besoins et améliorerons la croissance de votre entreprise.</h4>
+                            <h4>{{ __('message.info_1') }}</h4>
                         </div>
 
-                        <a href="/" class="btn icon-animated">
+                        <a href="/contact" class="btn icon-animated">
                             <span>
                                 <i class="lynny-page-1"></i>
-                                demander un devis rapide
+                                {{ __('message.ask') }}
                             </span>
                         </a>
                     </div><!-- .call-to-action end -->
@@ -293,13 +285,12 @@
                 <div class="col-md-6">
                     <!-- .custom-heading-01 start -->
                     <div class="custom-heading-01">
-                        <span>ce que nous utilisons</span>
-                        <h2>Nos Outils</h2>
+                        <span>{{__('message.txt_4') }}</span>
+                        <h2>{{ __('message.ce_que') }}</h2>
                     </div><!-- .custom-heading-01 end -->
 
                     <p>
-                        l'espace où l'innovation rencontre la performance. Explorez notre vaste gamme d'outils soigneusement
-                        sélectionnés pour répondre à vos besoins professionnels et personnels.
+                        {{ __('message.home_6') }}
                     </p>
 
                     <ul class="fa-ul ul-circled">
@@ -323,7 +314,7 @@
                             @endforelse
                         </div>
                         <a href="/outils" class="read-more">
-                            Plus de détails sur nos outils.
+                            {{ __('message.Plus_outils') }}
                         </a><!-- .read-more end -->
 
                     </ul>
@@ -363,7 +354,7 @@
                                 <div class="odometer" data-to={{ $info->secteur }}></div>
                             </div>
                             <p>
-                                Secteurs
+                                {{ __('message.txt_1') }}
                             </p>
                         </div><!-- .odometer-container end -->
                     </div><!-- .col-md-3 end -->
@@ -378,7 +369,7 @@
                                 <div class="odometer" data-to={{ $info->projet }}></div>
                             </div>
                             <p>
-                                Projets
+                                {{ __('message.txt_2') }}
                             </p>
                         </div><!-- .odometer-container end -->
                     </div><!-- .col-md-3 end -->
@@ -393,7 +384,7 @@
                                 <div class="odometer" data-to={{ $info->partenaire }}></div>
                             </div>
                             <p>
-                                Partenaires
+                                {{ __('message.txt_3') }}
                             </p>
                         </div><!-- .odometer-container end -->
                     </div><!-- .col-md-3 end -->
@@ -408,7 +399,7 @@
                                 <div class="odometer" data-to={{ $info->client }}></div>
                             </div>
                             <p>
-                                Clients satisfaits
+                                {{ __('message.txt_4') }}
                             </p>
                         </div><!-- .odometer-container end -->
                     </div><!-- .col-md-3 end -->
@@ -431,13 +422,13 @@
                     <!-- note start -->
                     <div class="call-to-action clearfix">
                         <div class="text">
-                            <h4>Toujours à la recherche de nouveaux talents. Envoyez-nous votre CV par email.</h4>
+                            <h4>{{ __('message.info_2') }}</h4>
                         </div>
 
                         <a href="/" class="btn icon-animated">
                             <span>
                                 <i class="lynny-page-1"></i>
-                                Contactez-nous
+                                {{ __('message.call_us') }}
                             </span>
                         </a>
                     </div><!-- .call-to-action end -->
@@ -479,7 +470,7 @@
                                             </a>
 
                                             <a href="/projet/post/{{ $item->id }}" class="read-more">
-                                                Lire plus
+                                                {{ __('message.lire_plus') }}
                                             </a><!-- .read-more end -->
                                         </div><!-- .post-body end -->
                                     </div><!-- .post-container end -->
@@ -504,7 +495,7 @@
             <div class="row">
                 <!-- .col-md-6 start -->
                 <div class="col-md-6">
-                    <h2>Abonnez-vous pour nos dernières nouvelles et informations</h2>
+                    <h2>{{ __('message.info_3') }}</h2>
                 </div><!-- .col-md-6 end -->
 
                 <!-- .col-md-6 start -->

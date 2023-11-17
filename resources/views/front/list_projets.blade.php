@@ -1,5 +1,5 @@
 @extends('layouts.front')
-@section('title', 'Nos projets')
+@section('title', __('message.btn_projets'))
 @section('content')
 
     <div class="page-title page-title-style-02 bkg-img09">
@@ -13,7 +13,7 @@
                 <div class="col-md-6">
                     <!-- .pt-heading start -->
                     <div class="pt-heading">
-                        <h1>Projets</h1>
+                        <h1>{{ __('message.btn_projets') }}</h1>
                     </div><!-- .pt-heading end -->
                 </div><!-- .col-md-6 end -->
 
@@ -22,14 +22,14 @@
                     <!-- breadcrumbs start -->
                     <div class="breadcrumb-container clearfix">
                         <ul class="breadcrumb">
-                            <li>You are here: </li>
+                            <li>{{ __('message.You_are_here') }}: </li>
 
                             <li>
-                                <a href="/">Home</a>
+                                <a href="/">{{ __('message.btn_accueil') }}</a>
                             </li>
 
                             <li>
-                                <span class="active">Projets</span>
+                                <span class="active">{{ __('message.btn_projets') }}</span>
                             </li>
                         </ul><!-- .breadcrumb end -->
                     </div><!-- .breadcrumb-container end -->

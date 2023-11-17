@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use App\Models\Visitor;
 use Closure;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\App;
 class CountVisitor
 {
     /**
@@ -23,6 +23,11 @@ class CountVisitor
                 'date' => today(),
                 'ip' => $ip,
             ]);
+        }
+        if (Session()->has("lang_code")) {
+            App::setLocale(Session()->get("lang_code"));
+        } else {
+            session()->put("lang_code", 'fr');
         }
         return $next($request);
     }

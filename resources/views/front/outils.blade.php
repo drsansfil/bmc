@@ -1,5 +1,5 @@
 @extends('layouts.front')
-@section('title', 'outils')
+@section('title', __('message.nos_outils') )
 @section('content')
 
 
@@ -14,7 +14,7 @@
                 <div class="col-md-6">
                     <!-- .pt-heading start -->
                     <div class="pt-heading">
-                        <h1>Notre liste d'outils</h1>
+                        <h1>{{ __('message.list_tool') }}</h1>
                     </div><!-- .pt-heading end -->
                 </div><!-- .col-md-6 end -->
 
@@ -23,14 +23,14 @@
                     <!-- breadcrumbs start -->
                     <div class="breadcrumb-container clearfix">
                         <ul class="breadcrumb">
-                            <li>You are here: </li>
+                            <li>{{ __('message.You_are_here') }}: </li>
 
                             <li>
-                                <a href="/">Home</a>
+                                <a href="/">{{ __('message.btn_accueil') }}</a>
                             </li>
 
                             <li>
-                                <span class="active">Nos outils</span>
+                                <span class="active">{{ __('message.btn_nos_outils') }}</span>
                             </li>
                         </ul><!-- .breadcrumb end -->
                     </div><!-- .breadcrumb-container end -->
@@ -50,7 +50,7 @@
                 <div class="col-md-12">
                     <!-- .custom-heading-02 start -->
                     <div class="custom-heading-02">
-                        <h2>NOS OUTILS DE TRAVAIL</h2>
+                        <h2>{{ __('message.work_tool') }}</h2>
                         <span>.</span>
                     </div><!-- .custom-heading-02 end -->
                 </div><!-- .col-md-12 end -->

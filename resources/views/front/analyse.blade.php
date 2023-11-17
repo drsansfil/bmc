@@ -1,5 +1,5 @@
 @extends('layouts.front')
-@section('title', 'Analyse')
+@section('title', __('message.btn_analyse') )
 @section('content')
 
         <div class="page-title page-title-style-02 bkg-img09">
@@ -13,7 +13,7 @@
                     <div class="col-md-6">
                         <!-- .pt-heading start -->
                         <div class="pt-heading">
-                            <h1>Analyse</h1>
+                            <h1>{{ __('message.btn_analyse') }}</h1>
                         </div><!-- .pt-heading end -->
                     </div><!-- .col-md-6 end -->
 
@@ -22,14 +22,14 @@
                         <!-- breadcrumbs start -->
                         <div class="breadcrumb-container clearfix">
                             <ul class="breadcrumb">
-                                <li>You are here: </li>
+                                <li>{{ __('message.You_are_here') }}: </li>
 
                                 <li>
-                                    <a href="/">Home</a>
+                                    <a href="/">{{ __('message.btn_accueil') }}</a>
                                 </li>
 
                                 <li>
-                                    <span class="active">Analyse</span>
+                                    <span class="active">{{ __('message.btn_analyse') }}</span>
                                 </li>
                             </ul><!-- .breadcrumb end -->
                         </div><!-- .breadcrumb-container end -->
@@ -85,53 +85,22 @@
                         <!-- .aside-widgets start -->
                         <ul class="aside-widgets">
 
-                            <!-- Project Categories start -->
-                            <li id="custom-post-type-categories-2" class="widget widget_categories clearfix">
-                                <div class="title">
-                                    <h3>Project Categories</h3>
-                                </div><!-- .title end -->
 
-                                <ul>
-                                    <li class="cat-item cat-item-2">
-                                        <a href="#" title="All Projects">All Projects</a>
-                                    </li>
-
-                                    <li class="cat-item cat-item-2">
-                                        <a href="#" title="Mergers & Acquisitions">Mergers & Acquisitions</a>
-                                    </li>
-
-                                    <li class="cat-item cat-item-2">
-                                        <a href="#" title="Strategy & Growth">Strategy & Growth</a>
-                                    </li>
-
-                                    <li class="cat-item cat-item-2">
-                                        <a href="#" title="Global Expansion">Global Expansion</a>
-                                    </li>
-
-                                    <li class="cat-item cat-item-2">
-                                        <a href="#" title="Customer Strategy">Customer Strategy</a>
-                                    </li>
-                                </ul>
-                            </li><!-- .widgetwidget_categories end -->
 
                             <!-- Latest projects start -->
                             <li id="custom-post-type-recent-posts-2" class="widget widget_recent_entries">
                                 <div class="title">
-                                    <h3>Recent Projects</h3>
+                                    <h3>{{ __('message.Latest_News') }}</h3>
                                 </div><!-- .title end -->
 
                                 <ul>
+                                    @forelse ($projets as $item)
                                     <li>
-                                        <a href="#">Developing a 10-Year Business Strategy for MixLogistics</a>
+                                        <a href="/projet/post/{{ $item->id }}">{{$item->nom_projet}}</a>
                                     </li>
+                                    @empty
 
-                                    <li>
-                                        <a href="management-case-market-assessment-aqua-park.html">Detailed Market Assessment for Aqua Park in Istria Croatia</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="management-case-management-global-strategy-geo-informatics.html">Global Strategy Development and Market Analysis for GEO Informatics</a>
-                                    </li>
+                                    @endforelse
                                 </ul>
                             </li><!-- .widget_recent_entries end -->
                         </ul><!-- .aside-widgets -->

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\analyse as ModelsAnalyse;
+use App\Models\Projet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
@@ -12,7 +13,8 @@ class analyse extends Controller
     public function index()
     {
         $analyses = ModelsAnalyse::all();
-        return view("front.analyse")->with('analyses', $analyses);
+        $projets = Projet::latest()->take(5)->get();
+        return view("front.analyse")->with('analyses', $analyses)->with('projets',$projets);
     }
 
 

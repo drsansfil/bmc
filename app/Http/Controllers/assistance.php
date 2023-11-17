@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\assistances;
+use App\Models\outils;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
@@ -12,7 +13,8 @@ class assistance extends Controller
     public function index()
     {
         $assistances = assistances::all();
-        return view("front.assistance")->with('assistances', $assistances);
+        $outils=outils::all();
+        return view("front.assistance")->with('assistances', $assistances)->with("outils",$outils);
     }
 
 

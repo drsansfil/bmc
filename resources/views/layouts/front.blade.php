@@ -109,7 +109,7 @@
                                                 </div>
 
                                                 <div class="text-container">
-                                                    <span>APPELEZ-NOUS</span>
+                                                    <span>{{ __('message.call_us') }}</span>
                                                     <p>
                                                         {{ $info_footer->contacts }}
                                                     </p>
@@ -122,7 +122,7 @@
                                                 </div>
 
                                                 <div class="text-container">
-                                                    <span>ENTRER EN CONTACT</span>
+                                                    <span>{{ __('message.ENTRER_en') }}</span>
                                                     <a href="mailto:{{ $info_footer->email_contact }}">
                                                         {{ $info_footer->email_contact }}
                                                     </a>
@@ -135,10 +135,10 @@
                                                 </div>
 
                                                 <div class="text-container">
-                                                    <span>Localisation</span>
+                                                    <span>LOCALISATION</span>
                                                     <p>
                                                         <a href="/contact">
-                                                            NOS IMPLANTATIONS
+                                                            {{ __('message.implantation') }}
                                                         </a>
                                                     </p>
                                                 </div><!-- .text-container end -->
@@ -186,26 +186,27 @@
                                         <!-- navigation links start -->
                                         <ul class="nav navbar-nav">
                                             <li class="{{ request()->is('', '/') ? 'current-menu-item' : '' }}">
-                                                <a href="/">Acceuil</a>
+                                                <a href="/">{{ __('message.btn_accueil') }}</a>
                                             </li>
                                             <li class="{{ request()->is('about') ? 'current-menu-item' : '' }}">
-                                                <a href="/about">A propos</a>
+                                                <a href="/about">{{ __('message.btn_apropos') }}</a>
                                             </li>
                                             <li
                                                 class="menu-item-has-children dropdown {{ request()->is('analyse', 'assistance') ? 'current-menu-item' : '' }}">
                                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle"
-                                                    role="button">Nos missions</a>
+                                                    role="button">{{ __('message.btn_nos_missions') }}</a>
 
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="/analyse">Analyse</a></li>
-                                                    <li><a href="/assistance">Assistance</a></li>
+                                                    <li><a href="/analyse">{{ __('message.btn_analyse') }}</a></li>
+                                                    <li><a href="/assistance">{{ __('message.btn_assistance') }}</a>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             <li class="{{ request()->is('outils') ? 'current-menu-item' : '' }}">
-                                                <a href="/outils">Nos Outils</a>
+                                                <a href="/outils">{{ __('message.btn_nos_outils') }}</a>
                                             </li>
                                             <li class="{{ request()->is('projets') ? 'current-menu-item' : '' }}">
-                                                <a href="/projets">Projets</a>
+                                                <a href="/projets">{{ __('message.btn_projets') }}</a>
                                             </li>
 
                                             {{--  <li class="menu-item-has-children dropdown">
@@ -220,7 +221,7 @@
                                             </li> --}}
 
                                             <li class="{{ request()->is('contact') ? 'current-menu-item' : '' }}">
-                                                <a href="/contact">Contact</a>
+                                                <a href="/contact">{{ __('message.btn_contact') }}</a>
                                             </li>
                                     </div><!-- navbar end -->
 
@@ -238,18 +239,26 @@
                                         <div class="nav-plugins clearfix">
                                             <!-- WPML Languages start -->
                                             <div class="wpml-languages enabled">
+                                                @if (app()->getLocale() == 'en')
+                                                    <a class="active" href="#">
+                                                        <span>En</span>
+                                                        <i class="fa fa-chevron-down"></i>
+                                                    </a>
+                                                @else
                                                 <a class="active" href="#">
                                                     <span>fr</span>
                                                     <i class="fa fa-chevron-down"></i>
                                                 </a>
+                                                @endif
+
 
                                                 <ul class="wpml-lang-dropdown">
                                                     <li>
-                                                        <a href="#">fr</a>
+                                                        <a href="{{ route('change-language', 'fr') }}" title="">Fr</a>
                                                     </li>
 
                                                     <li>
-                                                        <a href="#">en</a>
+                                                        <a href="{{ route('change-language', 'en') }}" title="">En</a>
                                                     </li>
                                                 </ul><!-- .wpml-lang-dropdown end -->
                                             </div><!-- .wpml-languages.enabled end -->
@@ -301,24 +310,24 @@
                         <!-- .widget.widget-pages start -->
                         <li class="widget widget-pages">
                             <div class="title">
-                                <h3>Nos liens</h3>
+                                <h3>{{ __('message.Nos_liens') }}</h3>
                             </div><!-- .title end -->
 
                             <ul>
                                 <li>
-                                    <a href="/">Accueil</a>
+                                    <a href="/">{{ __('message.btn_accueil') }}</a>
                                 </li>
 
                                 <li>
-                                    <a href="/about">A propos de nous</a>
+                                    <a href="/about">{{ __('message.btn_apropos') }}</a>
                                 </li>
 
                                 <li>
-                                    <a href="/projets">Nos projets</a>
+                                    <a href="/projets">{{ __('message.btn_projets') }}</a>
                                 </li>
 
                                 <li>
-                                    <a href="/contact">Contact</a>
+                                    <a href="/contact">{{ __('message.btn_contact') }}</a>
                                 </li>
                             </ul>
 
@@ -334,7 +343,7 @@
                     <ul class="footer-widget-container col-md-3 col-sm-6">
                         <li class="widget widget-text">
                             <div class="title">
-                                <h3>Latest News</h3>
+                                <h3>{{ __('message.Latest_News') }}</h3>
                             </div>
 
                             <!-- Latest posts element start -->
@@ -417,7 +426,7 @@
                     <!-- .col-md-6 start -->
                     <div class="col-md-6 col-sm-6 copyright-right">
                         <p>
-                            Design and development by <a href="http://www.pixel-industry.com">Ebuild</a>
+                            {{ __('message.Designed_by') }} <a href="http://www.pixel-industry.com">Ebuild</a>
                         </p>
                     </div><!-- .col-md-6 end -->
                 </div><!-- .row end -->

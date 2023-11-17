@@ -1,5 +1,5 @@
 @extends('layouts.front')
-@section('title', 'A propos')
+@section('title',  __('message.btn_apropos'))
 @section('content')
 
     <div class="page-title page-title-style-02 bkg-img09">
@@ -13,7 +13,7 @@
                 <div class="col-md-6">
                     <!-- .pt-heading start -->
                     <div class="pt-heading">
-                        <h1>A propos</h1>
+                        <h1>{{ __('message.btn_apropos') }}</h1>
                     </div><!-- .pt-heading end -->
                 </div><!-- .col-md-6 end -->
 
@@ -22,14 +22,14 @@
                     <!-- breadcrumbs start -->
                     <div class="breadcrumb-container clearfix">
                         <ul class="breadcrumb">
-                            <li>You are here: </li>
+                            <li>{{ __('message.You_are_here') }}: </li>
 
                             <li>
-                                <a href="/">Home</a>
+                                <a href="/">{{ __('message.btn_accueil') }}</a>
                             </li>
 
                             <li>
-                                <span class="active">A propos</span>
+                                <span class="active">{{ __('message.btn_apropos') }}</span>
                             </li>
                         </ul><!-- .breadcrumb end -->
                     </div><!-- .breadcrumb-container end -->
@@ -55,27 +55,17 @@
                         <div class="col-md-12">
                             <!-- .custom-heading-01 start -->
                             <div class="custom-heading-01">
-                                <span>company overview</span>
-                                <h2>Leading Management Consulting Company </h2>
+                                <span>company</span>
+                                <h2>{{ __('message.about_o') }}</h2>
                             </div><!-- .custom-heading-01 end -->
                             <p>
-                                Notre cabinet, implanté à Tunis, depuis 2009 est
-                                spécialisé dans l’accompagnement et l’assistance
-                                des entreprises publiques ou privées.
+                                {{ __('message.about_1') }}
                                 <br><br>
 
-                                Dans ce cadre d'activité, on organise des séminaires
-                                de formation professionnelle continue en inter ou en
-                                intra-entreprise, et on s'occupe au mise à niveau des
-                                entreprises, appelées à agir dans un milieu de plus en
-                                plus concurrentiel. <br>
+                                {{ __('message.about_2') }} <br>
                                 <img src="/images/about1.jpg" alt="" style="width: 100%" srcset="">
                                 <br><br>
-                                Nos services ont par conséquent pu acquérir
-                                l'expérience et la compétence pour étudier,
-                                planifier, estimer le budget nécessaire à de telles
-                                opérations et conduire ou accompagner un
-                                projet de la phase d'étude jusqu'à son terme.
+                                {{ __('message.about_3') }}
                                 <br><br>
                                 <img src="/images/about2.jpg" alt="" style="width: 100%" srcset="">
 
@@ -92,18 +82,18 @@
                     <ul class="aside-widgets">
                         <li class="widget widget_nav_menu clearfix">
                             <div class="title">
-                                <h3>Nos missions</h3>
+                                <h3>{{ __('message.btn_nos_missions') }}</h3>
                             </div><!-- .title end -->
 
                             <!-- .menu-quick-links-container start -->
                             <div class="menu-quick-links-container">
                                 <ul id="menu-quick-links" class="menu">
                                     <li class="menu-item current-menu-item">
-                                        <a href="/analyse">Analyse</a>
+                                        <a href="/analyse">{{ __('message.btn_analyse') }}</a>
                                     </li>
 
                                     <li class="menu-item">
-                                        <a href="/assistance">Assistance</a>
+                                        <a href="/assistance">{{ __('message.btn_assistance') }}</a>
                                     </li>
                                 </ul><!-- #menu-quick-links end -->
                             </div><!-- .menu-quick-links-container end -->
