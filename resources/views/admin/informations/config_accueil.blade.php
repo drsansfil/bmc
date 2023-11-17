@@ -59,15 +59,7 @@
 
                         <div class="card">
                             <div class="container">
-                                @if ($errors->any())
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                @endif
+
                                 <div class="row">
                                     <div class="col-sm-8">
                                         <div class="alert alert-default">
@@ -83,11 +75,17 @@
                                                 id="uploadForm">
                                                 @csrf
                                                 <div class="modal-body">
+                                                    @include('admin.composants.alert_success')
                                                     <div class="mb-3"><label class="form-label"
                                                             for="exampleFormControlInput1"><strong>Message
-                                                                d'accueil</strong></label>
+                                                                d'accueil ( Fr )</strong></label>
                                                         <textarea name="home_message" class="form-control" id=""rows="3">{{ $informations->home_message }}</textarea>
                                                     </div>
+                                                    <div class="mb-3"><label class="form-label"
+                                                        for="exampleFormControlInput1"><strong>Message
+                                                            d'accueil ( En )</strong></label>
+                                                    <textarea name="home_message_en" class="form-control" id=""rows="3">{{ $informations->home_message_en }}</textarea>
+                                                </div>
                                                     <div class="mb-3">
                                                         <label class="form-label" for="customFileSm"> <strong>
                                                                 Image</strong>

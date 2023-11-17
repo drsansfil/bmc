@@ -124,7 +124,7 @@ class InformationController extends Controller
 
     public function config_accueil()
     {
-        $informations = information::select("video", "home_message")->first();
+        $informations = information::select("video", "home_message","home_message_en")->first();
         return view('admin.informations.config_accueil')->with('informations', $informations);
     }
 
@@ -138,6 +138,7 @@ class InformationController extends Controller
 
         $validator = Validator::make($request->all(), [
             'home_message' => '',
+            'home_message_en' => '',
             'media' => 'file|mimes:jpeg,png,gif,mp4,avi,flv,webm,mkv,ogg|max:50000', // 50 Mo
         ], [
             'media.file' => 'Le champ média doit être un fichier.',
@@ -157,6 +158,7 @@ class InformationController extends Controller
         // Recherchez l'enregistrement unique (s'il existe)
         $information = Information::firstOrNew([]);
         $information->home_message = $request->home_message;
+        $information->home_message_en = $request->home_message_en;
 
         // Vérifiez si vous avez un fichier image à mettre à jour
         if ($request->hasFile('media')) {

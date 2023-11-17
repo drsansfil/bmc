@@ -29,7 +29,12 @@
                         left: 0;
                         top: 260px;"
                     data-type="text" data-effect="left(short)" data-duration="500" data-hide-effect="fade" data-delay="500">
-                    {{ $info->home_message }}
+                    @if (app()->getLocale() == 'en')
+                        {{ $info->home_message_en }}
+                    @else
+                        {{ $info->home_message }}
+                    @endif
+
                 </h2>
 
                 <a href="/contact"></a>

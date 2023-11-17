@@ -24,6 +24,7 @@ class CreateInformationTable extends Migration
             $table->string('video')->nullable();
             $table->string('mail_reception')->nullable();
             $table->string('home_message')->nullable();
+            $table->string('home_message_en')->nullable();
             $table->timestamps();
         });
     }
