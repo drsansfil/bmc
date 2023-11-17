@@ -1,6 +1,14 @@
 @extends('layouts.front')
-@section('title', $projet->nom_projet)
+@if (app()->getLocale() == 'en')
+    @section('title', $projet->nom_projet_en)
+    @section('description',$projet->description_en)
+@else
+    @section('title', $projet->nom_projet)
+    @section('description',$projet->description)
+@endif
 @section('content')
+
+@section('image',asset('uploads') .'/'. $projet->images()->first()->url )
 
     <div class="page-title page-title-style-02 bkg-img09">
         <div class="pt-mask-light"></div>
@@ -22,18 +30,23 @@
                     <!-- breadcrumbs start -->
                     <div class="breadcrumb-container clearfix">
                         <ul class="breadcrumb">
-                            <li>You are here: </li>
+                            <li>{{ __('message.You_are_here') }}: </li>
 
                             <li>
-                                <a href="/">Home</a>
+                                <a href="/">{{ __('message.btn_accueil') }}</a>
                             </li>
 
                             <li>
-                                <a href="/projets">Projets</a>
+                                <a href="/projets">{{ __('message.btn_projets') }}</a>
                             </li>
 
                             <li>
-                                <span class="active">{{ $projet->nom_projet }}</span>
+                                @if (app()->getLocale() == 'en')
+                                    <span class="active">{{ $projet->nom_projet_en }}</span>
+                                @else
+                                    <span class="active">{{ $projet->nom_projet }}</span>
+                                @endif
+
                             </li>
                         </ul><!-- .breadcrumb end -->
                     </div><!-- .breadcrumb-container end -->
@@ -57,18 +70,21 @@
 
                         <div class="post-body">
                             <span class="date">{{ $projet->created_at }}</span>
+                            @if (app()->getLocale() == 'en')
+                                <h2>{{ $projet->nom_projet_en }}</h2>
+                                {!! $projet->description_en !!}
+                            @else
+                                <h2>{{ $projet->nom_projet }}</h2>
+                                {!! $projet->description !!}
+                            @endif
 
-                            <h2>{{ $projet->nom_projet }}</h2>
-
-                            {!! $projet->description !!}
                             <div class="row">
                                 @forelse ($projet->images as $item)
-                                <div class="col-sm-6">
-                                    <img src="/uploads/{{$item->url}}" alt="">
-                                </div>
-                            @empty
-
-                            @endforelse
+                                    <div class="col-sm-6">
+                                        <img src="/uploads/{{ $item->url }}" alt="">
+                                    </div>
+                                @empty
+                                @endforelse
                             </div>
                         </div><!-- .post-body end -->
 
@@ -80,16 +96,21 @@
                     <ul class="aside-widgets">
                         <li class="widget widget-text">
                             <div class="title">
-                                <h3>Dernieres Projets</h3>
+                                <h3>{{ __('message.Latest_News') }}</h3>
                             </div><!-- .title end -->
                             <ul class="pi-latest-posts-03">
                                 @forelse ($projets as $item)
                                     <li class="post-container">
-                                        <a href="/projets/post/{{ $item->id }}">{{ $item->nom_projet}}</a>
+                                        @if (app()->getLocale() == 'en')
+                                            <a href="/projets/post/{{ $item->id }}">{{ $item->nom_projet_en }}</a>
+                                        @else
+                                            <a href="/projets/post/{{ $item->id }}">{{ $item->nom_projet }}</a>
+                                        @endif
+
                                         <span class="date">{{ $item->created_at }}</span>
                                     </li><!-- .post-container end -->
                                 @empty
-                                <i>Aucune publicaion.</i>
+                                    <i>Aucune publicaion.</i>
                                 @endforelse
                             </ul><!-- .pi-latest-posts-03 end -->
                         </li><!-- .widget end -->
@@ -112,22 +133,39 @@
                 <!-- .col-md-4 start -->
                 <div class="col-md-4">
                     <p>
-                        <a href="management-news-single-consultingpress-quality-over-quantity.html" class="nav-prev">prev
-                            post</a>
+                        @if (app()->getLocale() == 'en')
+                            @if ($projet_precedent)
+                                <a href="/projet/post/{{ $projet_precedent->id }}" class="nav-prev">{{ $projet_precedent->nom_projet_en }}</a>
+                            @endif
+                        @else
+                            @if ($projet_precedent)
+                                <a href="/projet/post/{{ $projet_precedent->id }}" class="nav-prev">{{ $projet_precedent->nom_projet }}</a>
+                            @endif
+                        @endif
                     </p>
                 </div><!-- .col-md-4 end -->
 
                 <!-- .col-md-4 start -->
                 <div class="col-md-4">
                     <p>
-                        <a href="management-news-grid.html">Back to news</a>
+                        <a href="/projets">{{ __('message.btn_projets') }}</a>
                     </p>
                 </div><!-- .col-md-4 end -->
 
                 <!-- .col-md-4 start -->
                 <div class="col-md-4">
                     <p>
-                        <a href="management-news-single-logistics-leaders.html" class="nav-next">next post</a>
+                        @if (app()->getLocale() == 'en')
+                            @if ($projet_suivant)
+                                <a href="/projet/post/{{ $projet_suivant->id }}" class="nav-next">{{ $projet_suivant->nom_projet_en }}</a>
+                            @endif
+                        @else
+                            @if ($projet_suivant)
+                                <a href="/projet/post/{{ $projet_suivant->id }}" class="nav-next">{{ $projet_suivant->nom_projet }}</a>
+                            @endif
+                        @endif
+
+
                     </p>
                 </div><!-- .col-md-4 end -->
             </div><!-- .row end -->

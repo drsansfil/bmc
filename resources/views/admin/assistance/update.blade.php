@@ -1,5 +1,5 @@
 @extends('layouts.back')
-@section('title', 'Modifier une  assistance')
+@section('title', 'Modifier une assistance')
 
 @section('content')
     <!-- PAGE -->
@@ -12,7 +12,7 @@
                     <div class="main-container container-fluid">
                         <!-- PAGE-HEADER -->
                         <div class="page-header">
-                            <h1 class="page-title">Modifier une  assistance</h1>
+                            <h1 class="page-title">Modifier une assistance</h1>
                         </div>
                         <div class="row p-5">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
@@ -25,7 +25,7 @@
                                                         <a href="/admin/assistance"><button class="btn btn-red"><i
                                                                     class="bi bi-arrow-return-left"></i>
                                                                 retour</button></a>
-                                                        Modifier une  assistance
+                                                        Modifier une assistance
                                                     </div>
                                                 </div>
                                                 <form action="/admin/update_assistance" method="POST"
@@ -34,18 +34,32 @@
                                                     <div class="row">
                                                         <div class="col-sm-12 mx-auto">
                                                             <div class="modal-body">
+                                                                @include('admin.composants.alert_success')
                                                                 <div class="mb-5">
                                                                     <label class="form-label"
                                                                         for="exampleFormControlInput1">
-                                                                        <strong>Titre </strong>
+                                                                        <strong>Titre ( Fr )</strong>
                                                                     </label>
                                                                     <input class="form-control" name="titre"
                                                                         id="name" type="text"
                                                                         value="{{ $assistance->titre }}" required>
                                                                 </div>
-                                                                Choisir une nouvelle image
+                                                                <div class="mb-5">
+                                                                    <label class="form-label"
+                                                                        for="exampleFormControlInput1">
+                                                                        <strong>Titre ( En ) </strong>
+                                                                    </label>
+                                                                    <input class="form-control" name="titre_en"
+                                                                        id="name" type="text"
+                                                                        value="{{ $assistance->titre_en }}" required>
+                                                                </div>
+                                                                Descriptin ( Fr )
                                                                 <textarea name="description" class="form-control" rows="3" required style="width: 100%">
                                                                     {{ $assistance->description }}
+                                                                </textarea>
+                                                                Descriptin ( En )
+                                                                <textarea name="description_en" class="form-control" rows="3" required style="width: 100%">
+                                                                    {{ $assistance->description_en }}
                                                                 </textarea>
 
                                                                 <input type="hidden" name="id"

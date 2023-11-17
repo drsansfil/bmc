@@ -34,6 +34,7 @@
                                                 <form action="/edite_projets" method="post" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="modal-body">
+                                                        @include('admin.composants.alert_success')
                                                         @forelse ($projets->images as $item)
                                                         <img src="{{ asset('uploads') }}/{{ $item->url }}" width="150">
                                                         @empty
@@ -43,10 +44,16 @@
                                                         <input type="hidden" value="{{ $projets->id }}" name="id_projet">
                                                         <div class="mb-5"><label class="form-label"
                                                                 for="exampleFormControlInput1"> <strong>nom
-                                                                    projet</strong></label>
+                                                                    projet ( Fr ) </strong></label>
                                                             <input class="form-control" name="nom_projet" id="name"
                                                                 type="text" value="{{ $projets->nom_projet }}">
                                                         </div>
+                                                        <div class="mb-5"><label class="form-label"
+                                                            for="exampleFormControlInput1"> <strong>nom
+                                                                projet ( En ) </strong></label>
+                                                        <input class="form-control" name="nom_projet_en" id="name"
+                                                            type="text" value="{{ $projets->nom_projet_en }}">
+                                                    </div>
                                                         <div class="mb-5"><label class="form-label"
                                                                 for="exampleFormControlInput1"><strong>type
                                                                     projet</strong></label>
@@ -61,19 +68,24 @@
                                                                 @endforelse
                                                             </select>
                                                         </div>
-
+{{ csrf_field() }}
 
                                                         <div class="mb-5"><label class="form-label" for="exampleTextarea">
-                                                                <strong>Description</strong> </label>
+                                                                <strong>Description ( Fr ) </strong> </label>
                                                             <p>
                                                                 <textarea class="form-control" name="description" id="exampleTextarea" rows="5" cols = "60"> {{ $projets->description }} </textarea>
                                                             </p>
-                                                            {{ csrf_field() }}
                                                         </div>
+                                                        <div class="mb-5"><label class="form-label" for="exampleTextarea">
+                                                            <strong>Description ( En ) </strong> </label>
+                                                        <p>
+                                                            <textarea class="form-control" name="description_en" id="exampleTextarea2" rows="5" cols = "60"> {{ $projets->description_en }} </textarea>
+                                                        </p>
+                                                    </div>
 
 
                                                     </div>
-                                                    <div>
+                                                    <div class="modal-footer">
                                                         <button class="btn btn-red" type="submit">Modifer</button>
                                                     </div>
                                                 </form>
@@ -97,6 +109,13 @@
         <script>
             ClassicEditor
                 .create(document.querySelector('#exampleTextarea'))
+                .catch(error => {
+                    console.error(error);
+                });
+        </script>
+        <script>
+            ClassicEditor
+                .create(document.querySelector('#exampleTextarea2'))
                 .catch(error => {
                     console.error(error);
                 });

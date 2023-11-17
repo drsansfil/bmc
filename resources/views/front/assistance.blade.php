@@ -60,23 +60,26 @@
                             </div><!-- .custom-heading-03 end -->
 
                             <ul class="fa-ul large-icons detailed clearfix">
-                               @forelse ($assistances as $item)
-                               <li>
-                                <i class="icon-container lynny-checkmark-2"></i>
+                                @forelse ($assistances as $item)
+                                    <li>
+                                        <i class="icon-container lynny-checkmark-2"></i>
 
-                                <div class="li-content">
-                                    <h4>{{ $item->titre }}</h4>
-
-                                    <p>
-                                        {{ $item->description }}
-                                    </p>
-
-
-                                </div>
-                            </li>
-                               @empty
-
-                               @endforelse
+                                        <div class="li-content">
+                                            @if (app()->getLocale() == 'en')
+                                                <h4>{{ $item->titre_en }}</h4>
+                                                <p>
+                                                    {{ $item->description_en }}
+                                                </p>
+                                            @else
+                                                <h4>{{ $item->titre }}</h4>
+                                                <p>
+                                                    {{ $item->description }}
+                                                </p>
+                                            @endif
+                                        </div>
+                                    </li>
+                                @empty
+                                @endforelse
 
 
                             </ul>
@@ -125,11 +128,15 @@
                             <div class="menu-quick-links-container">
                                 <ul id="menu-quick-links" class="menu">
                                     @forelse ($outils as $item)
-                                    <li class="menu-item">
-                                        <a href="management-about.html">{{ $item->titre}}</a>
-                                    </li>
-                                    @empty
+                                        <li class="menu-item">
+                                            @if (app()->getLocale() == 'en')
+                                            <a href="/outils">{{ $item->titre_en }}</a>
+                                        @else
+                                        <a href="/outils">{{ $item->titre }}</a>
+                                        @endif
 
+                                        </li>
+                                    @empty
                                     @endforelse
                                 </ul><!-- #menu-quick-links end -->
                             </div><!-- .menu-quick-links-container end -->

@@ -34,14 +34,24 @@
                                                     <div class="row">
                                                         <div class="col-sm-8">
                                                             <div class="modal-body">
+                                                                @include('admin.composants.alert_success')
                                                                 <div class="mb-5">
                                                                     <label class="form-label"
                                                                         for="exampleFormControlInput1">
-                                                                        <strong>Titre </strong>
+                                                                        <strong>Titre ( Fr )</strong>
                                                                     </label>
                                                                     <input class="form-control" name="titre"
                                                                         id="name" type="text"
                                                                         value="{{ $analyse->titre }}" required>
+                                                                </div>
+                                                                <div class="mb-5">
+                                                                    <label class="form-label"
+                                                                        for="exampleFormControlInput1">
+                                                                        <strong>Titre ( En )</strong>
+                                                                    </label>
+                                                                    <input class="form-control" name="titre_en"
+                                                                        id="name" type="text"
+                                                                        value="{{ $analyse->titre_en }}" required>
                                                                 </div>
                                                                 Choisir une nouvelle image
                                                                 <input class="form-control" name="image" type="file"

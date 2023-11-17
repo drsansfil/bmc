@@ -29,6 +29,7 @@ class analyse extends Controller
     {
         $validator = Validator::make($request->all(), [
             'titre' => 'required|string',
+            'titre_en' => 'required|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif',
         ]);
 
@@ -37,6 +38,7 @@ class analyse extends Controller
         }
         $analyse = new ModelsAnalyse();
         $analyse->titre = $request->titre;
+        $analyse->titre_en = $request->titre_en;
         if ($request->file('image')) {
             $newname = uniqid();
             $image = $request->file('image');
@@ -85,6 +87,7 @@ class analyse extends Controller
     {
         $validator = Validator::make($request->all(), [
             'titre' => 'required|string',
+            'titre_en' => 'required|string',
             'id' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ]);
@@ -96,6 +99,7 @@ class analyse extends Controller
             return redirect('/admin/analyse')->with('erruer', "Cet enregistrement n'existe pas!");
         }
         $analyse->titre = $request->titre;
+        $analyse->titre_en = $request->titre_en;
         if ($request->file('image')) {
             $oldimg = $analyse->image;
             $newname = uniqid();

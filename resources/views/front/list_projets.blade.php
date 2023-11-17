@@ -52,19 +52,25 @@
                             <div class="portfolio-item">
                                 <div class="media">
                                     <a href="/projet/post/{{ $item->id }}">
-                                        <img src="{{ asset('uploads')}}/{{ $item->images()->first()->url }}" alt="{{ $item->nom_projet }}" />
+                                        <img src="{{ asset('uploads') }}/{{ $item->images()->first()->url }}"
+                                            alt="{{ $item->nom_projet }}" />
                                     </a>
                                 </div><!-- .media end -->
 
                                 <div class="body">
                                     <a href="/projet/post/{{ $item->id }}">
-                                        <h2>{{ $item->nom_projet }} </h2>
+                                        @if (app()->getLocale() == 'en')
+                                            <h2>{{ $item->nom_projet_en }} </h2>
+                                        @else
+                                            <h2>{{ $item->nom_projet }} </h2>
+                                        @endif
+
                                     </a>
 
                                     <ul class="portfolio-tags">
                                         <li>
                                             <a href="#">
-                                                {{$item->created_at}}
+                                                {{ $item->created_at }}
                                             </a>
                                         </li>
                                     </ul><!-- .portfolio-tags end -->

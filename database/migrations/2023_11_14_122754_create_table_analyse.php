@@ -15,7 +15,8 @@ class CreateTableAnalyse extends Migration
     {
         Schema::create('analyses', function (Blueprint $table) {
             $table->id();
-            $table->string("titre");
+            $table->string("titre")->nullable();
+            $table->string("titre_en")->nullable();
             $table->text("image")->nullable();
             $table->timestamps();
         });

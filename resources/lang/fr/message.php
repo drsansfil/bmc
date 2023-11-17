@@ -13,6 +13,8 @@ return [
     "txt_2"=>"Projets",
     "txt_3"=>"Partenaires",
     "txt_4"=>"Clients satisfaits",
+    "404"=>"<h2>ressource <span style='color: #6ec25b;'>introuvable !</span></h2>",
+    "404_2"=>"ressource introuvable !",
 
 
 

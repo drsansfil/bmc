@@ -16,7 +16,9 @@ class CreateAssistancesTable extends Migration
         Schema::create('assistances', function (Blueprint $table) {
             $table->id();
             $table->string("titre");
+            $table->string("titre_en")->nullable();
             $table->text("description")->nullable();
+            $table->text("description_en")->nullable();
             $table->timestamps();
         });
     }

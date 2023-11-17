@@ -17,6 +17,7 @@ class CreateOutilsTable extends Migration
             $table->id();
             $table->string("titre");
             $table->text("description")->nullable();
+            $table->text("description_en")->nullable();
             $table->text("image")->nullable();
             $table->string("icone")->nullable();
             $table->timestamps();

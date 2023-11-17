@@ -37,6 +37,8 @@ class ProjetController extends Controller
         $validator = Validator::make($request->all(), [
             'nom_projet' => 'required',
             'type_projet' => 'required|integer',
+            'nom_projet_en' => 'required',
+            'description_en' => 'required',
             'description' => 'required',
             'image' => 'required|array',
             'image.*' => 'image|mimes:jpeg,png,jpg,gif|max:1024', // 1 Mo (1024 Ko) par image
@@ -105,7 +107,7 @@ class ProjetController extends Controller
 
 
 
-    
+
 
     //fontion modifier
     public function update(Request $request)
@@ -115,6 +117,8 @@ class ProjetController extends Controller
         $projets = projet::find($id);
         $projets->nom_projet = $request->nom_projet;
         $projets->project_category_id = $request->type_projet;
+        $projets->nom_projet_en = $request->nom_projet_en;
+        $projets->description_en = $request->description_en;
         $projets->description = $request->description;
         if ($projets->update()) {
             return redirect('/index_projets')->with('message', 'Projet Modifier avec Success');

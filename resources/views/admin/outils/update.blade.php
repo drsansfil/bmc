@@ -34,6 +34,7 @@
                                                     <div class="row">
                                                         <div class="col-sm-8 mx-auto">
                                                             <div class="modal-body">
+                                                                @include('admin.composants.alert_success')
                                                                 <div class="mb-5">
                                                                     <label class="form-label"
                                                                         for="exampleFormControlInput1">
@@ -43,9 +44,13 @@
                                                                         id="name" type="text"
                                                                         value="{{ $outils->titre }}" required>
                                                                 </div>
-                                                                Choisir une nouvelle image
+                                                                Description ( Fr )
                                                                 <textarea name="description" class="form-control" rows="3" required style="width: 100%">
                                                                     {{ $outils->description }}
+                                                                </textarea>
+                                                                Description ( En )
+                                                                <textarea name="description_en" class="form-control" rows="3" required style="width: 100%">
+                                                                    {{ $outils->description_en }}
                                                                 </textarea>
 
                                                                 <input type="hidden" name="id"

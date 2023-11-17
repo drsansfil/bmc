@@ -107,13 +107,32 @@ class GuestController extends Controller
     public function details_projet($id)
     {
         $projet = Projet::find($id);
-        $projets = Projet::all();
+
         if (!$projet) {
             abort(404);
         }
+
+        $projets = Projet::all();
+
+        // Trouver l'index du projet actuel dans la collection
+        $index = $projets->search(function ($item) use ($id) {
+            return $item->id == $id;
+        });
+
+        $projet_precedent = null;
+        $projet_suivant = null;
+
+        // Vérifier si l'index a été trouvé et récupérer les projets précédent et suivant
+        if ($index !== false) {
+            $projet_precedent = $index > 0 ? $projets[$index - 1] : null;
+            $projet_suivant = $index < $projets->count() - 1 ? $projets[$index + 1] : null;
+        }
+
         return view('front.projetDetails')->with([
             'projet' => $projet,
             'projets' => $projets,
+            'projet_precedent' => $projet_precedent,
+            'projet_suivant' => $projet_suivant,
         ]);
     }
 

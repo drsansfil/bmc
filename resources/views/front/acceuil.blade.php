@@ -285,7 +285,7 @@
                 <div class="col-md-6">
                     <!-- .custom-heading-01 start -->
                     <div class="custom-heading-01">
-                        <span>{{__('message.txt_4') }}</span>
+                        <span>{{ __('message.txt_4') }}</span>
                         <h2>{{ __('message.ce_que') }}</h2>
                     </div><!-- .custom-heading-01 end -->
 
@@ -466,7 +466,11 @@
                                             <span class="date">{{ $item->created_at }}</span>
 
                                             <a href="/projet/post/{{ $item->id }}">
-                                                <h3>{{ $item->nom_projet }}</h3>
+                                                @if (app()->getLocale() == 'en')
+                                                    <h2>{{ $item->nom_projet_en }} </h2>
+                                                @else
+                                                    <h2>{{ $item->nom_projet }} </h2>
+                                                @endif
                                             </a>
 
                                             <a href="/projet/post/{{ $item->id }}" class="read-more">
@@ -508,9 +512,11 @@
                             <form method="post" action="/store_new" id="monFormulaire">
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <input class="form-control" type="email" name="email" required placeholder="Email">
+                                        <input class="form-control" type="email" name="email" required
+                                            placeholder="Email">
                                         @csrf
-                                        <input class="form-control" type="text" name="nom" required placeholder="Nom">
+                                        <input class="form-control" type="text" name="nom" required
+                                            placeholder="Nom">
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="submit" class="btn btn-success" value="M'abonner">
@@ -575,9 +581,9 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Intercepter l'événement de soumission du formulaire
-            $('#monFormulaire').submit(function (e) {
+            $('#monFormulaire').submit(function(e) {
                 // Empêcher l'envoi traditionnel du formulaire
                 e.preventDefault();
 
@@ -589,12 +595,12 @@
                     type: 'POST',
                     url: '/store_new',
                     data: formData,
-                    success: function (response) {
+                    success: function(response) {
                         // Afficher le message de réponse dans une alerte
                         alert(response.message);
                         $('#monFormulaire')[0].reset();
                     },
-                    error: function (error) {
+                    error: function(error) {
                         // En cas d'erreur, afficher un message d'erreur dans une alerte
                         alert('Une erreur s\'est produite. Veuillez réessayer.');
                     }

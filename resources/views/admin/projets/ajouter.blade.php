@@ -28,31 +28,29 @@
                                                         Ajouter un nouveau projet
                                                     </div>
                                                 </div>
-                                                @if ($errors->any())
-                                                    <div class="alert alert-danger">
-                                                        <ul>
-                                                            @foreach ($errors->all() as $error)
-                                                                <li>{{ $error }}</li>
-                                                            @endforeach
-                                                        </ul>
-                                                    </div>
-                                                @endif
                                                 <form action="/store_projets" method="post" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="modal-body">
+                                                        @include('admin.composants.alert_success')
                                                         <div class="mb-5"><label class="form-label"
                                                                 for="exampleFormControlInput1">
-                                                                <strong>nom projet</strong>
+                                                                <strong>nom projet ( Fr ) </strong>
                                                             </label>
                                                             <input class="form-control" name="nom_projet" id="name"
                                                                 type="text" required>
-
                                                         </div>
+                                                        <div class="mb-5"><label class="form-label"
+                                                            for="exampleFormControlInput1">
+                                                            <strong>nom projet ( En ) </strong>
+                                                        </label>
+                                                        <input class="form-control" name="nom_projet_en" id="name"
+                                                            type="text" required>
+                                                    </div>
                                                         <div class="mb-5"><label class="form-label"
                                                                 for="exampleFormControlInput1"><strong>type
                                                                     projet</strong></label>
                                                             <!-- <input class="form-control" name="type_projet" id="name"
-                                                                    type="text" required> -->
+                                                                        type="text" required> -->
                                                             <select class="form-select" name="type_projet"
                                                                 aria-label="Default select example" required>
                                                                 <option value="">Choisir</option>
@@ -72,13 +70,18 @@
                                                         </div>
 
                                                         <div class="mb-5"><label class="form-label" for="exampleTextarea">
-                                                                <strong>Description</strong> </label>
+                                                                <strong>Description ( Fr ) </strong> </label>
                                                             <p>
                                                                 <textarea class="form-control" name="description" id="exampleTextarea" rows="3" required> </textarea>
                                                             </p>
-                                                            {{ csrf_field() }}
                                                         </div>
-
+                                                        <div class="mb-5"><label class="form-label" for="exampleTextarea">
+                                                            <strong>Description ( En ) </strong> </label>
+                                                        <p>
+                                                            <textarea class="form-control" name="description_en" id="exampleTextarea2" rows="3" required> </textarea>
+                                                        </p>
+                                                    </div>
+{{ csrf_field() }}
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button class="btn btn-red" type="submit">Ajouter</button>
@@ -101,6 +104,13 @@
         <script>
             ClassicEditor
                 .create(document.querySelector('#exampleTextarea'))
+                .catch(error => {
+                    console.error(error);
+                });
+        </script>
+         <script>
+            ClassicEditor
+                .create(document.querySelector('#exampleTextarea2'))
                 .catch(error => {
                     console.error(error);
                 });

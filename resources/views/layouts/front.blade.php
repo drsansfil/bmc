@@ -25,8 +25,8 @@
     {{-- referencement --}}
     <!-- Twitter -->
     <meta name="twitter:card" content="@yield('image')">
-    <meta name="twitter:site" content="TERACO.COM">
-    <meta name="twitter:creator" content="TERACO.COM">
+    <meta name="twitter:site" content="http://bestbmc.com.tn/">
+    <meta name="twitter:creator" content="http://bestbmc.com.tn/">
     <meta name="twitter:title" content="@yield('title')">
     <meta name="twitter:description" content="@yield('description')">
     <!-- Facebook -->

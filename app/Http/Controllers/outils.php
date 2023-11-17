@@ -28,6 +28,7 @@ class outils extends Controller
         $validator = Validator::make($request->all(), [
             'titre' => 'required|string',
             'description' => 'required|string',
+            'description_en' => 'required|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif',
             'icone' => 'required|image|mimes:svg',
         ]);
@@ -38,6 +39,7 @@ class outils extends Controller
         $outils = new Modelsoutils();
         $outils->titre = $request->titre;
         $outils->description = $request->description;
+        $outils->description_en = $request->description_en;
         if ($request->file('image')) {
             $newname = uniqid();
             $image = $request->file('image');
@@ -83,6 +85,9 @@ class outils extends Controller
 
 
 
+
+
+
     public function update_view($id)
     {
         $outils = Modelsoutils::findOrFail($id);
@@ -93,24 +98,30 @@ class outils extends Controller
     }
 
 
+
+
+
+
     public function update(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'titre' => 'required|string',
             'description' => 'required|string',
+            'description_en' => 'required|string',
             'id' => 'required',
-            'icone' => 'required|image|mimes:svg',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
+            'icone' => 'image|mimes:svg',
+            'image' => 'image|mimes:jpeg,png,jpg,gif',
         ]);
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
         $outils = Modelsoutils::find($request->id);
         if (!$outils) {
-            return redirect('/admin/outils')->with('erruer', "Cet enregistrement n'existe pas!");
+            return redirect('/admin/outils')->with('erreur', "Cet enregistrement n'existe pas!");
         }
         $outils->titre = $request->titre;
         $outils->description = $request->description;
+        $outils->description_en = $request->description_en;
         if ($request->file('image')) {
             $oldimg = $outils->image;
             $newname = uniqid();

@@ -35,6 +35,7 @@
                                                     enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="modal-body">
+                                                        @include('admin.composants.alert_success')
                                                         <div class="mb-5"><label class="form-label"
                                                                 for="exampleFormControlInput1">
                                                                 <strong>Nom de l'outil</strong>
@@ -45,10 +46,16 @@
                                                         </div>
                                                         <div class="mb-5"><label class="form-label"
                                                                 for="exampleFormControlInput1">
-                                                                <strong>Description</strong>
+                                                                <strong>Description ( fr )</strong>
                                                             </label>
-                                                            <textarea name="description" class="form-control" required style="width: 100%" rows="4"></textarea>
+                                                            <textarea name="description" class="form-control" required style="width: 100%" rows="3"></textarea>
                                                         </div>
+                                                        <div class="mb-5"><label class="form-label"
+                                                            for="exampleFormControlInput1">
+                                                            <strong>Description ( En )</strong>
+                                                        </label>
+                                                        <textarea name="description_en" class="form-control" required style="width: 100%" rows="3"></textarea>
+                                                    </div>
                                                         <div class="row">
                                                             <div class="col-sm-6">
                                                                 <div class="mb-3">

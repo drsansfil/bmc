@@ -1,5 +1,5 @@
 @extends('layouts.front')
-@section('title', __('message.nos_outils') )
+@section('title', __('message.nos_outils'))
 @section('content')
 
 
@@ -60,33 +60,38 @@
 
             <div class="container">
                 @forelse ($outils as $index => $item)
-                <div class="row oo p-2">
-                    {{-- Colonne pour les grandes tailles d'écran --}}
-                    <div class="col-lg-5 order-lg-{{ $index % 2 == 0 ? 1 : 2 }}">
-                        <img src="/uploads/{{ $item->image }}" alt="{{ $item->titre }}" class="img-fluid">
-                    </div>
+                    <div class="row oo p-2">
+                        {{-- Colonne pour les grandes tailles d'écran --}}
+                        <div class="col-lg-5 order-lg-{{ $index % 2 == 0 ? 1 : 2 }}">
+                            <img src="/uploads/{{ $item->image }}" alt="{{ $item->titre }}" class="img-fluid">
+                        </div>
 
-                    {{-- Colonne pour les petites tailles d'écran --}}
-                    <div class="col-lg-7 order-lg-{{ $index % 2 == 0 ? 2 : 1 }}">
-                        <table>
-                            <tr>
-                                <td style="width: 22px;">
-                                    <img src="/uploads/{{ $item->icone }}" style="height: 20px;"/>
-                                </td>
-                                <td>
-                                    <h3> {{ $item->titre }}</h3>
-                                </td>
-                            </tr>
-                        </table>
+                        {{-- Colonne pour les petites tailles d'écran --}}
+                        <div class="col-lg-7 order-lg-{{ $index % 2 == 0 ? 2 : 1 }}">
+                            <table>
+                                <tr>
+                                    <td style="width: 22px;">
+                                        <img src="/uploads/{{ $item->icone }}" style="height: 20px;" />
+                                    </td>
+                                    <td>
+                                        <h3> {{ $item->titre }}</h3>
+                                    </td>
+                                </tr>
+                            </table>
 
-                        <div class="text-container">
-                            <p>{{ $item->description }}</p>
+                            <div class="text-container">
+                                @if (app()->getLocale() == 'en')
+                                    <p>{{ $item->description_en }}</p>
+                                @else
+                                    <p>{{ $item->description }}</p>
+                                @endif
+
+                            </div>
                         </div>
                     </div>
-                </div>
-            @empty
-                {{-- Traitement pour le cas où la liste est vide --}}
-            @endforelse
+                @empty
+                    {{-- Traitement pour le cas où la liste est vide --}}
+                @endforelse
 
 
             </div>

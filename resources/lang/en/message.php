@@ -13,6 +13,8 @@ return [
  "txt_2"=>"Projects",
  "txt_3"=>"Partners",
  "txt_4"=>"Satisfied Clients",
+ "404"=>"<h2>resource <span style='color: #6ec25b;'>not found !</span></h2>",
+ "404_2"=>"resource not found!",
 
 
 //banner

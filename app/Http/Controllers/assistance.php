@@ -30,6 +30,8 @@ class assistance extends Controller
         $validator = Validator::make($request->all(), [
             'titre' => 'required|string',
             'description'  => 'required|string',
+            'titre_en' => 'required|string',
+            'description_en'  => 'required|string',
         ]);
 
         if ($validator->fails()) {
@@ -76,6 +78,8 @@ class assistance extends Controller
         $validator = Validator::make($request->all(), [
             'titre' => 'required|string',
             'description' => 'required|string',
+            'titre_en' => 'required|string',
+            'description_en'  => 'required|string',
             'id' => 'required',
         ]);
         if ($validator->fails()) {

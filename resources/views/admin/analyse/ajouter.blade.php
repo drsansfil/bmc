@@ -32,14 +32,23 @@
                                                     enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="modal-body">
+                                                        @include('admin.composants.alert_success')
                                                         <div class="mb-5"><label class="form-label"
                                                                 for="exampleFormControlInput1">
-                                                                <strong>Titre de l'analyse</strong>
+                                                                <strong>Titre de l'analyse ( Fr )</strong>
                                                             </label>
                                                             <input class="form-control" name="titre"
                                                                 type="text" required>
 
                                                         </div>
+                                                        <div class="mb-5"><label class="form-label"
+                                                            for="exampleFormControlInput1">
+                                                            <strong>Titre de l'analyse ( En )</strong>
+                                                        </label>
+                                                        <input class="form-control" name="titre_en"
+                                                            type="text" required>
+
+                                                    </div>
                                                         <div class="mb-5"><label class="form-label"
                                                                 for="exampleFormControlInput1">
                                                                 <strong>Image d'illustration</strong>
