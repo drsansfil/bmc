@@ -102,9 +102,9 @@
                                 @forelse ($projets as $item)
                                     <li class="post-container">
                                         @if (app()->getLocale() == 'en')
-                                            <a href="/projets/post/{{ $item->id }}">{{ $item->nom_projet_en }}</a>
+                                            <a href="/projet/post/{{ $item->id }}">{{ $item->nom_projet_en }}</a>
                                         @else
-                                            <a href="/projets/post/{{ $item->id }}">{{ $item->nom_projet }}</a>
+                                            <a href="/projet/post/{{ $item->id }}">{{ $item->nom_projet }}</a>
                                         @endif
 
                                         <span class="date">{{ $item->created_at }}</span>
