@@ -52,7 +52,7 @@
                         <h3>{{ __('message.call_us') }}</h3>
                     </div><!-- .custom-heading-03 end -->
 
-                    <form class="wpcf7 wpcf7-contact-us clearfix" method="POST" action="/contacte">
+                    <form class="wpcf7 wpcf7-contact-us clearfix" id="form">
                         @csrf
                         <input type="text" required name="name" class="wpcf7-text" id="contact-name" placeholder="{{ __('message.form_name') }}">
                         <input type="email" required name="email" class="wpcf7-email" id="contact-email" placeholder="{{ __('message.form_email') }}">
@@ -60,7 +60,11 @@
                         <input type="text" required name="subject" class="wpcf7-text" id="contact-subject" placeholder="{{ __('message.form_subjet') }}">
                         <textarea rows="8" name="message" class="wpcf7-textarea" id="contact-message" placeholder="{{ __('message.form_message') }}"></textarea>
                         <div class="g-recaptcha" data-sitekey="6Ld4VykTAAAAAM_qltIuTg7I0hpcdHjX7j68qpRz"></div>
-                        <input type="submit" value="submit" class="wpcf7-submit">
+                        <input type="submit" value="submit" class="wpcf7-submit"> <div id="response-container" class="col-lg-12" style="display: none;">
+                            <img src="https://cdn.pixabay.com/animation/2022/07/29/03/42/03-42-11-849_512.gif"
+                                alt="" style="height: 30px" srcset="">
+                            Envoie des informations....
+                        </div>
                     </form><!-- .wpcf7.clearfix end -->
                 </div><!-- .col-md-6 end -->
 
@@ -106,5 +110,28 @@
             </div><!-- .row end -->
         </div><!-- .container end -->
     </div><!-- .page-content end -->
+    <script>
+        $(document).ready(function() {
+            $("form").submit(function(event) {
+                event.preventDefault();
+                $('#response-container').show();
+                var formData = $(this).serialize();
+                var form = this;
+                $.ajax({
+                    type: 'POST',
+                    url: "{{ route('contacte') }}",
+                    data: formData,
+                    success: function(response) {
+                        $('#response-container').html(response.message);
+                        form.reset();
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+
 
 @endsection
