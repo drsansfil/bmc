@@ -53,6 +53,7 @@
                     </div><!-- .custom-heading-03 end -->
 
                     <form class="wpcf7 wpcf7-contact-us clearfix" method="POST" action="/contacte">
+                        @csrf
                         <input type="text" required name="name" class="wpcf7-text" id="contact-name" placeholder="{{ __('message.form_name') }}">
                         <input type="email" required name="email" class="wpcf7-email" id="contact-email" placeholder="{{ __('message.form_email') }}">
                         <input type="text" required name="phone_number" class="wpcf7-text" id="contact-phone" placeholder="{{ __('message.form_phone') }}">
