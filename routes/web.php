@@ -34,7 +34,6 @@ Route::middleware(['count-visitors', 'Language'])->group(function () {
     Route::get('/blog', [GuestController::class, 'blog'])->name('blog'); // blog page
     Route::get('/projets', [GuestController::class, 'projets']); // projet page
     Route::get('/projet/post/{id}', [GuestController::class, 'details_projet']);
-    Route::get('/secteur/{id}', [GuestController::class, 'details_secteur']); // projet page
     Route::get('/blog/post/{id}', [GuestController::class, 'blogDetail'])->name('blogDetail'); // blog detail page
     Route::post('/contacte', [ContactController::class, 'saveContact'])->name('contacte');
     Route::post('/recherche', [GuestController::class, 'recherche']);
@@ -96,20 +95,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/projet/{i}/delete', [ProjetController::class, 'destroy']);
     Route::post('/edite_projets', [ProjetController::class, 'update']);
 
-    /* //blog
-    Route::get('/ajout_blog', function () {
-        return view('admin.blogs.ajouter');
-    })->name('ajout_blog'); //page ajouter blog
-
-    Route::get('/edite_blogs/{id}', function ($id) {
-        $blogs = blog::find($id);
-        return view('admin.blogs.update_blog')->with('blogs', $blogs);
-    })->name('modifier_blog'); //page modifier blog
-
-    Route::get('/index_blog', [BlogController::class, 'index']);
-    Route::post('/store_blogs', [BlogController::class, 'store']);
-    Route::get('/admin/blog/{i}/delete', [BlogController::class, 'destroy']);
-    Route::post('/edite_blogs', [BlogController::class, 'update']); */
 
 
 
@@ -121,12 +106,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/ajout_client', function () {
         return view('admin.clients.ajouter');
     })->name('ajout_client'); //page ajouter client
-
     Route::get('/edite_clients/{id}', function ($id) {
         $clients = client::find($id);
         return view('admin.clients.update_client')->with('clients', $clients);
     })->name('modifier_client'); //page modifier client
-
     Route::get('/index_client', [ClientController::class, 'index'])->middleware('auth');
     Route::post('/store_clients', [ClientController::class, 'store']);
     Route::get('/admin/client/{i}/delete', [ClientController::class, 'destroy']);
@@ -134,16 +117,19 @@ Route::middleware('auth')->group(function () {
 
 
 
+
+
+
+
+
     //information
     Route::get('/ajout_information', function () {
         return view('admin.informations.ajouter');
     })->name('ajout_information'); //page ajouter information
-
     Route::get('/edite_informations/{id}', function ($id) {
         $informations = information::find($id);
         return view('admin.informations.update_information')->with('informations', $informations);
     })->name('modifier_information'); //page modifier information
-
     Route::get('/index_information', [InformationController::class, 'index'])->middleware('auth');
     Route::post('/store_informations', [InformationController::class, 'store']);
     Route::post('/start_informations', [InformationController::class, 'start']);
@@ -169,7 +155,6 @@ Route::middleware('auth')->group(function () {
         $newslettres = newslettre::find($id);
         return view('admin.newslettres.update_newslettre')->with('newslettres', $newslettres);
     })->name('modifier_newslettre'); //page modifier newslettre
-
     Route::get('/index_newslettre', [NewslettreController::class, 'index'])->middleware('auth');
     Route::post('/store_newslettres', [NewslettreController::class, 'store']);
     Route::get('/admin/newslettre/{i}/delete', [NewslettreController::class, 'destroy']);
@@ -228,6 +213,9 @@ Route::middleware('auth')->group(function () {
 
     //contact
     Route::get('/admin/contacts', [ContactController::class, 'index_liste'])->middleware('auth');
+    Route::post('/filtre-date-contact', [ContactController::class, 'filtre'])->middleware('auth');
+    Route::post('/delete_all_contact', [ContactController::class, 'delete_all']);
+    Route::delete('/supprimer_ligne_contact/{id}', [ContactController::class, 'supprimer_ligne_contact']);
 });
 
 

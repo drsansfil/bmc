@@ -14,6 +14,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="/img/svg/consultingpress-logo-dark-green.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/img/svg/consultingpress-logo-dark-green.png">
     <link rel="apple-touch-icon" sizes="120x120" href="/img/svg/consultingpress-logo-dark-green.png">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="apple-touch-icon" sizes="144x144" href="/img/svg/consultingpress-logo-dark-green.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/img/svg/consultingpress-logo-dark-green.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/svg/consultingpress-logo-dark-green.png">
@@ -44,6 +45,9 @@
     <link id="theme" rel="stylesheet" type="text/css" media="all"
         href="{{ asset('assetsadmin/colors/color1.css') }}" />
     <link href=" https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+
+
+
     @yield('css')
 </head>
 

@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Mail as FacadesMail;
 class ContactController extends Controller
 {
 
+
     public function saveContact(Request $request)
     {
         $this->validate($request, [
@@ -40,11 +41,11 @@ class ContactController extends Controller
                 'subject' => $request->subject,
                 'message' => $request->message,
                 'phone_number' => $request->phone_number,
-                'desti'=>$mail->mail_reception
+                'desti' => $mail->mail_reception
             ];
             FacadesMail::to($mail->mail_reception)->send(new ContactMail($data));
         }
-        $response = ['message' => 'Merci de nous avoir contacter !'];
+        $response = ['message' => ' Merci de nous avoir contacté '];
         return response()->json($response);
         //return back()->with('success', 'Merci de nous contacter !');
     }
@@ -52,13 +53,38 @@ class ContactController extends Controller
 
 
 
-    public function index_liste(){
+    public function index_liste()
+    {
         $contacts = Contact::paginate(15);
         return view('admin.contacts.index_contact')->with('contacts', $contacts);
     }
 
 
 
-  
+    public function delete_all()
+    {
+        Contact::truncate();
+        return redirect('/admin/contacts')->with('message', "Les contacts ont été supprimer !");
+    }
 
+
+    public function filtre(Request $request)
+    {
+        $date = $request->date;
+        $results = Contact::whereDate('created_at', $date)->orderBy('created_at', 'desc')->paginate(15);
+        return view('admin.contacts.index_contact')->with('contacts', $results)->with('filtre', $date);
+    }
+
+
+
+    public function supprimer_ligne_contact($id)
+    {
+        try {
+            $contact = Contact::findOrFail($id);
+            $contact->delete();
+            return response()->json(['success' => true, 'message' => 'Contact supprimé avec succès']);
+        } catch (\Exception $e) {
+            return response()->json(['success' => false, 'error' => 'Une erreur s\'est produite lors de la suppression'], 500);
+        }
+    }
 }
