@@ -1,5 +1,5 @@
 @extends('layouts.front')
-@section('title', __('message.btn_acceuil'))
+@section('title', __('message.btn_accueil'))
 @section('content')
     <style>
         .icon_ex {
