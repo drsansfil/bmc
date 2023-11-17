@@ -69,7 +69,7 @@
 
                                     <ul class="portfolio-tags">
                                         <li>
-                                            <a href="#">
+                                            <a href="/projet/post/{{ $item->id }}">
                                                 {{ $item->created_at }}
                                             </a>
                                         </li>
