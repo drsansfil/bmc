@@ -1,5 +1,5 @@
 @extends('layouts.front')
-@section('title', __('message.nos_outils'))
+@section('title', __('message.btn_nos_outils'))
 @section('content')
 
 
