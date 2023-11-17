@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,32 +14,85 @@
             margin: 0;
             padding: 0;
         }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-        }
+
         h2 {
-            color: #333;
+            color: #6ec25b;
         }
         b {
             font-weight: bold;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        header{
+            background-color: #030d26;
+            color: #6ec25b;
+            padding: 30px;
+            text-align: center;
+            padding-top: 60px;
+        }
+        .titre{
+            color: #6ec25b;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        a{
+            color:#030d26 ;
+            font-weight: bold;
+        }
+        footer{
+            background-color: #6ec25b;
+            padding-top: 20px;
+            padding-bottom: 60px;
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="{{ asset('assetsadmin/images/brand/brand-logo.png')}}" alt="Logo de la structure">
-        <h2>Hello Admin,</h2>
-        You received an email from : {{ $data['name'] }}
-        <p>Here are the details:</p>
-        <b>Name:</b> {{ $data['name'] }}<br>
-        <b>Besoins:</b> {{ $data['subject'] }} <br>
-        <b>Email:</b> {{ $data['email'] }}<br>
-        <b>Phone Number:</b> {{ $data['phone_number'] }}<br>
-        <b>Message:</b> {{ $data['message'] }}<br>
-        <p>Thank You</p>
+    <div style="background-color: #6ec25b;" class="p-2">
+
     </div>
+    <header>
+
+                <span class="titre">NOUVEAU MESSAGE</span>
+    </header>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 mx-auto">
+              <div class="text-center">
+                <img src="{{ asset('/img/svg/consultingpress-logo-dark-green.png')}}" alt="Logo de la structure" class="img-fluid">
+              </div>
+              <h2>Bonjour Admin,</h2>
+              <p>Vous avez reçu un email de :</p>
+              <b>Nom :</b> {{ $data['name'] }}<br>
+              <b>Sujet :</b> {{ $data['subject'] }}<br>
+              <b>Email :</b> {{ $data['email'] }}<br>
+              <b>Numéro de téléphone :</b> {{ $data['phone_number'] }}<br>
+              <b>Message :</b> {{ $data['message'] }}<br><br><br><br>
+              <p>Merci</p>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6"></div>
+                <div class="col-sm-4">
+                    Designed and Developed by <a href="https://www.e-build.tn">Ebuild</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
