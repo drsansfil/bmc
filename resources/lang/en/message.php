@@ -77,10 +77,11 @@ return [
 
 
 //home
-"home_1"=>"Our firm, established in Tunis since 2009, specializes in the support and assistance of public or private enterprises.",
-"home_2"=>"In this scope of activity, we organize continuing professional training seminars either in-house or intra-company, and we take care of upgrading companies, called to operate in an increasingly competitive environment.",
-"home_3"=>"As a result, our services have been able to gain the experience and competence to study, plan, estimate the budget required for such operations, and lead or accompany a project from the study phase to its completion.",
-"home_4"=>"OUR TEAM",
+
+"home_1" => "BEST MANAGEMENT AND CONSULTING stands out with its multi-specialist approach and its ability to offer high-value services in a wide range of industries, taking into account the standards and characteristics specific to each of them.",
+"home_2" => "BEST MANAGEMENT AND CONSULTING puts its expertise at your service to accelerate the success of your projects.",
+"home_3" => "Drawing on its professional experience in quality management, the BMC firm provides advice and support to companies wishing to be ISO certified in accordance with the requirements of the standard.",
+"home_4" => "Environmental impact study, decontamination study, safety study, hazard study, PII and POI, support until the issuance of the opening and operation permit for a classified establishment.",
 "home_5"=>"WE CAN PROVIDE THE BEST SOLUTIONS WITH A TEAM OF EXPERTS CLOSE TO THE CONCERNS OF MANAGERS AND SEASONED IN THE REQUIREMENTS OF THEIR PROFESSION. OUR TEAM IS COMPETENT TO DEVELOP AND IMPLEMENT SOLUTIONS ADAPTED TO THE NEEDS OF OUR CLIENTS AND PROVIDE CUSTOMIZED ANSWERS.",
 "home_6"=>"The space where innovation meets performance. Explore our extensive range of carefully selected tools to meet your professional and personal needs.",
 

@@ -43,11 +43,11 @@ return [
 
 
     //option
-    "option_1"=>"Son expérience",
-    "option_2"=>"Sa disponibilité",
-    "option_3"=>"Son intégrité",
-    "option_4"=>"Sa polyvalence et pluridisciplinarité",
-    "option_5"=>"L’écoute du client",
+    "option_1"=>"Étude d'impact sur l'environnement",
+    "option_2"=>"étude de dépollution",
+    "option_3"=>"étude de sécurité",
+    "option_4"=>"étude des dangers",
+    "option_5"=>"PII ET POI",
     "option_6"=>"La réponse dans les meilleurs délais",
 
 
@@ -83,10 +83,10 @@ return [
 
 
     //home
-    "home_1"=>"Notre cabinet, implanté à Tunis, depuis 2009 est spécialisé dans l’accompagnement et l’assistance des entreprises publiques ou privées.",
-    "home_2"=>"Dans ce cadre d'activité, on organise des séminaires de formation professionnelle continue en inter ou en intra-entreprise, et on s'occupe au mise à niveau des entreprises, appelées à agir dans un milieu de plus en plus concurrentiel.",
-    "home_3"=>"Nos services ont par conséquent pu acquérir l'expérience et la compétence pour étudier, planifier, estimer le budget nécessaire à de telles opérations et conduire ou accompagner un projet de la phase d'étude jusqu'à son terme.",
-    "home_4"=>"NOTRE EQUIPE",
+    "home_1"=>"BEST MANAGEMENT AND CONSULTING se démarque par son approche multi-spécialiste et sa capacité à proposer des services à forte valeur ajoutée dans un large panel de secteurs d’activité, en tenant compte des normes et caractéristiques propres à chacun d’entre eux.",
+    "home_2"=>"BEST MANAGEMENT AND CONSULTING met à votre service son expertise afin d’accélérer la réussite de vos projets.",
+    "home_3"=>"En se basant sur son expérience professionnelle en management de la qualité, le cabinet BMC assure le conseil et l’accompagnement des entreprises désirant être certifiées ISO conformément aux exigences de ladite norme.",
+    "home_4"=>"Étude d'impact sur l'environnement, étude de dépollution, étude de sécurité, étude des dangers, PII ET POI, l'accompagnement jusqu'à l'obtention de l'arrêté d'ouverture et d'exploitation d'un établissement classé",
     "home_5"=>"NOUS POUVONS DONNER LES MEILLEURES SOLUTIONS AVEC UNE ÉQUIPE COMPOSÉE D’EXPERTS PROCHES DES PRÉOCCUPATIONS DES RESPONSABLES ET ROMPUS AUX EXIGENCES DE LEUR MÉTIER. NOTRE ÉQUIPE EST COMPÉTENTE POUR DÉVELOPPER ET METTRE EN PLACE DES SOLUTIONS ADAPTÉES AUX BESOINS DE NOS CLIENTS ET APPORTER DES RÉPONSES SUR MESURE.",
     "home_6"=>"l'espace où l'innovation rencontre la performance. Explorez notre vaste gamme d'outils soigneusement sélectionnés pour répondre à vos besoins professionnels et personnels.",
 

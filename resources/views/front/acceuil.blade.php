@@ -5,6 +5,9 @@
         .icon_ex {
             width: 100% !important;
         }
+        .service-box-03{
+height: 200px;
+        }
     </style>
     <div class="master-slider-wrapper">
         <!-- #masterslider start -->
@@ -129,7 +132,7 @@
                     <div class="custom-heading-02">
                         <h2> {{ __('message.home_4') }}</h2>
                         <span>
-                            {{ __('message.home_5') }}
+                           {{--  {{ __('message.home_5') }} --}}
                         </span>
                     </div><!-- .custom-heading-02 end -->
                 </div><!-- .col-md-12 end -->
@@ -166,7 +169,7 @@
                         <div class="text-container">
                             <a href="#">
                                 <h3>{{ __('message.option_2') }}</h3>
-                            </a>
+                            </a> <br>
                             <p>
                                 Defining your business goals and steps to achieve them.
                             </p>
@@ -183,7 +186,7 @@
                         <div class="text-container">
                             <a href="#">
                                 <h3>{{ __('message.option_3') }}</h3>
-                            </a>
+                            </a> <br>
                             <p>
                                 Defining your business goals and steps to achieve them.
                             </p>

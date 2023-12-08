@@ -207,10 +207,6 @@
                                 class=" fe  fe-info"></i>&nbsp<span class="side-menu__label">Informations</span></a>
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item {{ request()->is('index_projets','ajout_projet') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/index_projets"><i
-                                class=" fe fe-folder-minus"></i>&nbsp<span class="side-menu__label">Projets</span></a>
-                    </li>
-                    <li class="slide">
                         <a class="side-menu__item {{ request()->is('index_newslettre','ajout_newslettre') ? 'active-menu' : '' }}" data-bs-toggle="slide" href="/index_newslettre"><i
                                 class=" fe fe-mail"></i>&nbsp<span class="side-menu__label">Newslettres</span></a>
                     </li>

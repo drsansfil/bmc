@@ -205,9 +205,6 @@
                                             <li class="{{ request()->is('outils') ? 'current-menu-item' : '' }}">
                                                 <a href="/outils">{{ __('message.btn_nos_outils') }}</a>
                                             </li>
-                                            <li class="{{ request()->is('projets') ? 'current-menu-item' : '' }}">
-                                                <a href="/projets">{{ __('message.btn_projets') }}</a>
-                                            </li>
 
                                             {{--  <li class="menu-item-has-children dropdown">
                                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle"
@@ -334,42 +331,7 @@
                         </li><!-- .widget.widget-pages end -->
                     </ul><!-- .footer-widget-container end -->
 
-                    <!-- .footer-widget-container start -->
-                    @php
-                        $projets = App\Models\Projet::orderBy('created_at', 'desc')
-                            ->take(2)
-                            ->get();
-                    @endphp
-                    <ul class="footer-widget-container col-md-3 col-sm-6">
-                        <li class="widget widget-text">
-                            <div class="title">
-                                <h3>{{ __('message.Latest_News') }}</h3>
-                            </div>
 
-                            <!-- Latest posts element start -->
-                            <ul class="pi-latest-posts-02">
-                                @forelse ($projets as $item)
-                                    <li class="post-container">
-                                        <div class="post-media">
-                                            <a href="/projet/post/{{ $item->id }}">
-                                                <img src="/uploads/{{ $item->images()->first()->url }}"
-                                                    alt="{{ $item->id }}" />
-                                            </a>
-                                        </div><!-- .post-media end -->
-
-                                        <div class="post-body">
-                                            <span class="date">{{ $item->created_at }}</span>
-                                            <a href="/projet/post/{{ $item->id }}">
-                                                <h4>{{ $item->nom_projet }}</h4>
-                                            </a>
-                                        </div><!-- .post-body end -->
-                                    </li>
-                                @empty
-                                @endforelse
-
-                            </ul><!-- .pi-latest-posts-02 end -->
-                        </li>
-                    </ul><!-- .footer-widget-container end -->
 
                     <!-- .footer-widget-container start -->
                     @if (!is_null($info_footer))
